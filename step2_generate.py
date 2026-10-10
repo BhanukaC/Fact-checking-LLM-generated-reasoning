@@ -14,7 +14,7 @@ MODELS = [
     "openai/gpt-6.1-sol",
 ]
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
 SYSTEM_PROMPT = (
     "You are a fact-checker. You will be given a claim, the date it was made and who made it. "
     "Decide whether the claim is SUPPORTED or REFUTED using only your own knowledge. "
