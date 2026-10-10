@@ -12,7 +12,6 @@ MODELS = [
     "google/gemini-3.8-flash",
     "anthropic/claude-sonnet-5",
     "openai/gpt-6.1-sol",
-    "openai/gpt-6-luna",
 ]
 
 # Third-party hosts (Claude Platform on AWS, Azure) applied their own content filters
