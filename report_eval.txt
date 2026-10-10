@@ -1,0 +1,5 @@
+anthropic/claude-sonnet-5: 84 right, 16 wrong (11 on Supported, 5 on Refuted)
+google/gemini-3.8-flash: 88 right, 12 wrong (8 on Supported, 4 on Refuted)
+openai/gpt-6.1-sol: 90 right, 10 wrong (7 on Supported, 3 on Refuted)
+claims by number of models right: {0: 6, 1: 4, 2: 12, 3: 78}
+claims all models got wrong: [13, 113, 147, 175, 196, 330]

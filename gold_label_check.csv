@@ -1,0 +1,9 @@
+claim_id,claim,claim_date,gold_label,gold_justification,gold_label_looks_right (yes/no/unsure),notes
+13,Wearing face masks will stop the spread of covid 19,29-10-2020,SUPPORTED,"From the question and answer pair it does indeed seem that face masks are useful in stopping the spread of covid19. Therefore, the claim is supported.",,
+113,Congress MP Rahul Gandhi has been listed as the seventh most educated leader by Forbes.,12-10-2020,SUPPORTED,Confirmed.,,
+147,"Because of a so-called trade war with China, America lost 300,000 manufacturing jobs.",7-10-2020,SUPPORTED,Claim is supported.,,
+175,“Wisconsin Republicans have not passed a single bill in 6 months.”,4-10-2020,SUPPORTED,"I have went with supported because although its just shy of 6 months it is only by a very small amount.
+
+4th October 2020 - 17th april 2020",,
+196,Video shared to make misleading claim that Hathras victim’s family did her last rites,1-10-2020,REFUTED,The sources show that the family did not give their relative the last rites so the claim is refuted.,,
+330,Ventura County election officials are reducing voting locations in order to limit in-person voter turnout.,16-9-2020,SUPPORTED,"Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot",,
