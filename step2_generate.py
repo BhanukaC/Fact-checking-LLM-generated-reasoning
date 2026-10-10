@@ -42,11 +42,19 @@ def build_messages(c):
 
 
 def call(model, messages):
-    body = {'model': model, 'messages': messages, 'temperature': 0, 'max_tokens': 4000}
+    body = {"model": model, "messages": messages, "temperature": 0, "max_tokens": 4000}
     for attempt in range(4):
-        r = requests.post(
-            URL, headers={"Authorization": f"Bearer {KEY}"}, json=body, timeout=120
-        )
+        try:
+            r = requests.post(
+                URL, headers={"Authorization": f"Bearer {KEY}"}, json=body, timeout=300
+            )
+        except (
+            requests.exceptions.RequestException
+        ) as e:  # timeout or connection problem
+            if attempt < 3:
+                time.sleep(5 * (attempt + 1))
+                continue
+            raise RuntimeError(f"network error: {e}")
         if r.status_code == 200:
             return r.json()
         if r.status_code in (
