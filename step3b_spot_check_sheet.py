@@ -39,7 +39,7 @@ fields = [
     "reasoning_ok (yes/no/unsure)",
     "notes",
 ]
-with open("spot_check_eval_1.csv", "w", newline="", encoding="utf-8") as f:
+with open("spot_check_eval.csv", "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
     w.writeheader()
     for r in pick:
