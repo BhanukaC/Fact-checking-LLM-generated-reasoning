@@ -19,7 +19,7 @@ MODELS = [
 PROVIDER_PREFS = {
 }
 
-PROMPT_VERSION = "v2"
+PROMPT_VERSION = "v3"
 SYSTEM_PROMPT = (
     "You are a fact-checker. You will be given a claim, the date it was made and who made it. "
     "Decide whether the claim is SUPPORTED or REFUTED using only your own knowledge. "
@@ -35,10 +35,32 @@ USER_TEMPLATE = (
     '{{"reasoning": "<your reasoning>", "label": "SUPPORTED" or "REFUTED"}}'
 )
 
+MONTHS = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+]
+
+
+def readable_date(s):
+    d, m, y = (int(x) for x in s.split("-"))  # AVeriTeC dates are day-month-year
+    return f"{d} {MONTHS[m - 1]} {y}"  # '4-10-2020' -> '4 October 2020'
+
 
 def build_messages(c):
     user = USER_TEMPLATE.format(
-        claim=c["claim"], date=c["claim_date"], speaker=c["speaker"] or "Unknown"
+        claim=c["claim"],
+        date=readable_date(c["claim_date"]),
+        speaker=c["speaker"] or "Unknown",
     )
     return [
         {"role": "system", "content": SYSTEM_PROMPT},
