@@ -1,0 +1,151 @@
+claim_id,model,claim,claim_date,gold_label,gold_justification,gold_evidence_qa,llm_label,llm_reasoning,reasoning_ok (yes/no/unsure),notes
+104,anthropic/claude-sonnet-5,"Amy Coney Barrett's nomination to the Supreme Court would be confirmed in October 2020, by a Senate majority that represents 15 million fewer people than the minority party.",13-10-2020,SUPPORTED,Confirmed via numbers in the QA Pairs.,"Q: Is Amy Coney Barrett a U.S Republican or U.S Democrat?
+A: Barrett's nomination was generally supported by Republicans, who sought to confirm her before the 2020 United States presidential election.
+
+Q: Will Amy Coney Barrett nomination to the Supreme Court be confirmed by a Senate majority that represents 15 MILLION FEWER PEOPLE than the minority party'
+A: Yes (the current Republican Senate “majority” represents about 15 million fewer people than the Democratic “minority.”)",REFUTED,"By October 2020, Republicans held a 53-47 Senate majority. Analyses of state populations (based on Census Bureau estimates) consistently showed that Democratic senators represented significantly more Americans than Republican senators, due to over-representation of smaller, rural, Republican-leaning states. However, the commonly cited figure from population analyses at the time was roughly 40 million more people represented by Democratic senators, not 15 million. The claim's specific numerical figure of 15 million understates the actual disparity reported by demographic analyses of Senate representation in 2020. While the directional claim (GOP majority represents fewer people) is correct, the specific 15 million figure does not match the widely cited calculations from that period, which were closer to 40 million.",,
+196,google/gemini-3.8-flash,Video shared to make misleading claim that Hathras victim’s family did her last rites,1-10-2020,REFUTED,The sources show that the family did not give their relative the last rites so the claim is refuted.,"Q: Did Hathras victim’s family did her last rites ?
+A: Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured in Uttar Pradesh's Hathras, was cremated by policemen last night, allegedly as her family and relatives were locked up in their homes. A disturbing sequence of events captured in overnight visuals shows the family arguing with cops, female relatives throwing themselves on the hood of the ambulance carrying the body and a mother weeping helplessly as cops insist on taking her daughter straight to cremation, without allowing a last look.
+
+Q: Did the police forcibly cremated Hathras' body ?
+A: Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in their home, reported NDTV. The police reportedly formed a human chain around the cremation to prevent anyone from approaching the ground.
+
+Q: What happened in the Hathras assault case?
+A: The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in the assault that drew parallels to the 2012 Nirbhaya gang-rape",SUPPORTED,"Following the cremation of the Hathras gang-rape victim by police in late September 2020, videos circulated on social media falsely claiming that her family had willingly performed her last rites. Analysis of the footage and ground reports confirmed that the victim's family was not permitted to carry out the cremation, and the video was being shared with misleading context to support claims to the contrary.",,
+429,anthropic/claude-sonnet-5,A Pakistani website was hacked by an Indian cyber group to wish Pawan Kalyan a Happy Birthday.,2-9-2020,SUPPORTED,The 4th Q&A shows that there were birthday wishes put on the hacked website so the claim is supported.,"Q: Where was this claim published?
+A: Indian Cyber Troops | Content is no longer available on Facebook
+
+Q: Who are Indian Cyber Troops?
+A: It’s not a new thing these days to hear Indian Cyber Troops hacking Nepali websites. Gradually time and again the action is repeated | On August 15 Saturday, Indian Hackers did a massive Cyber Attack on Pakistan Websites,
+
+An Indian Hacktivist Group Named Indian Cyber Troops said they are Celebrating Independence Day by Hacking Pakistani websites
+
+Q: Were Pakistani websites hacked by Indian cyber troops?
+A: Yes (Amid the celebration of 74th Independence Day in India, the Indian hackers have once again targeted Pakistani websites on the occasion of Independence Day. Just a day before Independence Day, Indian hackers hacked the website of Fatima Jinnah Mahila University in Pakistan. It was hacked by hackers named ‘ Indian Cyber Troops ‘ and wrote messages of Indian Independence Day on the website and congratulated Pakistan.) | Yes (On this Independence Day, a group of Indian hackers succeeding in hacking over 80 websites of Pakistan and hoisted the Indian tricolor on these websites. The Indian hackers went on to hack one websites after another while conveying the message of India's pride)
+
+Q: Did Indian cyber troops wish Pawan Kalyan a Happy Birthday when they hacked Pakistani websites?
+A: Birthday messages for Pawan Kalyan did appear on the hacked Pakistani websites.",REFUTED,"This claim originates from a meme/fan page, not a credible news source. There is no credible evidence of any Pakistani website being hacked specifically to wish actor-politician Pawan Kalyan a happy birthday. Such claims are common exaggerated fan-page content designed to glorify a celebrity, lacking any corroboration from cybersecurity reports or mainstream news outlets. No legitimate cyber-attack incident matching this description was reported around that date.",,
+461,openai/gpt-6.1-sol,All India Institute of Medical Sciences Nursing Officer Recruitment Common Eligibility Test 2020 was postponed.,31-8-2020,SUPPORTED,The Q&A does not give much information on the situation but it does state that is was postponed so can be supported. ,"Q: Was the All India Institute of Medical Sciences Nursing Officer Recruitment Common Eligibility Test 2020 postponed?
+A: Yes (All India Institute of Medical Sciences Nursing Officer Recruitment Common Eligibility Test 2020 was postponed.)",REFUTED,"As of 31 August 2020, AIIMS NORCET 2020 remained scheduled for 8 September 2020. AIIMS clarified that the circulating postponement notice was fake and that the examination date had not changed.",,
+99,google/gemini-3.8-flash,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,14-10-2020,REFUTED,The answer and source show that the claim is not correct so it is refuted.,"Q: Are babies born alive after an abortion in NZ entitled to  medical support?
+A: Yes (Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.)
+
+Q: Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ?
+A: False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.",SUPPORTED,"The Abortion Legislation Act 2020 does not contain a specific provision mandating medical support for infants born alive following an abortion procedure. An amendment proposing such a requirement was debated and voted down during the legislative process because lawmakers and medical bodies considered it redundant, as infants born alive are already recognized as legal persons with a right to medical care under existing New Zealand law, including the Crimes Act 1961 and the Care of Children Act 2004.",,
+147,openai/gpt-6.1-sol,"Because of a so-called trade war with China, America lost 300,000 manufacturing jobs.",7-10-2020,SUPPORTED,Claim is supported.,"Q: How many jobs have been lost because of the USA-China trade war?
+A: A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300,000 jobs through September, based on an economic simulation.",REFUTED,"A 2019 Moody’s Analytics estimate attributed about 300,000 lost U.S. jobs to the trade war with China, but that estimate covered the entire economy, not manufacturing alone. Manufacturing employment increased between the start of Trump’s presidency and February 2020, before falling sharply during the coronavirus pandemic. The cited estimate does not support a loss of 300,000 manufacturing jobs from the trade war.",,
+330,anthropic/claude-sonnet-5,Ventura County election officials are reducing voting locations in order to limit in-person voter turnout.,16-9-2020,SUPPORTED,"Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot","Q: Is California reducing its amount of voting stations?
+A: Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for the March primary, but has only secured 39 sites for the November election. In Santa Barbara, officials are reducing the number of in-person voting sites from 86 to 25.
+
+Q: Why are Voting station numbers being reduced?
+A: Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot",REFUTED,"Ventura County, like several other California counties, adopted the Voter's Choice Act model ahead of the 2020 election, which replaces many traditional precinct polling places with fewer, larger vote centers that are open for multiple days, plus universal mail-in ballots and drop boxes. This change was implemented to expand voting options, improve accessibility, and reduce COVID-19 health risks, not to suppress in-person turnout. Election officials publicly stated the goal was increased flexibility and safety, and all registered voters still receive mail ballots and have access to vote centers and drop boxes. There is no evidence that the reduction in traditional polling places was intended to limit in-person voting; rather, it reflects a statewide shift in election administration model.",,
+325,anthropic/claude-sonnet-5,Joe Biden was the first in his family to go to college.,17-9-2020,REFUTED,Joe Biden's great grandfather got his college degree years before Joe Biden attended college,"Q: What is the name of Joe Biden's great grandfather?
+A: He was a maternal great-grandfather of Joe Biden, the 46th and current president of the United States.
+
+Q: Which college did Joe Biden's great grandfather attend?
+A: Blewitt attended Lafayette College, US, serving as class president, and earned a Bachelor of Science degree in civil engineering in 1879.
+
+Q: How many of Joe Biden's family need to have attended college to make this statement untrue?
+A: One",SUPPORTED,"Joe Biden's parents, Joseph Sr. and Catherine (Jean) Biden, did not attend college; his father worked various jobs including as a car salesman and his mother was a homemaker without higher education. Biden has repeatedly stated that he was the first in his family to attend college, referring to his graduation from the University of Delaware in 1965. No contrary evidence shows another family member attending college before him. This matches publicly known biographical facts.",,
+175,openai/gpt-6.1-sol,“Wisconsin Republicans have not passed a single bill in 6 months.”,4-10-2020,SUPPORTED,"I have went with supported because although its just shy of 6 months it is only by a very small amount.
+
+4th October 2020 - 17th april 2020","Q: What is the date of the claim?
+A: The claim was made on 04/10/2020.
+
+Q: When was a bill passed prior to the date of the claim?
+A: 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: April 17, 2020",REFUTED,"Republicans controlled both chambers of the Wisconsin Legislature, which passed bills during its January and February 2020 sessions. Governor Tony Evers signed resulting legislation in February and March 2020. These actions occurred within six months of April 10, 2020.",,
+175,google/gemini-3.8-flash,“Wisconsin Republicans have not passed a single bill in 6 months.”,4-10-2020,SUPPORTED,"I have went with supported because although its just shy of 6 months it is only by a very small amount.
+
+4th October 2020 - 17th april 2020","Q: What is the date of the claim?
+A: The claim was made on 04/10/2020.
+
+Q: When was a bill passed prior to the date of the claim?
+A: 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: April 17, 2020",REFUTED,"The Republican-controlled Wisconsin Legislature met regularly in late 2019 and early 2020. During the six months prior to April 10, 2020, both the Wisconsin State Assembly and State Senate convened and passed dozens of bills, including numerous pieces of legislation passed in January and February 2020.",,
+489,anthropic/claude-sonnet-5,Kenosha police allowed Kyle Rittenhouse to walk away after he killed two protesters and injured a third with an AR-15-style rifle.,26-8-2020,SUPPORTED,The Milwaukee Journal Sentinel reports that video and audio recordings show Rittenhouse interacting with police. It is a matter of fact that he then left the scene and turned himself in elsewhere.,"Q: When did Kyle RIttenhouse kill someone?
+A: According to eyewitness videos and the criminal complaint, Rittenhouse shot and killed Rosenbaum in a parking lot after Rosenbaum chased him and tried to grab his gun. 
+
+Rittenhouse then began running slowly down the street, but tripped and fell as a crowd began to follow him. While he was on the ground, Huber approached him with a skateboard in one hand and reached for Rittenhouse’s gun with the other. Rittenhouse fired one round that hit Huber in the chest and killed him.
+
+Rittenhouse sat up and pointed his gun at Grosskreutz, who took a step back but then moved toward Rittenhouse. He fired a shot that hit Grosskreutz in the arm.
+
+Q: Did he approach the police in the aftermath?
+A: Yes (Afterward, video footage showed Rittenhouse approaching police vehicles with his hands raised. Several vehicles passed him after he waved toward the first. A voice can be heard yelling, ""Hey, he just shot them! Hey, dude right here just shot them!"" Another voice on a police loudspeaker is heard saying, ""Someone injured, straight ahead."")
+
+Q: Did the police just let him go?
+A: Kenosha Police Chief Daniel Miskinis defended his department’s actions in an Aug. 28, 2020 news conference, saying the police in the vehicles didn’t see Rittenhouse as a threat and wouldn’t have heard yelling from the crowd over other noise. He said officers were more focused on the injuries and what happened down the street.",SUPPORTED,"Video footage from the night of August 25, 2020 shows Rittenhouse walking toward law enforcement vehicles with his hands raised immediately after the shootings, and police vehicles passed by him without stopping or detaining him at the scene. He was not arrested until later that night at his home in Antioch, Illinois. This footage was widely circulated and discussed before Moore's statement on August 26, 2020, supporting the claim that police did not detain him immediately after the shooting despite his proximity to officers.",,
+437,anthropic/claude-sonnet-5,"A 21 year old can have sex with an 11-year-old, and not be listed on the sex registry as a sex offender",1-9-2020,REFUTED,Seems from the question and answer pairs that the claim is refuted.,"Q: What is the legal age for sexual consent in California?
+A: The legal age of consent in California is 18 years old.
+
+Q: What does age of consent mean in Californian law?
+A: The age of consent refers to the age at which a person can legally marry and/or engage in sexual acts. | The age of consent is also the point at which a child can consent to engage in sexual intercourse without the act being considered statutory rape. The age of consent with regard to sexual relations in California is 18
+
+Q: Do those convicted of sex crimes in California have to sign a sex offenders register?
+A: for consensual yet illegal sexual relations between a teenager age 15 and over and a partner within 10 years of age, “sexual intercourse” (i.e., vaginal intercourse) does not require the offender to go onto the sex offender registry; rather, the judge decides based on the facts of the case whether sex offender registration is warranted or unwarranted. By contrast, for other forms of intercourse — specifically, oral and anal intercourse — sex offender registration is mandated under all situations, with no judicial discretion.
+
+Q: Has there been a recent change to Californian law regarding singing of a sex offenders register?
+A: Senator Scott Wiener (D-San Francisco) introduced Senate Bill 145 to end blatant discrimination against LGBT young people regarding California’s sex offender registry.
+
+Q: What does bill 145 change about California sexual offender law?
+A: SB 145 does not change whether or not particular behavior is a crime and does not change the potential sentence for having sex with an underage person. Rather, the bill simply gives judges the ability to evaluate whether or not to require registration as a sex offender. To be clear, this judicial discretion for sex offender registration is *already* the law for vaginal intercourse between a 15-17 year old and someone up to 10 years older. SB 145 simply extends that discretion to other forms of intercourse.",REFUTED,"In all U.S. states, sexual contact between a 21-year-old adult and an 11-year-old child constitutes statutory rape/child sexual abuse, regardless of any claimed consent, because 11-year-olds are well below the age of consent everywhere (typically 16-18). Such offenses are serious felonies that mandatorily require registration as a sex offender under state laws and the federal Adam Walsh Act (Sex Offender Registration and Notification Act). There is no legal exception that would allow a 21-year-old to have sex with an 11-year-old without facing sex offender registration. The claim misrepresents the law; it does not correspond to any actual close-in-age or Romeo-and-Juliet exception, which typically apply only to minors close in age to each other, not to a 10-year age gap with an 11-year-old.",,
+267,anthropic/claude-sonnet-5,Pennsylvania ballots will be rejected without outer and inner envelopes.,25-9-2020,SUPPORTED,The answer shows that the envelopes must be included properly for the ballot to be counted. ,"Q: What does the official guidance on voting say about the use of a secrecy envelope?
+A: As soon as the voter receives the ballot, the voter should:
+Read the instructions carefully.
+Fill out the ballot, being sure to follow instructions on how to mark selections.
+Seal the ballot in the white inner secrecy envelope that says, ""official ballot."" Make sure not to make any stray marks on the envelope.
+Then seal the inner secrecy envelope in the pre-addressed outer return envelope where the voter must sign.
+Complete and sign the voter's declaration on the outside of the outer return envelope.
+
+§ If the ballot is not enclosed in both envelopes, it will not be counted.
+
+§ If the voter does not sign the outer envelope, the ballot will not be counted.",SUPPORTED,"Pennsylvania mail-in ballot procedure requires voters to place their ballot in a secrecy envelope (inner envelope) and then into the outer mailing envelope that they sign. Pennsylvania courts, including the Pennsylvania Supreme Court, had ruled that ballots lacking the secrecy envelope (so-called 'naked ballots') could be rejected. As of September 2020, Pennsylvania election officials and guidance confirmed that ballots missing the inner secrecy envelope or outer envelope could be disqualified. This aligns with the claim that ballots without both envelopes could be rejected.",,
+16,google/gemini-3.8-flash,The plentiful evidence we have indicates that masks would not meaningfully help with aerosol transmission of COVID 19.,29-10-2020,REFUTED,"Evidence finds that surgical face masks could prevent transmission of human coronaviruses and influenza viruses from symptomatic individuals. The CDC and the World Health Organization (WHO), at the time of the claim, also recommended cloth masks for the general public.","Q: Have any studies been done to show if masks help with Aerosol transmission ?
+A: Surgical face masks significantly reduced detection of influenza virus RNA in respiratory droplets and coronavirus RNA in aerosols, with a trend toward reduced detection of coronavirus RNA in respiratory droplets. Our results indicate that surgical face masks could prevent transmission of human coronaviruses and influenza viruses from symptomatic individuals.
+
+Q: Do any health body's recommend wearing a facemask to help slow down aerosol transmission of viruses at the time of the claim (2020)?
+A: At of claim yes, the (CDC) and the World Health Organization now recommended cloth masks for the general public, but earlier in the pandemic, both organizations recommended just the opposite.",REFUTED,"By October 2020, numerous laboratory and epidemiological studies demonstrated that masks significantly reduce the emission and inhalation of respiratory droplets and aerosols. Major public health bodies, including the CDC and WHO, acknowledged that masks provide both source control and personal protection against airborne aerosol transmission of SARS-CoV-2.",,
+93,google/gemini-3.8-flash,US Judge Amy Coney Barrett graduated at the top of her law school class at Notre Dame Law School,14-10-2020,SUPPORTED,Judge Amy Coney Barrett graduated at the top of her law school class,"Q: Which School of Law did US Judge Amy Coney Barrett graduate from?
+A: Notre Dame Law School.
+
+Q: Did US Judge Amy Coney Barrett do well in Notre Dame Law School?
+A: Amy Coney Barrett graduated first in her class in law school.",SUPPORTED,"Amy Coney Barrett graduated summa cum laude from Notre Dame Law School in 1997, finishing first in her class.",,
+107,google/gemini-3.8-flash,Anthony Fauci the NIAID director is a democrat.,13-10-2020,REFUTED,"From the source,  Fauci says he is an independent nonpartisan and his voter registration shows that he is not affiliated with any political party. ","Q: Is Anthony Fauci the NIAID director registered with a political party?
+A: No (Fauci says he is an independent nonpartisan and his voter registration shows that he is not affiliated with any political party, although he still votes)",REFUTED,Voter registration records show that Anthony Fauci is registered as an independent and is not affiliated with any political party. He has served as a career public official under presidents of both major political parties since 1984.,,
+301,google/gemini-3.8-flash,Melissa Francis is married to Wray Thorn.,19-9-2020,SUPPORTED,Melissa Francis' husband is Wray Thorn ,"Q: Who is Melissa Francis married to?
+A: The American news anchor and author is married to Wray Thorn",SUPPORTED,Melissa Francis married Wray Thorn in 1997. They remained married as of September 2020.,,
+104,google/gemini-3.8-flash,"Amy Coney Barrett's nomination to the Supreme Court would be confirmed in October 2020, by a Senate majority that represents 15 million fewer people than the minority party.",13-10-2020,SUPPORTED,Confirmed via numbers in the QA Pairs.,"Q: Is Amy Coney Barrett a U.S Republican or U.S Democrat?
+A: Barrett's nomination was generally supported by Republicans, who sought to confirm her before the 2020 United States presidential election.
+
+Q: Will Amy Coney Barrett nomination to the Supreme Court be confirmed by a Senate majority that represents 15 MILLION FEWER PEOPLE than the minority party'
+A: Yes (the current Republican Senate “majority” represents about 15 million fewer people than the Democratic “minority.”)",SUPPORTED,"Based on U.S. Census population data divided proportionally among each state's two senators, the 53 Republican senators in the majority represented approximately 153 million Americans, while the 47 Democratic and independent senators in the minority represented approximately 168 million Americans. This creates a difference of approximately 15 million people.",,
+438,openai/gpt-6.1-sol,"In Massachusetts, ""anybody can go vote for anybody so long as they have their information. … They're not even checking IDs at the polling stations.""",1-9-2020,REFUTED,"From the question and answer pairs it seems that it is illegal to vote in Massachusetts without the correct forms. Therefore, the claim is refuted","Q: Is it legal to vote using someone else's information in Massachusetts?
+A: No it is illegal:
+
+Section 26: Illegal voting or attempt to vote
+Section 26. Whoever, knowing that he is not a qualified voter in any place, wilfully votes or attempts to vote therein; whoever votes or attempts to vote more than once on his own name, his name having been registered more than once; whoever votes or attempts to vote in more than one voting precinct or town, his name having been registered in more than one voting precinct or town; whoever votes or attempts to vote in any name other than his own, or knowingly casts or attempts to cast more than one ballot at one time of balloting; or whoever votes or attempts to vote otherwise illegally, shall be punished by a fine of not more than ten thousand dollars or by imprisonment for not more than five years, or both.
+
+Q: Is Photo ID required in order to vote in Massachusetts?
+A: No (Massachusetts does not require everyone to show a government-issued photo ID in order to vote, but there are some instances when people will be asked to show identification before voting.)",REFUTED,"Massachusetts generally does not require voters to show identification, but poll workers check their names and addresses against voter registration lists. Identification is required in certain circumstances, including for some first-time voters who registered by mail and inactive voters. Knowing another person's information does not authorize someone to vote for them; voter impersonation is illegal.",,
+17,openai/gpt-6.1-sol,All USA Ballots Arriving After Election Day Will Be Thrown Out,28-10-2020,REFUTED,"Two sources confirm that postal ballots received after election day can still be counted, therefore not all will be thrown out.","Q: What was the election day in the 2020 US presidential elections?
+A: November 3, 2020.
+
+Q: When was the deadline to receiving votes by mail?
+A: Your mail-in ballot must be mailed or dropped in a drop off box location location by 8 pm on Election Day, November 3. If you mail your ballot, it must be postmarked on or before November 3, 2020 to be counted.
+
+Q: Was there an extension to the deadline of receipt of mail ballots in the 2020 elections?
+A: Yes (Numbered
+Memorandum 2020-22 (“Memo 2020-22”), the policy at issue in this case, makes two
+accommodations in light of the COVID-19 pandemic and “[d]ue to current delays with
+mail sent with the U.S. Postal Service.” Memo 2020-22, at 1. First, it extends the
+deadline by which timely mailed ballots must be received in order to be counted from
+three days after Election Day to nine days; and, second, it expands the mechanisms
+by which officials can determine the date on which an absentee ballot was mailed.
+Memo 2020-22, at 1.)
+
+Q: What was the deadline for receipt of mail ballots in Alaska and Maryland in the 2020 US presidential elections?
+A: Absentee ballots must be postmarked by Nov. 3 and received by Nov. 13.",REFUTED,"Ballot-receipt deadlines varied by state. In California, mail ballots postmarked by Election Day could be counted if received within 17 days afterward. Illinois also accepted ballots postmarked by Election Day and received within 14 days afterward. Therefore, ballots arriving after Election Day were not universally discarded.",,
