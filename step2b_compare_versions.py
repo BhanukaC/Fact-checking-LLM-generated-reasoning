@@ -29,6 +29,7 @@ def load(path):
 
 
 v2, v3 = load("outputs_eval_v2.jsonl"), load("outputs_eval.jsonl")
+#print(list(v3.items())[0])
 
 # 1. Sanity check of the new run
 print(

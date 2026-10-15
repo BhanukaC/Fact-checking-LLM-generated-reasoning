@@ -1,4 +1,4 @@
-claim_id,model,claim,claim_date,gold_label,gold_justification,gold_evidence_qa,llm_label,llm_reasoning,reasoning_ok (yes/no/unsure),notes
+﻿claim_id,model,claim,claim_date,gold_label,gold_justification,gold_evidence_qa,llm_label,llm_reasoning,reasoning_ok (yes/no/unsure),notes
 99,google/gemini-3.8-flash,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,14-10-2020,REFUTED,The answer and source show that the claim is not correct so it is refuted.,"Q: Are babies born alive after an abortion in NZ entitled to  medical support?
 A: Yes (Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.)
 
