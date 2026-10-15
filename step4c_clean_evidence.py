@@ -1,4 +1,5 @@
 import csv, json, re
+import difflib
 from collections import Counter
 from datetime import date
 from urllib.parse import urlparse
@@ -19,33 +20,21 @@ FACTCHECK_DOMAINS = {
     "sciencefeedback.co",
     "truthorfiction.com",
     "newschecker.in",
-    "vishvasnews.com",
     "factcheckni.org",
     "misbar.com",
-    "teyit.org",
 }
-STOP = {
-    "the",
-    "a",
-    "an",
-    "of",
-    "in",
-    "to",
-    "and",
-    "was",
-    "is",
-    "that",
-    "for",
-    "on",
-    "it",
-    "by",
-    "with",
-    "as",
-    "at",
-    "be",
-    "are",
-    "this",
-}
+
+
+COPY_THRESHOLD = 0.75
+
+
+def is_copy_of_claim(sentence, claim):
+    """True if the sentence is a near word-for-word copy of the claim.
+    Compares the two as sequences of lowercase words, so word order matters.
+    Sharing the claim's words is not enough: real reporting does that too."""
+    s_words = re.findall(r"[a-z0-9]+", sentence.lower())
+    c_words = re.findall(r"[a-z0-9]+", claim.lower())
+    return difflib.SequenceMatcher(None, s_words, c_words).ratio() >= COPY_THRESHOLD
 
 
 def real_url(url):
@@ -86,8 +75,7 @@ def parse_date(s):
     return date(y, m, d)
 
 
-def content_words(text):
-    return set(re.findall(r"[a-z0-9]+", text.lower())) - STOP
+
 
 
 # Load the sample, the full dev set (for the claim's source URLs) and the BM25 candidates
@@ -115,14 +103,14 @@ for cid, c in sorted(claims.items()):
         )
         if u
     }
-    claim_words = content_words(c["claim"])
+    
     cdate = parse_date(c["claim_date"])
 
     seen, kept = set(), []
     for rank, s in enumerate(evidence[cid]["top_100"]):
         sent, url = s["sentence"].strip(), s["url"]
         key = sent.lower()
-        words = content_words(sent)
+        
 
         if sent.lower().startswith("pingback") or len(sent.split()) < 5:
             reason = "noise"
@@ -132,7 +120,7 @@ for cid, c in sorted(claims.items()):
             reason = "factcheck_source"
         elif norm_url(url) in own_urls:
             reason = "claim_own_source"
-        elif claim_words and len(claim_words & words) / len(claim_words) >= 0.8:
+        elif is_copy_of_claim(sent, c["claim"]):
             reason = "copy_of_claim"
         elif url_date(url) and url_date(url) > cdate:
             reason = "after_claim_date"
