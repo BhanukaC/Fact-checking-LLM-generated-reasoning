@@ -28,10 +28,7 @@ FACTCHECK_DOMAINS = {
     "sciencefeedback.co",
     "truthorfiction.com",
     "newschecker.in",
-    "vishvasnews.com",
     "factcheckni.org",
-    "misbar.com",
-    "teyit.org",
 }
 
 
