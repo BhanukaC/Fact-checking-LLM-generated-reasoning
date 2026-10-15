@@ -1,14 +1,14 @@
 ﻿claim_id,claim,claim_date,gold_label,gold_justification,gold_evidence_qa,gold_label_looks_right (yes/no/unsure),notes
 13,Wearing face masks will stop the spread of covid 19,29-10-2020,SUPPORTED,"From the question and answer pair it does indeed seem that face masks are useful in stopping the spread of covid19. Therefore, the claim is supported.","Q: Does a face mask prevent the spread of Covid 19?
-A: Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.",,
+A: Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.",yes,claim says stop but it reduce the spread
 99,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,14-10-2020,REFUTED,The answer and source show that the claim is not correct so it is refuted.,"Q: Are babies born alive after an abortion in NZ entitled to  medical support?
 A: Yes (Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.)
 
 Q: Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ?
-A: False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.",,
-113,Congress MP Rahul Gandhi has been listed as the seventh most educated leader by Forbes.,12-10-2020,SUPPORTED,Confirmed.,"Q: what is Rahul Gandhi's position on the forbes list?
-A: “Mr. Rahul Gandhi is number 7 in the world’s most educated leader survey in Forbes list, ” the Facebook post read.",,
-196,Video shared to make misleading claim that Hathras victim’s family did her last rites,1-10-2020,REFUTED,The sources show that the family did not give their relative the last rites so the claim is refuted.,"Q: Did Hathras victim’s family did her last rites ?
+A: False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.",no,label issue
+113,Congress MP Rahul Gandhi has been listed as the seventh most educated leader by Forbes.,12/10/20,SUPPORTED,Confirmed.,"Q: what is Rahul Gandhi's position on the forbes list?
+A: “Mr. Rahul Gandhi is number 7 in the world’s most educated leader survey in Forbes list, ” the Facebook post read.",no,Based on a facebook post not on actual source
+196,Video shared to make misleading claim that Hathras victim’s family did her last rites,1/10/20,REFUTED,The sources show that the family did not give their relative the last rites so the claim is refuted.,"Q: Did Hathras victim’s family did her last rites ?
 A: Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured in Uttar Pradesh's Hathras, was cremated by policemen last night, allegedly as her family and relatives were locked up in their homes. A disturbing sequence of events captured in overnight visuals shows the family arguing with cops, female relatives throwing themselves on the hood of the ambulance carrying the body and a mother weeping helplessly as cops insist on taking her daughter straight to cremation, without allowing a last look.
 
 Q: Did the police forcibly cremated Hathras' body ?
@@ -17,7 +17,7 @@ A: Reports about forced cremation
 At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in their home, reported NDTV. The police reportedly formed a human chain around the cremation to prevent anyone from approaching the ground.
 
 Q: What happened in the Hathras assault case?
-A: The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in the assault that drew parallels to the 2012 Nirbhaya gang-rape",,
+A: The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in the assault that drew parallels to the 2012 Nirbhaya gang-rape",no,only checks inner claim
 258,A Supreme Court nominee has never been nominated and installed while a presidential election is already underway.,27-9-2020,REFUTED,there has been previous  Supreme Court nominations while a presidential election is already underway ,"Q: When was the claim made?
 A: 27/09/2020
 
@@ -36,9 +36,9 @@ On February 15, 1932, President Herbert Hoover (a Republican) nominated Benjamin
 
 On January 4, 1940, President Franklin Roosevelt (a Democrat) nominated Frank Murphy to replace Pierce Butler, who died on November 16, 1939; Murphy was confirmed by a heavily Democratic Senate on January 16, 1940, by a voice vote.
 
-On November 30, 1987, President Ronald Reagan (a Republican) nominated Justice Anthony Kennedy to fill the vacancy created by the retirement of Lewis Powell.  A Democratic-controlled Senate confirmed Kennedy (who followed Robert Bork and Douglas Ginsburg as nominees for that slot) on February 3, 1988, by a vote of ninety-seven to zero.",,
+On November 30, 1987, President Ronald Reagan (a Republican) nominated Justice Anthony Kennedy to fill the vacancy created by the retirement of Lewis Powell.  A Democratic-controlled Senate confirmed Kennedy (who followed Robert Bork and Douglas Ginsburg as nominees for that slot) on February 3, 1988, by a vote of ninety-seven to zero.",no,timeline is unclear
 330,Ventura County election officials are reducing voting locations in order to limit in-person voter turnout.,16-9-2020,SUPPORTED,"Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot","Q: Is California reducing its amount of voting stations?
 A: Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for the March primary, but has only secured 39 sites for the November election. In Santa Barbara, officials are reducing the number of in-person voting sites from 86 to 25.
 
 Q: Why are Voting station numbers being reduced?
-A: Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot",,
+A: Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot",no,in person voting reduced due to covid
