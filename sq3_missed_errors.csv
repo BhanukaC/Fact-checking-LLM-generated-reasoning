@@ -1,0 +1,1125 @@
+﻿claim_id,model,condition,claim,gold_label,llm_label,llm_reasoning,flagged_by,gold_evidence_qa,statements_and_passages,claim_check,error_statement (sid or none),category (no factual error / retrieval failure / partial evidence / verifier failure),notes
+13,anthropic/claude-sonnet-5,gold,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"As of October 2020, scientific consensus held that face masks reduce but do not completely stop the transmission of COVID-19. Masks were understood as one layer of a multi-layered mitigation strategy (alongside distancing, hand hygiene, and ventilation) that lowers the probability of viral transmission by blocking respiratory droplets, but they do not provide complete protection, especially with inconsistent use, improper fit, or lower-quality materials. Breakthrough transmission among masked individuals was already documented, and studies showed reduction rates rather than full prevention. The claim's absolute phrasing that masks 'will stop' spread overstates the actual evidence, which supported mask-wearing as risk-reducing, not as a guaranteed stop to transmission.",similarity verifier,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-claude-1] UNVERIFIED (e 0.06, c 0.00): As of October 2020, face masks reduce the transmission of COVID-19.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-2] UNVERIFIED (e 0.07, c 0.02): As of October 2020, face masks do not completely stop the transmission of COVID-19.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-3] UNVERIFIED (e 0.00, c 0.00): Masks were understood as one layer of a multi-layered mitigation strategy against COVID-19.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-4] UNVERIFIED (e 0.00, c 0.00): Distancing was part of the multi-layered mitigation strategy against COVID-19.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-5] UNVERIFIED (e 0.00, c 0.00): Hand hygiene was part of the multi-layered mitigation strategy against COVID-19.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-6] UNVERIFIED (e 0.00, c 0.00): Ventilation was part of the multi-layered mitigation strategy against COVID-19.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-7] UNVERIFIED (e 0.01, c 0.00): Masks lower the probability of viral transmission by blocking respiratory droplets.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-8] UNVERIFIED (e 0.00, c 0.00): Masks do not provide complete protection, especially with inconsistent use.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-9] UNVERIFIED (e 0.00, c 0.00): Masks do not provide complete protection, especially with improper fit.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-10] UNVERIFIED (e 0.02, c 0.01): Masks do not provide complete protection, especially with lower-quality materials.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-11] UNVERIFIED (e 0.00, c 0.01): Breakthrough transmission among masked individuals was already documented as of October 2020.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-claude-12] SUPPORTED (e 0.98, c 0.00): Studies showed reduction rates rather than full prevention of COVID-19 transmission with mask-wearing.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 ","claim verdict UNVERIFIED (e 0.01, c 0.00); strongest contradiction: Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of",,,
+13,google/gemini-3.8-flash,gold,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"Public health agencies and scientific studies establish that wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2. However, masks do not completely prevent or stop the spread of COVID-19 on their own, and health authorities emphasize that they must be combined with other protective measures such as physical distancing and ventilation.",none,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-gemini-1] UNVERIFIED (e 0.91, c 0.00): Wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gemini-2] SUPPORTED (e 0.98, c 0.00): Face masks do not completely prevent the spread of COVID-19 on their own.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gemini-3] UNVERIFIED (e 0.00, c 0.00): Face masks must be combined with other protective measures such as physical distancing.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gemini-4] UNVERIFIED (e 0.00, c 0.00): Face masks must be combined with other protective measures such as ventilation.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 ","claim verdict UNVERIFIED (e 0.01, c 0.00); strongest contradiction: Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of",,,
+13,openai/gpt-6.1-sol,gold,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"By 29 October 2020, evidence indicated that face masks could reduce COVID-19 transmission by limiting infectious respiratory particles. They did not eliminate transmission, and their effectiveness depended on mask type, fit and consistent use. Wearing masks alone could not guarantee that the spread would stop.",verifier,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-gpt-1] UNVERIFIED (e 0.00, c 0.00): By 29 October 2020, face masks could reduce COVID-19 transmission by limiting infectious respiratory particles.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gpt-2] UNVERIFIED (e 0.80, c 0.05): Face masks did not eliminate COVID-19 transmission.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gpt-3] UNVERIFIED (e 0.01, c 0.03): The effectiveness of face masks depended on mask type.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gpt-4] UNVERIFIED (e 0.00, c 0.00): The effectiveness of face masks depended on fit.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gpt-5] UNVERIFIED (e 0.00, c 0.00): The effectiveness of face masks depended on consistent use.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 
+[13-gpt-6] UNVERIFIED (e 0.86, c 0.01): Wearing masks alone could not guarantee that the spread of COVID-19 would stop.
+    - Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 ","claim verdict UNVERIFIED (e 0.01, c 0.00); strongest contradiction: Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of",,,
+29,openai/gpt-6.1-sol,gold,The Wire called Durga puja racist and the goddess Durga a sex worker,REFUTED,SUPPORTED,"The Wire published an opinion essay, 'Why I Won’t Celebrate Durga Puja', describing the festival as racist and casteist. It also recounted an alternative account portraying Durga as a sex worker sent to kill Mahishasura. These were a contributor’s arguments and a retelling of that account, not an established historical description or necessarily the publication’s editorial position.",bm25 similarity verifier,"Who was ""The Wire"" referencing in the article from which the claim was derived They were referencing HRD minister Smriti Irani
+Did HRD minister Smriti Irani make the comments herself She read from a pamphlet allegedly brought out by the organisers of the event","[29-gpt-1] UNVERIFIED (e 0.00, c 0.88): The Wire published an opinion essay titled 'Why I Won’t Celebrate Durga Puja'.
+    - Who was ""The Wire"" referencing in the article from which the claim was derived They were referencing HRD minister Smriti Irani
+    - Did HRD minister Smriti Irani make the comments herself She read from a pamphlet allegedly brought out by the organisers of the event
+[29-gpt-4] UNVERIFIED (e 0.00, c 0.00): An alternative account portrays Durga as a sex worker.
+    - Who was ""The Wire"" referencing in the article from which the claim was derived They were referencing HRD minister Smriti Irani
+    - Did HRD minister Smriti Irani make the comments herself She read from a pamphlet allegedly brought out by the organisers of the event
+[29-gpt-5] UNVERIFIED (e 0.01, c 0.00): The alternative account portrays Durga as having been sent to kill Mahishasura.
+    - Who was ""The Wire"" referencing in the article from which the claim was derived They were referencing HRD minister Smriti Irani
+    - Did HRD minister Smriti Irani make the comments herself She read from a pamphlet allegedly brought out by the organisers of the event","claim verdict UNVERIFIED (e 0.00, c 0.42); strongest contradiction: Did HRD minister Smriti Irani make the comments herself She read from a pamphlet allegedly brought out by the organisers of the event",,,
+42,anthropic/claude-sonnet-5,gold,An 'anti-Black Lives Matter' flag replaced the American flag behind President Trump during a Waukesha campaign rally.,SUPPORTED,REFUTED,"This claim refers to a viral social media claim about a Trump rally in Waukesha, Wisconsin in October 2020. The claim alleged that an anti-BLM flag replaced the American flag behind Trump. In reality, the flags behind Trump at these rallies were typically a combination of American flags and campaign-related flags (such as 'Trump 2020' or 'Make America Great Again' flags), not an 'anti-Black Lives Matter' flag replacing the American flag. No credible contemporaneous reporting confirmed that the American flag was literally replaced by an anti-BLM flag; this appears to be a mischaracterization or exaggeration of the rally's staging, likely based on a misleading photo or video angle that went viral without full context.",bm25 similarity verifier,"What flag is seen as an anti Black Lives Matter flag? The Blue Lives Matter Flag is said to have racist symbolism which is anti Black Lives Matter.
+Did the Blue Lives Matter Flag show at a Donald trump Rally in Waukesha campaign rally in 2020? Yes. A large Blue Lives Matter Flag was behind the podium on which Donald Trump spoke at during the Waukesha rally.","[42-claude-6] UNVERIFIED (e 0.51, c 0.02): An 'anti-Black Lives Matter' flag did not replace the American flag behind Trump at these rallies in October 2020.
+    - What flag is seen as an anti Black Lives Matter flag? The Blue Lives Matter Flag is said to have racist symbolism which is anti Black Lives Matter.
+    - Did the Blue Lives Matter Flag show at a Donald trump Rally in Waukesha campaign rally in 2020? Yes. A large Blue Lives Matter Flag was behind the podium on which Donald 
+[42-claude-7] UNVERIFIED (e 0.03, c 0.45): No credible contemporaneous reporting confirmed that the American flag was literally replaced by an anti-BLM flag behind Trump at the Waukesha rally in October 2020.
+    - What flag is seen as an anti Black Lives Matter flag? The Blue Lives Matter Flag is said to have racist symbolism which is anti Black Lives Matter.
+    - Did the Blue Lives Matter Flag show at a Donald trump Rally in Waukesha campaign rally in 2020? Yes. A large Blue Lives Matter Flag was behind the podium on which Donald ","claim verdict UNVERIFIED (e 0.19, c 0.40); strongest contradiction: Did the Blue Lives Matter Flag show at a Donald trump Rally in Waukesha campaign rally in 2020? Yes. A large Blue Lives Matter Flag was behind the podium on whi",,,
+99,anthropic/claude-sonnet-5,gold,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,REFUTED,SUPPORTED,"New Zealand's Abortion Legislation Act 2020 removed abortion from the Crimes Act and treated it primarily as a health and regulatory matter, focusing on procedural and conscientious objection provisions. The Act itself does not contain an explicit clause requiring medical practitioners to provide life-saving care to infants who survive an abortion procedure. This gap was raised during parliamentary debate, with some MPs and advocacy groups noting the absence of a specific born-alive protection clause in the bill. The government's position was that existing general laws (such as those governing homicide and medical duty of care) would apply once a child is born alive, but these are not part of the Abortion Legislation Act itself. Therefore, the claim accurately reflects that the Act does not explicitly mandate such care within its own text.",similarity verifier,"Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.
+Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.","[99-claude-1] UNVERIFIED (e 0.00, c 0.00): New Zealand's Abortion Legislation Act 2020 removed abortion from the Crimes Act.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-2] UNVERIFIED (e 0.01, c 0.00): New Zealand's Abortion Legislation Act 2020 treated abortion primarily as a health matter.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-3] UNVERIFIED (e 0.00, c 0.00): New Zealand's Abortion Legislation Act 2020 treated abortion primarily as a regulatory matter.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-4] UNVERIFIED (e 0.01, c 0.00): New Zealand's Abortion Legislation Act 2020 focused on procedural provisions.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-5] UNVERIFIED (e 0.00, c 0.01): New Zealand's Abortion Legislation Act 2020 focused on conscientious objection provisions.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-6] SUPPORTED (e 1.00, c 0.07): New Zealand's Abortion Legislation Act 2020 does not contain an explicit clause requiring medical practitioners to provide life-saving care to infants who survive an abortion procedure.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-7] UNVERIFIED (e 0.00, c 0.00): The absence of a specific born-alive protection clause in the Abortion Legislation bill was raised during parliamentary debate.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-8] UNVERIFIED (e 0.72, c 0.06): Existing general laws governing homicide would apply once a child is born alive.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-9] SUPPORTED (e 0.99, c 0.14): Existing general laws governing medical duty of care would apply once a child is born alive.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-10] UNVERIFIED (e 0.13, c 0.01): Existing general laws governing homicide are not part of New Zealand's Abortion Legislation Act 2020 itself.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-claude-11] UNVERIFIED (e 0.89, c 0.00): Existing general laws governing medical duty of care are not part of New Zealand's Abortion Legislation Act 2020 itself.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'","claim verdict SUPPORTED (e 1.00, c 0.99); strongest contradiction: Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person ",,,
+99,google/gemini-3.8-flash,gold,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,REFUTED,SUPPORTED,"New Zealand's Abortion Legislation Act 2020 does not include a specific provision requiring medical support for infants born alive following an abortion procedure. An amendment proposed during the legislative process to mandate medical care in such circumstances was voted down by Parliament. While general legal and professional duties under other legislation (such as the Crimes Act 1961) apply to any person born alive, the Abortion Legislation Act itself does not contain this requirement.",bm25,"Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.
+Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.","[99-gemini-1] SUPPORTED (e 1.00, c 0.04): New Zealand's Abortion Legislation Act 2020 does not include a specific provision requiring medical support for infants born alive following an abortion procedure.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-gemini-2] SUPPORTED (e 1.00, c 0.00): An amendment to mandate medical care for infants born alive following an abortion procedure was proposed during the legislative process for New Zealand's Abortion Legislation Act 2020.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-gemini-3] SUPPORTED (e 1.00, c 0.99): Parliament voted down the amendment to New Zealand's Abortion Legislation Act 2020 that would mandate medical care for infants born alive following an abortion procedure.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-gemini-4] UNVERIFIED (e 0.01, c 0.00): General legal duties under other New Zealand legislation (such as the Crimes Act 1961) apply to any person born alive.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'
+[99-gemini-5] UNVERIFIED (e 0.00, c 0.00): General professional duties under other New Zealand legislation (such as the Crimes Act 1961) apply to any person born alive.
+    - Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has th
+    - Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand'","claim verdict SUPPORTED (e 1.00, c 0.99); strongest contradiction: Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person ",,,
+147,google/gemini-3.8-flash,gold,"Because of a so-called trade war with China, America lost 300,000 manufacturing jobs.",SUPPORTED,REFUTED,"Between the start of Donald Trump's presidency in 2017 and the onset of the COVID-19 pandemic in early 2020, the United States gained roughly 400,000 to 500,000 manufacturing jobs rather than losing them. The figure of 300,000 jobs came from a Moody's Analytics study estimating jobs lost or not created across the entire U.S. economy due to the trade war, not manufacturing jobs specifically.",bm25 similarity verifier,"How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300,000 jobs through September, based on an economic simulation.","[147-gemini-1] UNVERIFIED (e 0.02, c 0.36): Between the start of Donald Trump's presidency in 2017 and the onset of the COVID-19 pandemic in early 2020, the United States gained roughly 400,000 to 500,000 manufacturing jobs.
+    - How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300
+[147-gemini-3] SUPPORTED (e 0.97, c 0.00): An estimated 300,000 jobs were lost or not created across the entire U.S. economy due to the trade war with China.
+    - How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300","claim verdict UNVERIFIED (e 0.01, c 0.00); strongest contradiction: How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018",,,
+147,openai/gpt-6.1-sol,gold,"Because of a so-called trade war with China, America lost 300,000 manufacturing jobs.",SUPPORTED,REFUTED,"A 2019 Moody’s Analytics estimate attributed roughly 300,000 fewer U.S. jobs to the trade war with China. That estimate covered the entire economy, not manufacturing alone, and measured employment below a no-trade-war scenario rather than actual layoffs. The claim incorrectly describes those 300,000 jobs as manufacturing jobs.",bm25 similarity verifier,"How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300,000 jobs through September, based on an economic simulation.","[147-gpt-1] UNVERIFIED (e 0.93, c 0.03): A 2019 Moody’s Analytics estimate attributed roughly 300,000 fewer U.S. jobs to the trade war with China.
+    - How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300
+[147-gpt-2] UNVERIFIED (e 0.01, c 0.00): The 2019 Moody’s Analytics estimate covered the entire U.S. economy.
+    - How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300
+[147-gpt-3] UNVERIFIED (e 0.00, c 0.00): The 2019 Moody’s Analytics estimate was not limited to manufacturing.
+    - How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300
+[147-gpt-4] SUPPORTED (e 0.99, c 0.00): The 2019 Moody’s Analytics estimate measured employment below a no-trade-war scenario.
+    - How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300
+[147-gpt-5] SUPPORTED (e 0.99, c 0.00): The 2019 Moody’s Analytics estimate did not measure actual layoffs.
+    - How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018, cost 300","claim verdict UNVERIFIED (e 0.01, c 0.00); strongest contradiction: How many jobs have been lost because of the USA-China trade war? A report from Moody’s Analytics says that the trade war with China, which started in early 2018",,,
+175,openai/gpt-6.1-sol,gold,“Wisconsin Republicans have not passed a single bill in 6 months.”,SUPPORTED,REFUTED,"Wisconsin’s Republican-controlled Assembly passed a COVID-19 relief bill on April 14, 2020, and the Senate passed it on April 15. Governor Tony Evers signed it as 2019 Wisconsin Act 185 on April 15. Those votes occurred within the six months preceding October 4, 2020.",bm25 similarity verifier,"What is the date of the claim? The claim was made on 04/10/2020.
+When was a bill passed prior to the date of the claim? 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: April 17, 2020","[175-gpt-1] UNVERIFIED (e 0.01, c 0.04): Wisconsin’s Republican-controlled Assembly passed a COVID-19 relief bill on April 14, 2020.
+    - What is the date of the claim? The claim was made on 04/10/2020.
+    - When was a bill passed prior to the date of the claim? 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: 
+[175-gpt-2] UNVERIFIED (e 0.01, c 0.02): The Wisconsin Senate passed the COVID-19 relief bill on April 15, 2020.
+    - What is the date of the claim? The claim was made on 04/10/2020.
+    - When was a bill passed prior to the date of the claim? 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: 
+[175-gpt-3] UNVERIFIED (e 0.02, c 0.20): Governor Tony Evers signed the COVID-19 relief bill as 2019 Wisconsin Act 185 on April 15, 2020.
+    - What is the date of the claim? The claim was made on 04/10/2020.
+    - When was a bill passed prior to the date of the claim? 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: 
+[175-gpt-4] SUPPORTED (e 0.98, c 0.12): The Wisconsin Assembly’s vote on the COVID-19 relief bill occurred within the six months preceding October 4, 2020.
+    - What is the date of the claim? The claim was made on 04/10/2020.
+    - When was a bill passed prior to the date of the claim? 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: 
+[175-gpt-5] SUPPORTED (e 0.98, c 0.15): The Wisconsin Senate’s vote on the COVID-19 relief bill occurred within the six months preceding October 4, 2020.
+    - What is the date of the claim? The claim was made on 04/10/2020.
+    - When was a bill passed prior to the date of the claim? 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effective date: ","claim verdict REFUTED (e 0.04, c 0.99); strongest contradiction: When was a bill passed prior to the date of the claim? 2019 Wisconsin Act 185 makes numerous changes to state law in response to the COVID-19 outbreak. 
+
+Effect",,,
+196,anthropic/claude-sonnet-5,gold,Video shared to make misleading claim that Hathras victim’s family did her last rites,REFUTED,SUPPORTED,"In the Hathras case (September 2020), UP police cremated the victim's body at night without her family's consent and against their wishes, not allowing them to perform the customary last rites as per their religious practices. This was a major point of controversy and media coverage at the time, with the family alleging they were locked inside their home while police carried out the cremation. Given this well-documented context, a video claiming that the family itself performed the last rites would indeed be misleading, as it contradicts the family's own accounts and widespread reporting about forced cremation by police.",bm25 similarity verifier,"Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured in Uttar Pradesh's Hathras, was cremated by policemen last night, allegedly as her family and relatives were locked up in their homes. A disturbing sequence of events captured in overnight visuals shows the family arguing with cops, female relatives throwing themselves on the hood of the ambulance carrying the body and a mother weeping helplessly as cops insist on taking her daughter straight to cremation, without allowing a last look.
+Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in their home, reported NDTV. The police reportedly formed a human chain around the cremation to prevent anyone from approaching the ground.
+What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in the assault that drew parallels to the 2012 Nirbhaya gang-rape","[196-claude-1] SUPPORTED (e 0.99, c 0.08): In the Hathras case (September 2020), UP police cremated the victim's body at night.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-claude-2] SUPPORTED (e 0.99, c 0.02): UP police cremated the Hathras victim's body without her family's consent.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-claude-3] SUPPORTED (e 0.99, c 0.01): UP police cremated the Hathras victim's body against her family's wishes.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-claude-4] SUPPORTED (e 0.98, c 0.00): UP police did not allow the Hathras victim's family to perform the customary last rites as per their religious practices.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-claude-5] UNVERIFIED (e 0.00, c 0.00): The police cremation of the Hathras victim in September 2020 was a major point of controversy at the time.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-claude-6] UNVERIFIED (e 0.41, c 0.01): The police cremation of the Hathras victim in September 2020 received media coverage at the time.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-claude-7] SUPPORTED (e 1.00, c 0.04): The Hathras victim's family were locked inside their home while police carried out the cremation.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in ","claim verdict UNVERIFIED (e 0.01, c 0.81); strongest contradiction: Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her",,,
+196,google/gemini-3.8-flash,gold,Video shared to make misleading claim that Hathras victim’s family did her last rites,REFUTED,SUPPORTED,"Following the cremation of the Hathras rape victim in late September 2020, social media users shared a video alleging that the victim's family consented to and performed her last rites. Multiple journalists and ground reports documented that the cremation was conducted in the middle of the night by Uttar Pradesh police without the family's permission, while the family protested. Thus, the video was indeed circulated with misleading claims.",bm25 similarity verifier,"Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured in Uttar Pradesh's Hathras, was cremated by policemen last night, allegedly as her family and relatives were locked up in their homes. A disturbing sequence of events captured in overnight visuals shows the family arguing with cops, female relatives throwing themselves on the hood of the ambulance carrying the body and a mother weeping helplessly as cops insist on taking her daughter straight to cremation, without allowing a last look.
+Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in their home, reported NDTV. The police reportedly formed a human chain around the cremation to prevent anyone from approaching the ground.
+What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in the assault that drew parallels to the 2012 Nirbhaya gang-rape","[196-gemini-1] UNVERIFIED (e 0.00, c 0.00): The Hathras rape victim was cremated in late September 2020.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-gemini-2] UNVERIFIED (e 0.00, c 0.00): Following the cremation of the Hathras rape victim, social media users shared a video.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-gemini-5] SUPPORTED (e 1.00, c 0.00): The Hathras rape victim's cremation was conducted in the middle of the night.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-gemini-6] SUPPORTED (e 1.00, c 0.00): The Hathras rape victim's cremation was conducted by Uttar Pradesh police.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-gemini-7] SUPPORTED (e 0.99, c 0.01): The Hathras rape victim's cremation was conducted without her family's permission.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in 
+[196-gemini-8] SUPPORTED (e 0.96, c 0.00): The Hathras rape victim's family protested while her cremation was conducted.
+    - Did Hathras victim’s family did her last rites ? Hathras, Uttar Pradesh: A 20-year-old woman, who died on Tuesday in Delhi two weeks after she was gang-raped and tortured
+    - Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her family in
+    - What happened in the Hathras assault case? The woman died at Delhi's Safdarjung Hospital. She had suffered multiple fractures, paralysis and a deep gash in her tongue in ","claim verdict UNVERIFIED (e 0.01, c 0.81); strongest contradiction: Did the police forcibly cremated Hathras' body ? Reports about forced cremation
+
+At 2.30 am, the UP police forcibly cremated the victim’s body after locking her",,,
+330,anthropic/claude-sonnet-5,gold,Ventura County election officials are reducing voting locations in order to limit in-person voter turnout.,SUPPORTED,REFUTED,"In 2020, Ventura County, like many California counties, transitioned to the Voter's Choice Act model, which consolidates traditional neighborhood polling places into fewer, larger vote centers. This change was accompanied by expanded early voting days, universal mail-in ballots, and additional drop-off locations, all implemented due to COVID-19 safety concerns and to make voting more accessible overall, not to suppress turnout. Election officials publicly stated the goal was to protect public health while maintaining or increasing voter access, not to limit in-person voting. There is no evidence that the reduction in physical sites was intended to restrict turnout; rather, it was part of a broader strategy to safely expand voting options during the pandemic.",bm25 similarity verifier,"Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for the March primary, but has only secured 39 sites for the November election. In Santa Barbara, officials are reducing the number of in-person voting sites from 86 to 25.
+Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot","[330-claude-1] UNVERIFIED (e 0.00, c 0.01): In 2020, Ventura County transitioned to the Voter's Choice Act model.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-2] UNVERIFIED (e 0.01, c 0.03): In 2020, many California counties transitioned to the Voter's Choice Act model.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-3] UNVERIFIED (e 0.00, c 0.00): The Voter's Choice Act model consolidates traditional neighborhood polling places into fewer vote centers.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-4] UNVERIFIED (e 0.00, c 0.00): The Voter's Choice Act model replaces traditional neighborhood polling places with larger vote centers.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-5] UNVERIFIED (e 0.00, c 0.00): Ventura County's 2020 transition to the Voter's Choice Act model was accompanied by expanded early voting days.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-6] UNVERIFIED (e 0.00, c 0.00): Ventura County's 2020 transition to the Voter's Choice Act model was accompanied by universal mail-in ballots.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-7] UNVERIFIED (e 0.00, c 0.34): Ventura County's 2020 transition to the Voter's Choice Act model was accompanied by additional drop-off locations.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-8] UNVERIFIED (e 0.00, c 0.00): Ventura County's 2020 voting changes were all implemented due to COVID-19 safety concerns.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-9] UNVERIFIED (e 0.00, c 0.00): Ventura County's 2020 voting changes were all implemented to make voting more accessible overall.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-10] UNVERIFIED (e 0.03, c 0.03): Ventura County's 2020 voting changes were not implemented to suppress turnout.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-11] UNVERIFIED (e 0.00, c 0.00): Ventura County election officials' goal for the 2020 voting changes was to protect public health.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-12] UNVERIFIED (e 0.00, c 0.00): Ventura County election officials' goal for the 2020 voting changes was to maintain or increase voter access.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-13] UNVERIFIED (e 0.00, c 0.01): Ventura County election officials' goal for the 2020 voting changes was not to limit in-person voting.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-14] UNVERIFIED (e 0.00, c 0.00): There is no evidence that Ventura County's 2020 reduction in physical voting sites was intended to restrict turnout.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-claude-15] UNVERIFIED (e 0.00, c 0.00): Ventura County's 2020 reduction in physical voting sites was part of a broader strategy to safely expand voting options during the pandemic.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a","claim verdict UNVERIFIED (e 0.00, c 0.00); strongest contradiction: Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote cent",,,
+330,google/gemini-3.8-flash,gold,Ventura County election officials are reducing voting locations in order to limit in-person voter turnout.,SUPPORTED,REFUTED,"In response to the COVID-19 pandemic and state legislation, Ventura County consolidated polling places into larger, multi-day in-person voting centers and sent mail-in ballots to all registered voters. The changes were implemented to accommodate health guidelines, poll worker shortages, and state regulations, not to suppress or limit in-person voter turnout.",verifier,"Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for the March primary, but has only secured 39 sites for the November election. In Santa Barbara, officials are reducing the number of in-person voting sites from 86 to 25.
+Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot","[330-gemini-1] UNVERIFIED (e 0.00, c 0.00): Ventura County consolidated polling places into larger, multi-day in-person voting centers.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-gemini-2] UNVERIFIED (e 0.00, c 0.00): Ventura County sent mail-in ballots to all registered voters.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-gemini-3] UNVERIFIED (e 0.01, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were responses to the COVID-19 pandemic.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-gemini-4] UNVERIFIED (e 0.01, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were responses to state legislation.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-gemini-5] UNVERIFIED (e 0.01, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate health guidelines.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-gemini-6] UNVERIFIED (e 0.00, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate poll worker shortages.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-gemini-7] UNVERIFIED (e 0.01, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate state regulations.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a
+[330-gemini-8] UNVERIFIED (e 0.00, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were not intended to suppress or limit in-person voter turnout.
+    - Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for th
+    - Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail a","claim verdict UNVERIFIED (e 0.00, c 0.00); strongest contradiction: Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote cent",,,
+463,anthropic/claude-sonnet-5,gold,"558 people were killed by the police in 2018, while 201 people died in police custody",SUPPORTED,REFUTED,"The claim's figures (558 police killings and 201 police-custody deaths in 2018) do not match known official statistics. Indian NHRC and NCRB data for 2018 report considerably lower numbers of deaths in police custody (typically in the range of 70-100 per year), and the number of people killed in police encounters/actions in a single year is also far lower than 558 based on NCRB's 'Crime in India' reports. There is no reliable record supporting these specific combined figures for 2018.",bm25 similarity verifier,"Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+How many people were killed by South African police in 2018? 558
+How many people were killed in custody by South African police in 2018? 201","[463-claude-3] UNVERIFIED (e 0.01, c 0.61): Deaths in police custody in India in 2018 were typically in the range of 70-100 per year.
+    - Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+    - How many people were killed by South African police in 2018? 558
+    - How many people were killed in custody by South African police in 2018? 201
+[463-claude-4] SUPPORTED (e 0.97, c 0.02): The number of people killed in police encounters/actions in India in 2018 was far lower than 558.
+    - Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+    - How many people were killed by South African police in 2018? 558
+    - How many people were killed in custody by South African police in 2018? 201
+[463-claude-5] UNVERIFIED (e 0.05, c 0.51): There is no reliable record supporting the combined figures of 558 police killings and 201 police-custody deaths in 2018.
+    - Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+    - How many people were killed by South African police in 2018? 558
+    - How many people were killed in custody by South African police in 2018? 201","claim verdict UNVERIFIED (e 0.62, c 0.00); strongest contradiction: How many people were killed in custody by South African police in 2018? 201",,,
+463,openai/gpt-6.1-sol,gold,"558 people were killed by the police in 2018, while 201 people died in police custody",SUPPORTED,REFUTED,"South Africa’s Independent Police Investigative Directorate recorded 436 deaths resulting from police action and 201 deaths in police custody in 2017/18. In 2018/19, the figures were 393 and 214, respectively. The claim pairs the 2017/18 custody figure with an incorrect figure for deaths resulting from police action.",bm25 verifier,"Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+How many people were killed by South African police in 2018? 558
+How many people were killed in custody by South African police in 2018? 201","[463-gpt-1] UNVERIFIED (e 0.01, c 0.00): South Africa’s Independent Police Investigative Directorate recorded 436 deaths resulting from police action in 2017/18.
+    - Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+    - How many people were killed by South African police in 2018? 558
+    - How many people were killed in custody by South African police in 2018? 201
+[463-gpt-2] UNVERIFIED (e 0.03, c 0.01): South Africa’s Independent Police Investigative Directorate recorded 201 deaths in police custody in 2017/18.
+    - Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+    - How many people were killed by South African police in 2018? 558
+    - How many people were killed in custody by South African police in 2018? 201
+[463-gpt-3] UNVERIFIED (e 0.06, c 0.34): South Africa’s Independent Police Investigative Directorate recorded 393 deaths resulting from police action in 2018/19.
+    - Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+    - How many people were killed by South African police in 2018? 558
+    - How many people were killed in custody by South African police in 2018? 201
+[463-gpt-4] UNVERIFIED (e 0.03, c 0.56): South Africa’s Independent Police Investigative Directorate recorded 214 deaths in police custody in 2018/19.
+    - Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+    - How many people were killed by South African police in 2018? 558
+    - How many people were killed in custody by South African police in 2018? 201","claim verdict UNVERIFIED (e 0.62, c 0.00); strongest contradiction: How many people were killed in custody by South African police in 2018? 201",,,
+13,anthropic/claude-sonnet-5,bm25,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"As of October 2020, scientific consensus held that face masks reduce but do not completely stop the transmission of COVID-19. Masks were understood as one layer of a multi-layered mitigation strategy (alongside distancing, hand hygiene, and ventilation) that lowers the probability of viral transmission by blocking respiratory droplets, but they do not provide complete protection, especially with inconsistent use, improper fit, or lower-quality materials. Breakthrough transmission among masked individuals was already documented, and studies showed reduction rates rather than full prevention. The claim's absolute phrasing that masks 'will stop' spread overstates the actual evidence, which supported mask-wearing as risk-reducing, not as a guaranteed stop to transmission.",similarity verifier,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-claude-1] UNVERIFIED (e 0.80, c 0.01): As of October 2020, face masks reduce the transmission of COVID-19.
+    - The use of face masks in public may serve as a means of source control to reduce the spread of the
+    - The guidelines on the use of face masks were updated on 19 of June 2020. See When and how to use masks.
+    - Following the World Health Organization's (WHO) first recommendation of wearing face masks in the general public in early April 2020 as the coronavirus spread globally, t
+    - Can wearing a face mask really reduce the spread of COVID-19?
+    - June 12: German study suggests making face masks compulsory could slow the spread of Covid-19 by as much as 40 per cent.
+[13-claude-2] UNVERIFIED (e 0.02, c 0.12): As of October 2020, face masks do not completely stop the transmission of COVID-19.
+    - How do face masks protect against the spread of COVID‑19?
+    - The guidelines on the use of face masks were updated on 19 of June 2020. See When and how to use masks.
+    - to stop the devastating impact of COVID-19 by wearing a face covering, not
+    - Following the World Health Organization's (WHO) first recommendation of wearing face masks in the general public in early April 2020 as the coronavirus spread globally, t
+    - The rapid spread of COVID-19 compelled some governments, but not others, to recommend the wearing of face masks at the start of the pandemic.
+[13-claude-3] UNVERIFIED (e 0.04, c 0.95): Masks were understood as one layer of a multi-layered mitigation strategy against COVID-19.
+    - How do face masks protect against the spread of COVID‑19?
+    - Wearing a mask is one of the simplest ways to reduce spread of COVID-19, and persuading people
+    - The guidelines on the use of face masks were updated on 19 of June 2020. See When and how to use masks.
+    - that face masks were unavailable or that wearing face
+    - Finding out whether face masks indeed reduce the spread of COVID-19 is thus important. Against the available evidence from clinical studies or previous pandemics, we ask:
+[13-claude-4] UNVERIFIED (e 0.01, c 0.13): Distancing was part of the multi-layered mitigation strategy against COVID-19.
+    - spread of respiratory viruses. Part 1: face masks, eye protection and person distancing:
+    - How do face masks protect against the spread of COVID‑19?
+    - That’s a good point, Gary! I was thinking the same — I gues gaiters are safer against covid 19 than the people think.
+    - WHEREAS, Wisconsin must do its part to stop the spread of COVID-19 in
+    - Finding out whether face masks indeed reduce the spread of COVID-19 is thus important. Against the available evidence from clinical studies or previous pandemics, we ask:
+[13-claude-5] UNVERIFIED (e 0.04, c 0.82): Hand hygiene was part of the multi-layered mitigation strategy against COVID-19.
+    - How do face masks protect against the spread of COVID‑19?
+    - That’s a good point, Gary! I was thinking the same — I gues gaiters are safer against covid 19 than the people think.
+    - WHEREAS, Wisconsin must do its part to stop the spread of COVID-19 in
+    - - Is hand-washing really the best thing we can do to stop the spread of COVID-19?
+    - to stop the spread of the disease, but on the other hand, the number of existing
+[13-claude-6] UNVERIFIED (e 0.01, c 0.01): Ventilation was part of the multi-layered mitigation strategy against COVID-19.
+    - How do face masks protect against the spread of COVID‑19?
+    - That’s a good point, Gary! I was thinking the same — I gues gaiters are safer against covid 19 than the people think.
+    - WHEREAS, Wisconsin must do its part to stop the spread of COVID-19 in
+    - Finding out whether face masks indeed reduce the spread of COVID-19 is thus important. Against the available evidence from clinical studies or previous pandemics, we ask:
+    - It was messy, fraught and slow. (Read more about how face masks can control the spread of Covid-19.)
+[13-claude-7] SUPPORTED (e 0.99, c 0.01): Masks lower the probability of viral transmission by blocking respiratory droplets.
+    - source the spread of large respiratory droplets from the person wearing the face mask [1]. Medical masks
+    - Because cloth masks are more effective at blocking larger particles, they are most efficient at stopping the spread if they stop the droplets at their source.
+    - Surely one of the world’s densest cities, full of non-socially distancing residents at a covid viral epicenter, would have seen some significant spread of the virus.
+    - So, people started doing something most of us hadn’t really seen before to stop transmission: wearing surgical face masks.
+    - OBJECTIVE To examine the effectiveness of eye protection, face masks, or person distancing on interrupting or reducing the spread of respiratory viruses.
+[13-claude-8] UNVERIFIED (e 0.01, c 0.00): Masks do not provide complete protection, especially with inconsistent use.
+    - Wearing face masks for protection was at very high levels
+    - spread of respiratory viruses. Part 1: face masks, eye protection and person distancing:
+    - community can be assumed to be high. Wearing a face mask could be considered, especially
+    - How do face masks protect against the spread of COVID‑19?
+    - OBJECTIVE To examine the effectiveness of eye protection, face masks, or person distancing on interrupting or reducing the spread of respiratory viruses.
+[13-claude-9] UNVERIFIED (e 0.03, c 0.01): Masks do not provide complete protection, especially with improper fit.
+    - Wearing face masks for protection was at very high levels
+    - spread of respiratory viruses. Part 1: face masks, eye protection and person distancing:
+    - community can be assumed to be high. Wearing a face mask could be considered, especially
+    - Secondly, face masks are more efficient in preventing virus spread from asymptomatic patients. Third, there is no evidence of false sense of security and improper use of 
+    - How do face masks protect against the spread of COVID‑19?
+[13-claude-10] UNVERIFIED (e 0.01, c 0.00): Masks do not provide complete protection, especially with lower-quality materials.
+    - High-quality and well-fitted face masks can stop or slow viruses spreading.
+    - Wearing face masks for protection was at very high levels
+    - spread of respiratory viruses. Part 1: face masks, eye protection and person distancing:
+    - community can be assumed to be high. Wearing a face mask could be considered, especially
+    - How do face masks protect against the spread of COVID‑19?
+[13-claude-11] UNVERIFIED (e 0.00, c 0.54): Breakthrough transmission among masked individuals was already documented as of October 2020.
+    - The spread of IT use will give individuals and groups
+    - So, people started doing something most of us hadn’t really seen before to stop transmission: wearing surgical face masks.
+    - Following the World Health Organization's (WHO) first recommendation of wearing face masks in the general public in early April 2020 as the coronavirus spread globally, t
+    - The credibility of effect-modification across settings was, therefore, low. Wearing face masks was also acceptable and feasible.
+    - The guidelines on the use of face masks were updated on 19 of June 2020. See When and how to use masks.
+[13-claude-12] UNVERIFIED (e 0.00, c 0.00): Studies showed reduction rates rather than full prevention of COVID-19 transmission with mask-wearing.
+    - But, there have been various studies on the issue. Results showed the effectiveness of wearing face masks to prevent the spread of viruses.
+    - - Wear a mask with two or more layers to help stop the spread of COVID-19
+    - |Level 5: A set of guidelines with potential measures to stop the spread of COVID-19
+    - So, people started doing something most of us hadn’t really seen before to stop transmission: wearing surgical face masks.
+    - First off, there are two main types of face masks worn to aid in the prevention of the spread of viruses.","claim verdict REFUTED (e 0.08, c 1.00); strongest contradiction: can contribute to the spread of COVID-19, face masks and other",,,
+13,google/gemini-3.8-flash,bm25,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"Public health agencies and scientific studies establish that wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2. However, masks do not completely prevent or stop the spread of COVID-19 on their own, and health authorities emphasize that they must be combined with other protective measures such as physical distancing and ventilation.",none,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-gemini-1] UNVERIFIED (e 0.88, c 0.01): Wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2.
+    - The consensus in the medical community is that face masks may help prevent the spread of SARS-CoV-2.
+    - - Kenyon, C. Widespread use of face masks in public may slow the spread of SARS CoV-2: an ecological study.
+    - We conducted a systematic review and meta-analysis to evaluate the effectiveness of using face masks to prevent the spread of SARS-CoV-2.
+    - source the spread of large respiratory droplets from the person wearing the face mask [1]. Medical masks
+    - So, people started doing something most of us hadn’t really seen before to stop transmission: wearing surgical face masks.
+[13-gemini-2] UNVERIFIED (e 0.94, c 0.02): Face masks do not completely prevent the spread of COVID-19 on their own.
+    - How do face masks protect against the spread of COVID‑19?
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - Can face masks help prevent the spread of coronavirus disease 2019 (COVID-19)?
+    - But, there have been various studies on the issue. Results showed the effectiveness of wearing face masks to prevent the spread of viruses.
+    - On May 5, President Yoweri Museveni of Uganda said every person who leaves their home must wear a cloth face mask to stop the spread the COVID-19.
+[13-gemini-3] SUPPORTED (e 0.99, c 0.00): Face masks must be combined with other protective measures such as physical distancing.
+    - Yes, face masks combined with other preventive measures, such as frequent hand-washing and social distancing, help slow the spread of the disease.
+    - - Wearing personal protective equipment, such as non-surgical masks, face shields, safety glasses and gloves, as appropriate.
+    - This review considers respiratory protective measures e.g. use of face masks as PPE, to reduce droplet and airborne spread.
+    - Wearing a mask will not just help reduce the spread of the disease, but also reduce the risks of having to enact more onerous policies such as the reintroduction of stric
+    - community can be assumed to be high. Wearing a face mask could be considered, especially
+[13-gemini-4] UNVERIFIED (e 0.00, c 0.04): Face masks must be combined with other protective measures such as ventilation.
+    - Yes, face masks combined with other preventive measures, such as frequent hand-washing and social distancing, help slow the spread of the disease.
+    - - Wearing personal protective equipment, such as non-surgical masks, face shields, safety glasses and gloves, as appropriate.
+    - This review considers respiratory protective measures e.g. use of face masks as PPE, to reduce droplet and airborne spread.
+    - Wearing a mask will not just help reduce the spread of the disease, but also reduce the risks of having to enact more onerous policies such as the reintroduction of stric
+    - community can be assumed to be high. Wearing a face mask could be considered, especially","claim verdict REFUTED (e 0.08, c 1.00); strongest contradiction: can contribute to the spread of COVID-19, face masks and other",,,
+13,openai/gpt-6.1-sol,bm25,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"By 29 October 2020, evidence indicated that face masks could reduce COVID-19 transmission by limiting infectious respiratory particles. They did not eliminate transmission, and their effectiveness depended on mask type, fit and consistent use. Wearing masks alone could not guarantee that the spread would stop.",verifier,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-gpt-1] UNVERIFIED (e 0.13, c 0.01): By 29 October 2020, face masks could reduce COVID-19 transmission by limiting infectious respiratory particles.
+    - June 12: German study suggests making face masks compulsory could slow the spread of Covid-19 by as much as 40 per cent.
+    - Sick people can limit the spread of germs by wearing face masks. And respirators can prevent inhalation of airborne flu particles when worn properly.
+    - Relating to preventing the spread of COVID-19 by requiring face coverings
+    - to stop the devastating impact of COVID-19 by wearing a face covering, not
+    - Finding out whether face masks indeed reduce the spread of COVID-19 is thus important. Against the available evidence from clinical studies or previous pandemics, we ask:
+[13-gpt-2] SUPPORTED (e 0.97, c 0.96): Face masks did not eliminate COVID-19 transmission.
+    - So, people started doing something most of us hadn’t really seen before to stop transmission: wearing surgical face masks.
+    - that wearing face masks alone was not protective (19), although this evidence has
+    - to stop the devastating impact of COVID-19 by wearing a face covering, not
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - The rapid spread of COVID-19 compelled some governments, but not others, to recommend the wearing of face masks at the start of the pandemic.
+[13-gpt-3] UNVERIFIED (e 0.11, c 0.00): The effectiveness of face masks depended on mask type.
+    - But, there have been various studies on the issue. Results showed the effectiveness of wearing face masks to prevent the spread of viruses.
+    - OBJECTIVE To examine the effectiveness of eye protection, face masks, or person distancing on interrupting or reducing the spread of respiratory viruses.
+    - The guidelines on the use of face masks were updated on 19 of June 2020. See When and how to use masks.
+    - There is additional epidemiological evidence for the effectiveness of wearing face masks regarding the spread of the new coronavirus:
+    - The impact and effectiveness of the general public wearing masks to reduce the spread of pandemics in the UK: a multidisciplinary comparison of single-use masks versus re
+[13-gpt-4] UNVERIFIED (e 0.00, c 0.00): The effectiveness of face masks depended on fit.
+    - But, there have been various studies on the issue. Results showed the effectiveness of wearing face masks to prevent the spread of viruses.
+    - OBJECTIVE To examine the effectiveness of eye protection, face masks, or person distancing on interrupting or reducing the spread of respiratory viruses.
+    - The guidelines on the use of face masks were updated on 19 of June 2020. See When and how to use masks.
+    - There is additional epidemiological evidence for the effectiveness of wearing face masks regarding the spread of the new coronavirus:
+    - The impact and effectiveness of the general public wearing masks to reduce the spread of pandemics in the UK: a multidisciplinary comparison of single-use masks versus re
+[13-gpt-5] UNVERIFIED (e 0.01, c 0.00): The effectiveness of face masks depended on consistent use.
+    - The guidelines on the use of face masks were updated on 19 of June 2020. See When and how to use masks.
+    - But, there have been various studies on the issue. Results showed the effectiveness of wearing face masks to prevent the spread of viruses.
+    - OBJECTIVE To examine the effectiveness of eye protection, face masks, or person distancing on interrupting or reducing the spread of respiratory viruses.
+    - The impact and effectiveness of the general public wearing masks to reduce the spread of pandemics in the UK: a multidisciplinary comparison of single-use masks versus re
+    - There is additional epidemiological evidence for the effectiveness of wearing face masks regarding the spread of the new coronavirus:
+[13-gpt-6] SUPPORTED (e 0.98, c 0.02): Wearing masks alone could not guarantee that the spread of COVID-19 would stop.
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - that wearing face masks alone was not protective (19), although this evidence has
+    - The rapid spread of COVID-19 compelled some governments, but not others, to recommend the wearing of face masks at the start of the pandemic.
+    - June 12: German study suggests making face masks compulsory could slow the spread of Covid-19 by as much as 40 per cent.
+    - to stop the devastating impact of COVID-19 by wearing a face covering, not","claim verdict REFUTED (e 0.08, c 1.00); strongest contradiction: can contribute to the spread of COVID-19, face masks and other",,,
+99,anthropic/claude-sonnet-5,bm25,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,REFUTED,SUPPORTED,"New Zealand's Abortion Legislation Act 2020 removed abortion from the Crimes Act and treated it primarily as a health and regulatory matter, focusing on procedural and conscientious objection provisions. The Act itself does not contain an explicit clause requiring medical practitioners to provide life-saving care to infants who survive an abortion procedure. This gap was raised during parliamentary debate, with some MPs and advocacy groups noting the absence of a specific born-alive protection clause in the bill. The government's position was that existing general laws (such as those governing homicide and medical duty of care) would apply once a child is born alive, but these are not part of the Abortion Legislation Act itself. Therefore, the claim accurately reflects that the Act does not explicitly mandate such care within its own text.",similarity verifier,"Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.
+Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.","[99-claude-1] SUPPORTED (e 0.99, c 0.04): New Zealand's Abortion Legislation Act 2020 removed abortion from the Crimes Act.
+    - In March 2020 abortion was removed from the Crimes Act, meaning it is now legal to have an abortion in New Zealand.
+    - Abortion was governed under New Zealand’s Crimes Act 1961, and women seeking an abortion were considered to be committing a crime.
+    - The Abortion Legislation Act 2020 is an Act of Parliament in New Zealand allowing unrestricted access to abortion within the first 20 weeks of pregnancy, and repealing se
+    - - ^ ""Abortion Legislation Act 2020 No 6, Public Act Contents – New Zealand Legislation"". www.legislation.govt.nz.
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+[99-claude-2] UNVERIFIED (e 0.07, c 0.56): New Zealand's Abortion Legislation Act 2020 treated abortion primarily as a health matter.
+    - Before the Abortion Legislation Act 2020, abortion is only legal in New Zealand on certain grounds, such as to preserve the life or health of the woman, incest, or foetal
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+    - - ^ ""Abortion Legislation Act 2020 No 6, Public Act Contents – New Zealand Legislation"". www.legislation.govt.nz.
+    - That's a purpose that is under the New Zealand Public Health and Disability Act 2000 in relation to the specific provision of healthcare services, which the Abortion Legi
+    - Abortion was governed under New Zealand’s Crimes Act 1961, and women seeking an abortion were considered to be committing a crime.
+[99-claude-3] UNVERIFIED (e 0.01, c 0.93): New Zealand's Abortion Legislation Act 2020 treated abortion primarily as a regulatory matter.
+    - Before the Abortion Legislation Act 2020, abortion is only legal in New Zealand on certain grounds, such as to preserve the life or health of the woman, incest, or foetal
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+    - - ^ ""Abortion Legislation Act 2020 No 6, Public Act Contents – New Zealand Legislation"". www.legislation.govt.nz.
+    - Abortion was governed under New Zealand’s Crimes Act 1961, and women seeking an abortion were considered to be committing a crime.
+    - - ^ a b ""Final report: Abortion Legislation Bill"". New Zealand Parliament. 14 February 2020. Retrieved 24 March 2020.
+[99-claude-4] UNVERIFIED (e 0.01, c 0.95): New Zealand's Abortion Legislation Act 2020 focused on procedural provisions.
+    - - ^ ""Abortion Legislation Act 2020 No 6, Public Act Contents – New Zealand Legislation"". www.legislation.govt.nz.
+    - - ^ ""Abortion Legislation Bill — Third Reading"". New Zealand Parliament. 18 March 2020. Archived from the original on 20 July 2020.
+    - New Zealand's Abortion Legislation Bill passed its third reading on 18 March, 68 votes to 51 and was given royal assent on 23 March.
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+    - The abortion legislation is available on the New Zealand Legislation website. ()
+[99-claude-5] UNVERIFIED (e 0.00, c 0.87): New Zealand's Abortion Legislation Act 2020 focused on conscientious objection provisions.
+    - - ^ ""Abortion Legislation Act 2020 No 6, Public Act Contents – New Zealand Legislation"". www.legislation.govt.nz.
+    - - ^ ""Abortion Legislation Bill — Third Reading"". New Zealand Parliament. 18 March 2020. Archived from the original on 20 July 2020.
+    - New Zealand's Abortion Legislation Bill passed its third reading on 18 March, 68 votes to 51 and was given royal assent on 23 March.
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+    - The abortion legislation is available on the New Zealand Legislation website. ()
+[99-claude-6] UNVERIFIED (e 0.43, c 0.20): New Zealand's Abortion Legislation Act 2020 does not contain an explicit clause requiring medical practitioners to provide life-saving care to infants who survive an abortion procedure.
+    - Yet today, House Democrats shockingly sided with extremists who do not believe babies born alive during an abortion deserve life-saving care.
+    - Response: Current law does not adequately protect infants born alive after a failed abortion. Although President George W. Bush signed the Born-Alive Infant Survivors Pro
+    - (g) A physician or health care practitioner who violates Subsection (c) by failing to provide the appropriate medical treatment to a child born alive after an abortion or
+    - The federal Born-Alive Abortion Survivors Protection Act would augment current law to require that proper medical care be given to an infant born alive following an abort
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+[99-claude-7] UNVERIFIED (e 0.52, c 0.00): The absence of a specific born-alive protection clause in the Abortion Legislation bill was raised during parliamentary debate.
+    - - ""Abortion Legislation Bill"". New Zealand Legislation. Parliamentary Counsel Office. Retrieved 8 August 2019.
+    - It extends legal protection to an infant born alive after a failed attempt at induced abortion. It was signed by President George W. Bush.
+    - * In a shocking display of human rights abuse in New Zealand, an amendment to the Abortion Legislation Bill which required the care of a child born after an attempted abo
+    - That's a purpose that is under the New Zealand Public Health and Disability Act 2000 in relation to the specific provision of healthcare services, which the Abortion Legi
+    - The mother of the child born alive during an abortion would not be prosecuted.
+[99-claude-8] UNVERIFIED (e 0.12, c 0.45): Existing general laws governing homicide would apply once a child is born alive.
+    - The mother of the child born alive during an abortion would not be prosecuted.
+    - 56 “A brief history of abortion laws in New Zealand” (21 November 2014) Abortion Services in New Zealand <
+    - “I would think they would be rushing to make it very clear that they absolutely do not support the killing of a baby born alive.
+    - I accept that it's trying to reform the legislation, but we must also remember that abortion is legal in New Zealand, but there is an opportunity to differentiate between
+    - (e) A physician who violates Subsection (c) by failing to provide the appropriate medical treatment to a child born alive after an abortion or an attempted abortion is li
+[99-claude-9] UNVERIFIED (e 0.07, c 0.82): Existing general laws governing medical duty of care would apply once a child is born alive.
+    - The mother of the child born alive during an abortion would not be prosecuted.
+    - tually impossible. Being ‘born alive’, however, does not of itself impose a legal duty on doc-
+    - (g) A physician or health care practitioner who violates Subsection (c) by failing to provide the appropriate medical treatment to a child born alive after an abortion or
+    - The federal Born-Alive Abortion Survivors Protection Act would augment current law to require that proper medical care be given to an infant born alive following an abort
+    - 56 “A brief history of abortion laws in New Zealand” (21 November 2014) Abortion Services in New Zealand <
+[99-claude-10] UNVERIFIED (e 0.30, c 0.04): Existing general laws governing homicide are not part of New Zealand's Abortion Legislation Act 2020 itself.
+    - 56 “A brief history of abortion laws in New Zealand” (21 November 2014) Abortion Services in New Zealand <
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+    - - ^ ""Abortion Legislation Act 2020 No 6, Public Act Contents – New Zealand Legislation"". www.legislation.govt.nz.
+    - tually impossible. Being ‘born alive’, however, does not of itself impose a legal duty on doc-
+    - The Abortion Legislation Act 2020 is an Act of Parliament in New Zealand allowing unrestricted access to abortion within the first 20 weeks of pregnancy, and repealing se
+[99-claude-11] UNVERIFIED (e 0.01, c 0.02): Existing general laws governing medical duty of care are not part of New Zealand's Abortion Legislation Act 2020 itself.
+    - tually impossible. Being ‘born alive’, however, does not of itself impose a legal duty on doc-
+    - 56 “A brief history of abortion laws in New Zealand” (21 November 2014) Abortion Services in New Zealand <
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+    - There are two types of abortions performed in New Zealand; a medical abortion which involves
+    - The Abortion Legislation Act 2020 is an Act of Parliament in New Zealand allowing unrestricted access to abortion within the first 20 weeks of pregnancy, and repealing se","claim verdict UNVERIFIED (e 0.06, c 0.01); strongest contradiction: Currently, it does impede on the rights of others. It is not a legal act for women to tell the truth when they seek an abortion in New Zealand.",,,
+254,google/gemini-3.8-flash,bm25,Olive Garden prohibits its employees from wearing face masks depicting the American flag.,REFUTED,SUPPORTED,"Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear plain, solid-colored face masks without logos, symbols, or designs. Under this policy, face masks featuring graphics or patterns, including the American flag, were not permitted.",gold,"Is there any evidence that Olive Garden has banned employees from wearing masks with the American Flag? No. There are no credible reports anyway about Olive Garden banning its employees from wearing masks depicting the American flag.
+What Olive Garden said about this? In response to a question about the claim on the chain’s official Facebook page, Olive Garden also said that claim is “not true.”","[254-gemini-1] UNVERIFIED (e 0.01, c 0.06): Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear plain face masks.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Another Darden entity, seafood restaurant Red Lobster has reopened select locations for dine-in. Like Olive Garden employees, Red Lobster staff are required to wear face 
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Which restaurants require diners to wear face masks?
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+[254-gemini-2] UNVERIFIED (e 0.00, c 0.04): Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear solid-colored face masks.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Another Darden entity, seafood restaurant Red Lobster has reopened select locations for dine-in. Like Olive Garden employees, Red Lobster staff are required to wear face 
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Which restaurants require diners to wear face masks?
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+[254-gemini-3] UNVERIFIED (e 0.00, c 0.02): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with logos.
+    - Covering face with masks and sanitizing the hands,
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+    - We spoke with one of the employees that was targeted in that situation at Olive Garden on Monday.
+    - Bellini Tea from Olive Garden. Love it. They serve it with a slice of frozen peach. I have bought the syrup direct from Olive Garden Restaurant.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+[254-gemini-4] UNVERIFIED (e 0.00, c 0.01): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with symbols.
+    - Covering face with masks and sanitizing the hands,
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+    - We spoke with one of the employees that was targeted in that situation at Olive Garden on Monday.
+    - Bellini Tea from Olive Garden. Love it. They serve it with a slice of frozen peach. I have bought the syrup direct from Olive Garden Restaurant.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+[254-gemini-5] UNVERIFIED (e 0.00, c 0.01): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with designs.
+    - Covering face with masks and sanitizing the hands,
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+    - We spoke with one of the employees that was targeted in that situation at Olive Garden on Monday.
+    - Bellini Tea from Olive Garden. Love it. They serve it with a slice of frozen peach. I have bought the syrup direct from Olive Garden Restaurant.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+[254-gemini-6] UNVERIFIED (e 0.00, c 0.48): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring graphics.
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+    - Olive Garden waitress's Facebook post saves children from allegedly abusive parents
+    - But Olive Garden has transcended Olive Garden, the way Gauguin’s olive trees transcended olive trees.
+    - The county of San Diego posted this collage of locals wearing face masks on Instagram. “Verified
+[254-gemini-7] UNVERIFIED (e 0.00, c 0.16): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring patterns.
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+    - Olive Garden waitress's Facebook post saves children from allegedly abusive parents
+    - But Olive Garden has transcended Olive Garden, the way Gauguin’s olive trees transcended olive trees.
+    - The county of San Diego posted this collage of locals wearing face masks on Instagram. “Verified
+[254-gemini-8] UNVERIFIED (e 0.00, c 0.91): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring the American flag.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - from a crossed staff, place the U.S. flag on its right
+    - Note: A commenter shared feedback from the manager of an Olive Garden, who said that the information from Olive Garden corporate isn't accurate.
+    - believe Olive Garden may become the next Red Lobster…an iconic American brand destroyed","claim verdict UNVERIFIED (e 0.02, c 0.23); strongest contradiction: body of work depicting Latino and Native American subjects,",,,
+254,openai/gpt-6.1-sol,bm25,Olive Garden prohibits its employees from wearing face masks depicting the American flag.,REFUTED,SUPPORTED,"Olive Garden required employees to wear solid-colored face masks without logos, symbols, or patterns. American flag masks were therefore prohibited under its general dress code, not a rule specifically targeting the flag.",gold similarity verifier,"Is there any evidence that Olive Garden has banned employees from wearing masks with the American Flag? No. There are no credible reports anyway about Olive Garden banning its employees from wearing masks depicting the American flag.
+What Olive Garden said about this? In response to a question about the claim on the chain’s official Facebook page, Olive Garden also said that claim is “not true.”","[254-gpt-1] UNVERIFIED (e 0.01, c 0.05): Olive Garden required employees to wear solid-colored face masks.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Another Darden entity, seafood restaurant Red Lobster has reopened select locations for dine-in. Like Olive Garden employees, Red Lobster staff are required to wear face 
+    - Which restaurants require diners to wear face masks?
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+[254-gpt-2] UNVERIFIED (e 0.00, c 0.05): Olive Garden required employees to wear face masks without logos.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Airlines are cracking down on passengers without face masks
+    - Another Darden entity, seafood restaurant Red Lobster has reopened select locations for dine-in. Like Olive Garden employees, Red Lobster staff are required to wear face 
+    - Which restaurants require diners to wear face masks?
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+[254-gpt-3] UNVERIFIED (e 0.00, c 0.06): Olive Garden required employees to wear face masks without symbols.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Airlines are cracking down on passengers without face masks
+    - Another Darden entity, seafood restaurant Red Lobster has reopened select locations for dine-in. Like Olive Garden employees, Red Lobster staff are required to wear face 
+    - Which restaurants require diners to wear face masks?
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+[254-gpt-4] UNVERIFIED (e 0.00, c 0.07): Olive Garden required employees to wear face masks without patterns.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Airlines are cracking down on passengers without face masks
+    - Another Darden entity, seafood restaurant Red Lobster has reopened select locations for dine-in. Like Olive Garden employees, Red Lobster staff are required to wear face 
+    - Which restaurants require diners to wear face masks?
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+[254-gpt-5] UNVERIFIED (e 0.00, c 0.07): American flag masks were prohibited under Olive Garden's general dress code.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+    - from a crossed staff, place the U.S. flag on its right
+    - believe Olive Garden may become the next Red Lobster…an iconic American brand destroyed
+    - But Olive Garden has transcended Olive Garden, the way Gauguin’s olive trees transcended olive trees.
+    - It found that cloth masks were worse than wearing nothing at all.
+[254-gpt-6] UNVERIFIED (e 0.02, c 0.01): Olive Garden did not have a rule specifically targeting American flag masks.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Female allegorical figure of Columbia wearing a red Phrygian cap and a dress made from the American flag; she is carrying a basket from which she scatters seed into a plo
+    - Bellini Tea from Olive Garden. Love it. They serve it with a slice of frozen peach. I have bought the syrup direct from Olive Garden Restaurant.
+    - Not to mention that Olive Garden continued to raise its prices. It is evident that Olive Garden has not considered costs and other logistics.
+    - This is an essay about Olive Garden, but it's not really about Olive Garden.","claim verdict UNVERIFIED (e 0.02, c 0.23); strongest contradiction: body of work depicting Latino and Native American subjects,",,,
+258,google/gemini-3.8-flash,bm25,A Supreme Court nominee has never been nominated and installed while a presidential election is already underway.,REFUTED,SUPPORTED,"Prior to September 2020, no Supreme Court justice had ever been nominated and confirmed after voting in a presidential election had already begun. In historical instances where vacancies occurred in the autumn of an election year, such as in 1864, presidents delayed nominations until after the election concluded.",gold verifier,"When was the claim made? 27/09/2020
+Has voting begun for state elections in the US? Forty-five states and the District of Columbia offer early in-person voting (including states with all-mail elections). Delaware has enacted early voting but it will not be in place until 2022. Five states do not offer pre-Election Day in-person voting options: Connecticut, Mississippi, Missouri, New Hampshire, and South Carolina.
+Have Supreme Court justice nominees ever been installed while a president is running for reelection? In presidential election years, five justices have been nominated and installed by presidents who were running for reelection.
+Have there been presidential election years in the US where Supreme court judges were nominated and installed The first nomination during an election year in the twentieth century came on March 13, 1912, when  President William Taft (a Republican) nominated Mahlon Pitney to succeed John Marshall Harlan, who died on October 14, 1911.  The Republican-controlled Senate confirmed Pitney on March 18, 1912, by a vote of fifty to twenty-six.
+
+President Woodrow Wilson (a Democrat) made two nominations during 1916.  On January 28, 1916, Wilson nominated Louis Brandeis to replace Joseph Rucker Lamar, who died on January 2, 1916; the Democratic-controlled Senate confirmed Brandeis on June 1, 1916, by a vote of forty-seven to twenty-two.  Charles Evans Hughes resigned from the Court on June 10, 1916 to run (unsuccessfully) for president as a Republican.  On July 14, 1916, Wilson nominated John Clarke to replace him; Clarke was confirmed unanimously ten days later.
+
+On February 15, 1932, President Herbert Hoover (a Republican) nominated Benjamin Cardozo to succeed Oliver Wendell Holmes, who retired on January 12, 1932.  A Republican-controlled Senate confirmed Cardozo by a unanimous voice vote on February 24, 1932.
+
+On January 4, 1940, President Franklin Roosevelt (a Democrat) nominated Frank Murphy to replace Pierce Butler, who died on November 16, 1939; Murphy was confirmed by a heavily Democratic Senate on January 16, 1940, by a voice vote.
+
+On November 30, 1987, President Ronald Reagan (a Republican) nominated Justice Anthony Kennedy to fill the vacancy created by the retirement of Lewis Powell.  A Democratic-controlled Senate confirmed Kennedy (who followed Robert Bork and Douglas Ginsburg as nominees for that slot) on February 3, 1988, by a vote of ninety-seven to zero.","[258-gemini-1] SUPPORTED (e 0.99, c 0.98): Prior to September 2020, no Supreme Court justice had ever been nominated and confirmed after voting in a presidential election had already begun.
+    - At a 2016 GOP presidential primary debate, Cruz said that it had been 80 years since a Supreme Court justice was nominated and confirmed in an election year as logic for 
+    - No court nominee has been considered so close to a presidential election before, with early voting already underway.
+    - No Senate has ever denied a hearing to a presidential nominee to fill a Supreme Court vacancy.” Official statement March 16, 2016
+    - “Never before in our nation’s history has a Supreme Court Justice been nominated and installed while a presidential election is already underway,” Biden said.
+    - since a Supreme Court justice was nominated and confirmed in a presidential election year while the president’s opposing party controlled the Senate (1888, President Grov
+[258-gemini-2] UNVERIFIED (e 0.00, c 0.00): In historical instances where Supreme Court vacancies occurred in the autumn of an election year, such as in 1864, presidents delayed nominations until after the election concluded.
+    - An earlier version of this post incorrectly identified the last person nominated and confirmed to the Supreme Court in a presidential election year as Stanley Reed in 193
+    - move forward on a Supreme Court nominee until after the election."" ""Mitch McConnell
+    - In U.S. presidential election years, there have been 16 Supreme Court vacancies that occurred before Election Day.
+    - as we approach a Supreme Court nominee is where are we in
+    - Supreme Court vacancies in presidential election years","claim verdict UNVERIFIED (e 0.19, c 0.02); strongest contradiction: “Never before in our nation’s history has a Supreme Court Justice been nominated and installed while a presidential election is already underway,” Biden said.",,,
+330,google/gemini-3.8-flash,bm25,Ventura County election officials are reducing voting locations in order to limit in-person voter turnout.,SUPPORTED,REFUTED,"In response to the COVID-19 pandemic and state legislation, Ventura County consolidated polling places into larger, multi-day in-person voting centers and sent mail-in ballots to all registered voters. The changes were implemented to accommodate health guidelines, poll worker shortages, and state regulations, not to suppress or limit in-person voter turnout.",verifier,"Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for the March primary, but has only secured 39 sites for the November election. In Santa Barbara, officials are reducing the number of in-person voting sites from 86 to 25.
+Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot","[330-gemini-1] UNVERIFIED (e 0.00, c 0.09): Ventura County consolidated polling places into larger, multi-day in-person voting centers.
+    - places, vote centers, or early voting locations, consider voter turnout from
+    - conducted using in-person voting at polling locations throughout the jurisdiction;
+    - There were no in-person voting options for Riverside County, only 10 options in Los Angeles County, and 3 in-person options in Ventura County.
+    - expanded in-person voting locations on Election Day for those who need to vote in-person.
+    - technologies, the County must select voting locations that are larger and have
+[330-gemini-2] UNVERIFIED (e 0.00, c 0.87): Ventura County sent mail-in ballots to all registered voters.
+    - will limit the number of voters who visit in-person locations to drop off VBM ballots and
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+    - County elections officials should ensure all in-person voting
+    - EARLIER: Ventura County turnout tops 70 percent in November
+    - MORE: Ventura County turnout tops 70 percent in November election
+[330-gemini-3] UNVERIFIED (e 0.00, c 0.01): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were responses to the COVID-19 pandemic.
+    - will limit the number of voters who visit in-person locations to drop off VBM ballots and
+    - pandemic continues to limit locations and poll worker availability. All in-person
+    - There were no in-person voting options for Riverside County, only 10 options in Los Angeles County, and 3 in-person options in Ventura County.
+    - While voting locations and polling place design typically vary, some election officials are moving
+    - Primary election in Sacramento County have a greater effect on voter turnout than the Voter’s
+[330-gemini-4] UNVERIFIED (e 0.00, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were responses to state legislation.
+    - Ventura County officials want to use federal and state
+    - will limit the number of voters who visit in-person locations to drop off VBM ballots and
+    - There were no in-person voting options for Riverside County, only 10 options in Los Angeles County, and 3 in-person options in Ventura County.
+    - While voting locations and polling place design typically vary, some election officials are moving
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+[330-gemini-5] UNVERIFIED (e 0.00, c 0.01): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate health guidelines.
+    - public health and safety guidelines for in-person voting locations.
+    - will limit the number of voters who visit in-person locations to drop off VBM ballots and
+    - There were no in-person voting options for Riverside County, only 10 options in Los Angeles County, and 3 in-person options in Ventura County.
+    - While voting locations and polling place design typically vary, some election officials are moving
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+[330-gemini-6] UNVERIFIED (e 0.00, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate poll worker shortages.
+    - pandemic continues to limit locations and poll worker availability. All in-person
+    - will limit the number of voters who visit in-person locations to drop off VBM ballots and
+    - There were no in-person voting options for Riverside County, only 10 options in Los Angeles County, and 3 in-person options in Ventura County.
+    - While voting locations and polling place design typically vary, some election officials are moving
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+[330-gemini-7] UNVERIFIED (e 0.00, c 0.01): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate state regulations.
+    - Ventura County officials want to use federal and state
+    - will limit the number of voters who visit in-person locations to drop off VBM ballots and
+    - There were no in-person voting options for Riverside County, only 10 options in Los Angeles County, and 3 in-person options in Ventura County.
+    - While voting locations and polling place design typically vary, some election officials are moving
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+[330-gemini-8] UNVERIFIED (e 0.01, c 0.14): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were not intended to suppress or limit in-person voter turnout.
+    - will limit the number of voters who visit in-person locations to drop off VBM ballots and
+    - There were no in-person voting options for Riverside County, only 10 options in Los Angeles County, and 3 in-person options in Ventura County.
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+    - above the 1% limit, or raise taxes without voter approval, in order to satisfy a creditor.  Ventura
+    - Primary election in Sacramento County have a greater effect on voter turnout than the Voter’s","claim verdict REFUTED (e 0.00, c 0.97); strongest contradiction: in order to receive in-person voting assistance.",,,
+356,anthropic/claude-sonnet-5,bm25,Nigerian Government had placed a ban on alcohol in sachet and polythene.,REFUTED,SUPPORTED,"In 2018, Nigeria's National Agency for Food and Drug Administration and Control (NAFDAC) announced a plan to ban the sale of alcoholic beverages in sachets and small volume PET bottles, citing public health concerns over abuse by minors and the poor. The ban was scheduled to take effect in phases starting January 2020, with a five-year timeline for full implementation. By September 2020, this policy had already come into effect as part of government regulation on alcohol packaging. Thus, the claim that the Nigerian Government had placed a ban on alcohol in sachet and polythene packaging is consistent with known regulatory action.",gold similarity verifier,"Which agency of the Nigerian Government regulates alcohol? National Agency for Food Administration and Control, (NAFDAC) has regulatory responsibilities for alcohol.
+Did the  NAFDAC want to  regulate alcohol being sold in sachets and polythene? NAFDAC expressed worry over the sale and consumption of alcoholic beverages in sachets and small volume glass and Poly-Ethylene Terephthalate (PET) bottles.
+Did the NAFDAC impose a ban on alcohol being sold in sachets and polythene? No. Only that no new products in sachet and small volume PET or glass bottles above 30%ABV will be registered by NAFDAC. AND THAT. 
+Furthermore, to reduce availability and curb abuse, effective January 31st, 2020, producers of alcohol in sachets and small volume PET and glass bottles are to reduce production by 50% of capacity prior to January 2020.","[356-claude-1] UNVERIFIED (e 0.00, c 0.05): In 2018, Nigeria's National Agency for Food and Drug Administration and Control (NAFDAC) announced a plan to ban the sale of alcoholic beverages in sachets.
+    - Two days after the National Agency for Food and Drug Administration and Control (NAFDAC) cautioned the public on the consumption of alcohol in sachet, the Federal Governm
+    - Govt. to ban sachet alcoholic beverages. Malawi Post 18
+    - In 2003 GON placed a ban on imports of beer and all non-alcoholic wines and beverages into the country
+    - NAFDAC hints ban on alcohol packaged in sachets, plastics
+    - While investigation is ongoing on the source/origin of methanol in the beverage, the Federal Government of Nigeria (FGN) placed a ban on the production, sale, distributio
+[356-claude-2] UNVERIFIED (e 0.01, c 0.33): In 2018, Nigeria's National Agency for Food and Drug Administration and Control (NAFDAC) announced a plan to ban the sale of alcoholic beverages in small volume PET bottles.
+    - Two days after the National Agency for Food and Drug Administration and Control (NAFDAC) cautioned the public on the consumption of alcohol in sachet, the Federal Governm
+    - Although the goal of the agency is to completely phase out the consumption and production of sachet, small PET and glass bottle alcohol, NAFDAC has not placed a ban on th
+    - Why Nigeria wan ban shayo for sachet and small-small bottle
+    - Govt. to ban sachet alcoholic beverages. Malawi Post 18
+    - In 2003 GON placed a ban on imports of beer and all non-alcoholic wines and beverages into the country
+[356-claude-3] UNVERIFIED (e 0.03, c 0.37): Nigeria's National Agency for Food and Drug Administration and Control (NAFDAC) cited public health concerns over alcohol abuse by minors as a reason for the planned ban.
+    - Two days after the National Agency for Food and Drug Administration and Control (NAFDAC) cautioned the public on the consumption of alcohol in sachet, the Federal Governm
+    - Why Nigeria wan ban shayo for sachet and small-small bottle
+    - providers, and the draft contains additional restrictions, including a ban on advertising for alcohol and
+    - Government of the Netherlands (2015) What does the ban on free plastic bags entail for
+    - Although the goal of the agency is to completely phase out the consumption and production of sachet, small PET and glass bottle alcohol, NAFDAC has not placed a ban on th
+[356-claude-4] UNVERIFIED (e 0.02, c 0.43): Nigeria's National Agency for Food and Drug Administration and Control (NAFDAC) cited public health concerns over alcohol abuse by the poor as a reason for the planned ban.
+    - Two days after the National Agency for Food and Drug Administration and Control (NAFDAC) cautioned the public on the consumption of alcohol in sachet, the Federal Governm
+    - Why Nigeria wan ban shayo for sachet and small-small bottle
+    - providers, and the draft contains additional restrictions, including a ban on advertising for alcohol and
+    - Government of the Netherlands (2015) What does the ban on free plastic bags entail for
+    - Although the goal of the agency is to completely phase out the consumption and production of sachet, small PET and glass bottle alcohol, NAFDAC has not placed a ban on th
+[356-claude-5] UNVERIFIED (e 0.00, c 0.56): The ban on the sale of alcoholic beverages in sachets and small volume PET bottles was scheduled to take effect in phases starting January 2020.
+    - In 2003 GON placed a ban on imports of beer and all non-alcoholic wines and beverages into the country
+    - Govt. to ban sachet alcoholic beverages. Malawi Post 18
+    - An important development post the ban on sale of alcohol in sachets relates to new packaging practice.
+    - The Nigerian Government has begun moves to end the packaging and selling of alcohol in sachet and small bottles.
+    - Maharashtra Government in their efforts to ban the sale
+[356-claude-6] UNVERIFIED (e 0.00, c 0.00): The ban on the sale of alcoholic beverages in sachets and small volume PET bottles had a five-year timeline for full implementation.
+    - In 2003 GON placed a ban on imports of beer and all non-alcoholic wines and beverages into the country
+    - Govt. to ban sachet alcoholic beverages. Malawi Post 18
+    - Adolescents view the ban on the sale of alcohol sachets in Malawi as a step towards reducing adolescent alcohol intake.
+    - Although the goal of the agency is to completely phase out the consumption and production of sachet, small PET and glass bottle alcohol, NAFDAC has not placed a ban on th
+    - An important development post the ban on sale of alcohol in sachets relates to new packaging practice.
+[356-claude-7] UNVERIFIED (e 0.00, c 0.37): By September 2020, the policy banning the sale of alcoholic beverages in sachets and small volume PET bottles had already come into effect as part of government regulation on alcohol packaging.
+    - In 2003 GON placed a ban on imports of beer and all non-alcoholic wines and beverages into the country
+    - - Government will ban the packaging of alcohol in sachets effective 30th September, 2017.
+    - The Nigerian Government has begun moves to end the packaging and selling of alcohol in sachet and small bottles.
+    - An important development post the ban on sale of alcohol in sachets relates to new packaging practice.
+    - Adolescents view the ban on the sale of alcohol sachets in Malawi as a step towards reducing adolescent alcohol intake.","claim verdict SUPPORTED (e 0.98, c 0.01); strongest contradiction: should then be covered with polythene material and placed on a raised platform to",,,
+13,google/gemini-3.8-flash,similarity,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"Public health agencies and scientific studies establish that wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2. However, masks do not completely prevent or stop the spread of COVID-19 on their own, and health authorities emphasize that they must be combined with other protective measures such as physical distancing and ventilation.",none,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-gemini-1] UNVERIFIED (e 0.88, c 0.01): Wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2.
+    - The consensus in the medical community is that face masks may help prevent the spread of SARS-CoV-2.
+    - We conducted a systematic review and meta-analysis to evaluate the effectiveness of using face masks to prevent the spread of SARS-CoV-2.
+    - - Kenyon, C. Widespread use of face masks in public may slow the spread of SARS CoV-2: an ecological study.
+    - source the spread of large respiratory droplets from the person wearing the face mask [1]. Medical masks
+    - While face masks can help reduce the spread of the flu and other respiratory viruses, they only do so if worn correctly and frequently.
+[13-gemini-2] SUPPORTED (e 0.98, c 0.02): Face masks do not completely prevent the spread of COVID-19 on their own.
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - Can wearing a face mask really reduce the spread of COVID-19?
+    - How do face masks protect against the spread of COVID‑19?
+    - Can face masks help prevent the spread of coronavirus disease 2019 (COVID-19)?
+    - can contribute to the spread of COVID-19, face masks and other
+[13-gemini-3] UNVERIFIED (e 0.01, c 0.00): Face masks must be combined with other protective measures such as physical distancing.
+    - The use of face masks in public may serve as a means of source control to reduce the spread of the
+    - Wearing face masks only when strictly necessary may reduce these undesired side effects.
+    - Wearing face masks for protection was at very high levels
+    - that wearing face masks alone was not protective (19), although this evidence has
+    - The World Health Organization (WHO) has changed its advice on face masks, saying they should be worn in public where social distancing is not possible to help stop the sp
+[13-gemini-4] UNVERIFIED (e 0.00, c 0.00): Face masks must be combined with other protective measures such as ventilation.
+    - The use of face masks in public may serve as a means of source control to reduce the spread of the
+    - While face masks can help reduce the spread of the flu and other respiratory viruses, they only do so if worn correctly and frequently.
+    - Wearing face masks for protection was at very high levels
+    - This review considers respiratory protective measures e.g. use of face masks as PPE, to reduce droplet and airborne spread.
+    - face masks to be worn in the entire country, 19 in parts","claim verdict REFUTED (e 0.08, c 1.00); strongest contradiction: can contribute to the spread of COVID-19, face masks and other",,,
+13,openai/gpt-6.1-sol,similarity,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"By 29 October 2020, evidence indicated that face masks could reduce COVID-19 transmission by limiting infectious respiratory particles. They did not eliminate transmission, and their effectiveness depended on mask type, fit and consistent use. Wearing masks alone could not guarantee that the spread would stop.",verifier,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-gpt-1] UNVERIFIED (e 0.13, c 0.01): By 29 October 2020, face masks could reduce COVID-19 transmission by limiting infectious respiratory particles.
+    - Can face masks help prevent the spread of coronavirus disease 2019 (COVID-19)?
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - Can wearing a face mask really reduce the spread of COVID-19?
+    - June 12: German study suggests making face masks compulsory could slow the spread of Covid-19 by as much as 40 per cent.
+    - How do face masks protect against the spread of COVID‑19?
+[13-gpt-2] UNVERIFIED (e 0.53, c 0.87): Face masks did not eliminate COVID-19 transmission.
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - Can face masks help prevent the spread of coronavirus disease 2019 (COVID-19)?
+    - Can wearing a face mask really reduce the spread of COVID-19?
+    - The rapid spread of COVID-19 compelled some governments, but not others, to recommend the wearing of face masks at the start of the pandemic.
+    - How do face masks protect against the spread of COVID‑19?
+[13-gpt-3] UNVERIFIED (e 0.00, c 0.01): The effectiveness of face masks depended on mask type.
+    - But between face masks for healthcare workers and face masks for the rest of us, what do we really know about these different types of face masks?
+    - The use of face masks in public may serve as a means of source control to reduce the spread of the
+    - While face masks can help reduce the spread of the flu and other respiratory viruses, they only do so if worn correctly and frequently.
+    - First off, there are two main types of face masks worn to aid in the prevention of the spread of viruses.
+    - Wearing face masks for protection was at very high levels
+[13-gpt-4] UNVERIFIED (e 0.02, c 0.00): The effectiveness of face masks depended on fit.
+    - While face masks can help reduce the spread of the flu and other respiratory viruses, they only do so if worn correctly and frequently.
+    - The use of face masks in public may serve as a means of source control to reduce the spread of the
+    - Wearing face masks for protection was at very high levels
+    - Yes, face masks combined with other preventive measures, such as frequent hand-washing and social distancing, help slow the spread of the disease.
+    - The World Health Organization (WHO) has changed its advice on face masks, saying they should be worn in public where social distancing is not possible to help stop the sp
+[13-gpt-5] UNVERIFIED (e 0.00, c 0.00): The effectiveness of face masks depended on consistent use.
+    - The use of face masks in public may serve as a means of source control to reduce the spread of the
+    - Secondly, face masks are more efficient in preventing virus spread from asymptomatic patients. Third, there is no evidence of false sense of security and improper use of 
+    - Wearing face masks for protection was at very high levels
+    - Yes, face masks combined with other preventive measures, such as frequent hand-washing and social distancing, help slow the spread of the disease.
+    - He and his colleagues recently published a study looking at the effectiveness of face masks to prevent the spread of the virus from infected people.
+[13-gpt-6] SUPPORTED (e 0.98, c 0.01): Wearing masks alone could not guarantee that the spread of COVID-19 would stop.
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - Wearing a mask is one of the simplest ways to reduce spread of COVID-19, and persuading people
+    - The rapid spread of COVID-19 compelled some governments, but not others, to recommend the wearing of face masks at the start of the pandemic.
+    - Can wearing a face mask really reduce the spread of COVID-19?
+    - - Wear a mask with two or more layers to help stop the spread of COVID-19","claim verdict REFUTED (e 0.08, c 1.00); strongest contradiction: can contribute to the spread of COVID-19, face masks and other",,,
+99,google/gemini-3.8-flash,similarity,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,REFUTED,SUPPORTED,"New Zealand's Abortion Legislation Act 2020 does not include a specific provision requiring medical support for infants born alive following an abortion procedure. An amendment proposed during the legislative process to mandate medical care in such circumstances was voted down by Parliament. While general legal and professional duties under other legislation (such as the Crimes Act 1961) apply to any person born alive, the Abortion Legislation Act itself does not contain this requirement.",bm25,"Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.
+Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.","[99-gemini-1] UNVERIFIED (e 0.39, c 0.00): New Zealand's Abortion Legislation Act 2020 does not include a specific provision requiring medical support for infants born alive following an abortion procedure.
+    - Even more horrific still, New Zealand’s new law includes no requirement that babies born alive after botched abortions be given medical support.
+    - Before the Abortion Legislation Act 2020, abortion is only legal in New Zealand on certain grounds, such as to preserve the life or health of the woman, incest, or foetal
+    - New Zealand abortion law was liberalised on March 18, 2020. Abortion is legal up to birth with the only requirement being that after 20 weeks the “health practitioner rea
+    - - There will be no legal requirement that babies born alive after a ‘failed’ abortion are given medical support
+    - This large number of submissions was not even considered by the Abortion Legislation Committee, and positions have been taken in support of a bill that places New Zealand
+[99-gemini-2] UNVERIFIED (e 0.07, c 0.03): An amendment to mandate medical care for infants born alive following an abortion procedure was proposed during the legislative process for New Zealand's Abortion Legislation Act 2020.
+    - * In a shocking display of human rights abuse in New Zealand, an amendment to the Abortion Legislation Bill which required the care of a child born after an attempted abo
+    - New Zealand abortion law was liberalised on March 18, 2020. Abortion is legal up to birth with the only requirement being that after 20 weeks the “health practitioner rea
+    - That's a purpose that is under the New Zealand Public Health and Disability Act 2000 in relation to the specific provision of healthcare services, which the Abortion Legi
+    - Even more horrific still, New Zealand’s new law includes no requirement that babies born alive after botched abortions be given medical support.
+    - The Abortion Legislation Act 2020 is an Act of Parliament in New Zealand allowing unrestricted access to abortion within the first 20 weeks of pregnancy, and repealing se
+[99-gemini-3] UNVERIFIED (e 0.12, c 0.87): Parliament voted down the amendment to New Zealand's Abortion Legislation Act 2020 that would mandate medical care for infants born alive following an abortion procedure.
+    - The Abortion Legislation Act 2020 is an Act of Parliament in New Zealand allowing unrestricted access to abortion within the first 20 weeks of pregnancy, and repealing se
+    - The New Zealand Abortion Legislation Act 2020 is an Act of Parliament in New Zealand that amends the law to decriminalise abortion.
+    - * In a shocking display of human rights abuse in New Zealand, an amendment to the Abortion Legislation Bill which required the care of a child born after an attempted abo
+    - New Zealand abortion law was liberalised on March 18, 2020. Abortion is legal up to birth with the only requirement being that after 20 weeks the “health practitioner rea
+    - In March 2020 abortion was removed from the Crimes Act, meaning it is now legal to have an abortion in New Zealand.
+[99-gemini-4] UNVERIFIED (e 0.03, c 0.68): General legal duties under other New Zealand legislation (such as the Crimes Act 1961) apply to any person born alive.
+    - Abortion was governed under New Zealand’s Crimes Act 1961, and women seeking an abortion were considered to be committing a crime.
+    - a woman to receive an abortion in New Zealand. When there are no offences in the Crimes Act
+    - Even more horrific still, New Zealand’s new law includes no requirement that babies born alive after botched abortions be given medical support.
+    - In New Zealand, in Aotearoa New Zealand, it is legal to have an abortion through the current system. In the current system in New Zealand, performing an unlawful abortion
+    - Background: Abortion is a common procedure in New Zealand (NZ). Currently, it is only legal when two certifying consultants agree that the person seeking an abortion meet
+[99-gemini-5] UNVERIFIED (e 0.01, c 0.67): General professional duties under other New Zealand legislation (such as the Crimes Act 1961) apply to any person born alive.
+    - a woman to receive an abortion in New Zealand. When there are no offences in the Crimes Act
+    - Abortion was governed under New Zealand’s Crimes Act 1961, and women seeking an abortion were considered to be committing a crime.
+    - Background: Abortion is a common procedure in New Zealand (NZ). Currently, it is only legal when two certifying consultants agree that the person seeking an abortion meet
+    - Even more horrific still, New Zealand’s new law includes no requirement that babies born alive after botched abortions be given medical support.
+    - New Zealand does not confer on an applicant for residence (or citizenship) an","claim verdict UNVERIFIED (e 0.06, c 0.01); strongest contradiction: Before the Abortion Legislation Act 2020, abortion is only legal in New Zealand on certain grounds, such as to preserve the life or health of the woman, incest,",,,
+254,google/gemini-3.8-flash,similarity,Olive Garden prohibits its employees from wearing face masks depicting the American flag.,REFUTED,SUPPORTED,"Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear plain, solid-colored face masks without logos, symbols, or designs. Under this policy, face masks featuring graphics or patterns, including the American flag, were not permitted.",gold,"Is there any evidence that Olive Garden has banned employees from wearing masks with the American Flag? No. There are no credible reports anyway about Olive Garden banning its employees from wearing masks depicting the American flag.
+What Olive Garden said about this? In response to a question about the claim on the chain’s official Facebook page, Olive Garden also said that claim is “not true.”","[254-gemini-1] UNVERIFIED (e 0.00, c 0.08): Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear plain face masks.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - Also, before requiring employees to provide their own equipment such as face masks, employers should confirm availability.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Which restaurants require diners to wear face masks?
+[254-gemini-2] UNVERIFIED (e 0.00, c 0.04): Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear solid-colored face masks.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - It's a good week for Olive Garden servers who hate ties and like to wear black. After more than 97 percent of employees complained about their uniforms, Bloomberg Busines
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Also, before requiring employees to provide their own equipment such as face masks, employers should confirm availability.
+[254-gemini-3] UNVERIFIED (e 0.01, c 0.62): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with logos.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - It's a good week for Olive Garden servers who hate ties and like to wear black. After more than 97 percent of employees complained about their uniforms, Bloomberg Busines
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+[254-gemini-4] UNVERIFIED (e 0.00, c 0.66): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with symbols.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Also, before requiring employees to provide their own equipment such as face masks, employers should confirm availability.
+[254-gemini-5] UNVERIFIED (e 0.00, c 0.63): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with designs.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Also, before requiring employees to provide their own equipment such as face masks, employers should confirm availability.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+[254-gemini-6] UNVERIFIED (e 0.01, c 0.43): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring graphics.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Also, before requiring employees to provide their own equipment such as face masks, employers should confirm availability.
+[254-gemini-7] UNVERIFIED (e 0.01, c 0.57): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring patterns.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Also, before requiring employees to provide their own equipment such as face masks, employers should confirm availability.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+[254-gemini-8] UNVERIFIED (e 0.00, c 0.91): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring the American flag.
+    - Olive Garden has put several safety measures in place for both employees and guests.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - It's a good week for Olive Garden servers who hate ties and like to wear black. After more than 97 percent of employees complained about their uniforms, Bloomberg Busines
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.","claim verdict UNVERIFIED (e 0.01, c 0.35); strongest contradiction: • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.",,,
+258,google/gemini-3.8-flash,similarity,A Supreme Court nominee has never been nominated and installed while a presidential election is already underway.,REFUTED,SUPPORTED,"Prior to September 2020, no Supreme Court justice had ever been nominated and confirmed after voting in a presidential election had already begun. In historical instances where vacancies occurred in the autumn of an election year, such as in 1864, presidents delayed nominations until after the election concluded.",gold verifier,"When was the claim made? 27/09/2020
+Has voting begun for state elections in the US? Forty-five states and the District of Columbia offer early in-person voting (including states with all-mail elections). Delaware has enacted early voting but it will not be in place until 2022. Five states do not offer pre-Election Day in-person voting options: Connecticut, Mississippi, Missouri, New Hampshire, and South Carolina.
+Have Supreme Court justice nominees ever been installed while a president is running for reelection? In presidential election years, five justices have been nominated and installed by presidents who were running for reelection.
+Have there been presidential election years in the US where Supreme court judges were nominated and installed The first nomination during an election year in the twentieth century came on March 13, 1912, when  President William Taft (a Republican) nominated Mahlon Pitney to succeed John Marshall Harlan, who died on October 14, 1911.  The Republican-controlled Senate confirmed Pitney on March 18, 1912, by a vote of fifty to twenty-six.
+
+President Woodrow Wilson (a Democrat) made two nominations during 1916.  On January 28, 1916, Wilson nominated Louis Brandeis to replace Joseph Rucker Lamar, who died on January 2, 1916; the Democratic-controlled Senate confirmed Brandeis on June 1, 1916, by a vote of forty-seven to twenty-two.  Charles Evans Hughes resigned from the Court on June 10, 1916 to run (unsuccessfully) for president as a Republican.  On July 14, 1916, Wilson nominated John Clarke to replace him; Clarke was confirmed unanimously ten days later.
+
+On February 15, 1932, President Herbert Hoover (a Republican) nominated Benjamin Cardozo to succeed Oliver Wendell Holmes, who retired on January 12, 1932.  A Republican-controlled Senate confirmed Cardozo by a unanimous voice vote on February 24, 1932.
+
+On January 4, 1940, President Franklin Roosevelt (a Democrat) nominated Frank Murphy to replace Pierce Butler, who died on November 16, 1939; Murphy was confirmed by a heavily Democratic Senate on January 16, 1940, by a voice vote.
+
+On November 30, 1987, President Ronald Reagan (a Republican) nominated Justice Anthony Kennedy to fill the vacancy created by the retirement of Lewis Powell.  A Democratic-controlled Senate confirmed Kennedy (who followed Robert Bork and Douglas Ginsburg as nominees for that slot) on February 3, 1988, by a vote of ninety-seven to zero.","[258-gemini-1] UNVERIFIED (e 0.17, c 0.80): Prior to September 2020, no Supreme Court justice had ever been nominated and confirmed after voting in a presidential election had already begun.
+    - No court nominee has been considered so close to a presidential election before, with early voting already underway.
+    - It should be noted that not every Supreme Court nominee who was a Senator or former Senator when nominated was
+    - This would be unprecedented. Indeed, there has never been a vacancy on the Supreme Court lasting more than four months, while the Court has been in session.
+    - It has been “standard practice,” Grassley said, “over the last nearly 80 years that Supreme Court nominees are not nominated and confirmed during a presidential election 
+    - No Senate has ever denied a hearing to a presidential nominee to fill a Supreme Court vacancy.” Official statement March 16, 2016
+[258-gemini-2] UNVERIFIED (e 0.00, c 0.01): In historical instances where Supreme Court vacancies occurred in the autumn of an election year, such as in 1864, presidents delayed nominations until after the election concluded.
+    - Supreme Court vacancies in presidential election years
+    - There have been eight instances in American history when a Supreme Court vacancy opened during a presidential election year, the White House and the Senate were controlle
+    - There have now been seven instances in American history when a Supreme Court vacancy opened during a presidential election year, the White House and the Senate were contr
+    - In U.S. presidential election years, there have been 16 Supreme Court vacancies that occurred before Election Day.
+    - This would be unprecedented. Indeed, there has never been a vacancy on the Supreme Court lasting more than four months, while the Court has been in session.","claim verdict UNVERIFIED (e 0.19, c 0.02); strongest contradiction: “Never before in our nation’s history has a Supreme Court Justice been nominated and installed while a presidential election is already underway,” Biden said.",,,
+325,anthropic/claude-sonnet-5,similarity,Joe Biden was the first in his family to go to college.,REFUTED,SUPPORTED,"Biden has frequently stated he was the first in his family to attend college, reflecting his working-class upbringing in Scranton, Pennsylvania. His father worked various jobs without a college degree, and no immediate family members before him are known to have attended college. This claim aligns with his well-documented personal and family history.",gold bm25 verifier,"What is the name of Joe Biden's great grandfather? He was a maternal great-grandfather of Joe Biden, the 46th and current president of the United States.
+Which college did Joe Biden's great grandfather attend? Blewitt attended Lafayette College, US, serving as class president, and earned a Bachelor of Science degree in civil engineering in 1879.
+How many of Joe Biden's family need to have attended college to make this statement untrue? One","[325-claude-1] SUPPORTED (e 1.00, c 0.05): Joe Biden was the first in his family to attend college.
+    - I started thinking as I was coming over here, why is it that Joe Biden is the first in his family ever to go to a university?
+    - ""I started thinking as I was coming over here, Why is it that Joe Biden is the first in his family ever to go to a university?""
+    - “Why is it that Joe Biden is the first in his family ever to go to a university?” Biden asked. “Is it because I’m the first Biden in a thousand generations to get a colle
+    - From there it is not so long a leap to the politician we know. Biden was the family’s first national politician the way families have a first child to go to college—which
+    - Without mentioning Mr Kinnock, the young presidential hopeful said: ""Why is it that Joe Biden is the first in his family ever to go to a university?
+[325-claude-2] UNVERIFIED (e 0.15, c 0.00): Joe Biden had a working-class upbringing in Scranton, Pennsylvania.
+    - Joe Biden was born in Scranton, Pennsylvania, to Catherine Eugenia Finnegan Biden and Joseph Robinette Biden Sr.
+    - Vice President Joe Biden was born in Scranton, Pa., and moved to Delaware with his family when he was 11.
+    - When Joe Biden’s father, Joe Sr., experienced financial hardship, he had to move his family into his wife’s parents’ home in Scranton, Pennsylvania.
+    - Joe Biden depended on his family to help staff his campaigns. His sister, Valerie, who taught at the Quaker day school Wilmington Friends, served as his campaign manager.
+    - I would recommend this to people interested in learning about Joe Biden.
+[325-claude-3] UNVERIFIED (e 0.00, c 0.00): Joe Biden's father worked various jobs.
+    - Biden's parents were married for 61 years. Biden's father was a successful businessman early in his career, but faced several setbacks when Joe was born.
+    - When Joe Biden’s father, Joe Sr., experienced financial hardship, he had to move his family into his wife’s parents’ home in Scranton, Pennsylvania.
+    - He is the eldest son of Vice President Joe Biden. Beau's father and his mother, Neilia Hunter Biden, lived in Syracuse during the first years of their marriage, when Joe 
+    - I wondered if he was any relation to Democratic presidential candidate Joe Biden. Indeed he is! He was Joe Biden’s father.
+    - Joe Biden depended on his family to help staff his campaigns. His sister, Valerie, who taught at the Quaker day school Wilmington Friends, served as his campaign manager.
+[325-claude-4] UNVERIFIED (e 0.00, c 0.00): Joe Biden's father did not have a college degree.
+    - I started thinking as I was coming over here, why is it that Joe Biden is the first in his family ever to go to a university?
+    - Biden's parents were married for 61 years. Biden's father was a successful businessman early in his career, but faced several setbacks when Joe was born.
+    - Joe Biden is hardly the first politician to have faced scrutiny for the business dealings of a family member.
+    - “Why is it that Joe Biden is the first in his family ever to go to a university?” Biden asked. “Is it because I’m the first Biden in a thousand generations to get a colle
+    - When Joe Biden’s father, Joe Sr., experienced financial hardship, he had to move his family into his wife’s parents’ home in Scranton, Pennsylvania.
+[325-claude-5] SUPPORTED (e 0.99, c 0.31): No immediate family members before Joe Biden are known to have attended college.
+    - Joe Biden is hardly the first politician to have faced scrutiny for the business dealings of a family member.
+    - I started thinking as I was coming over here, why is it that Joe Biden is the first in his family ever to go to a university?
+    - Biden's parents were married for 61 years. Biden's father was a successful businessman early in his career, but faced several setbacks when Joe was born.
+    - Neither Frank Biden nor the presidential campaign of his brother Joe Biden agreed to be quoted for this story.
+    - From there it is not so long a leap to the politician we know. Biden was the family’s first national politician the way families have a first child to go to college—which","claim verdict SUPPORTED (e 1.00, c 0.05); strongest contradiction: From there it is not so long a leap to the politician we know. Biden was the family’s first national politician the way families have a first child to go to col",,,
+330,google/gemini-3.8-flash,similarity,Ventura County election officials are reducing voting locations in order to limit in-person voter turnout.,SUPPORTED,REFUTED,"In response to the COVID-19 pandemic and state legislation, Ventura County consolidated polling places into larger, multi-day in-person voting centers and sent mail-in ballots to all registered voters. The changes were implemented to accommodate health guidelines, poll worker shortages, and state regulations, not to suppress or limit in-person voter turnout.",verifier,"Is California reducing its amount of voting stations? Reductions in voting stations are across the board some examples are Sacramento County opened 84 vote centers for the March primary, but has only secured 39 sites for the November election. In Santa Barbara, officials are reducing the number of in-person voting sites from 86 to 25.
+Why are Voting station numbers being reduced? Facing the uncertainty of an election conducted during the COVID-19 pandemic, state officials are encouraging vote-by-mail and sending every California voter a ballot","[330-gemini-1] UNVERIFIED (e 0.00, c 0.12): Ventura County consolidated polling places into larger, multi-day in-person voting centers.
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+    - expanded in-person voting locations on Election Day for those who need to vote in-person.
+    - Counties that wish to offer fewer in-person voting locations or fewer days of
+    - MORE: Ventura County turnout tops 70 percent in November election
+    - things, identifies the number of in-person voting locations county elections
+[330-gemini-2] UNVERIFIED (e 0.00, c 0.00): Ventura County sent mail-in ballots to all registered voters.
+    - The Ventura County registrar reports voter turnout at just under 36 percent.
+    - - These election results are from the Ventura County elections office.
+    - MORE: Ventura County turnout tops 70 percent in November election
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+    - EARLIER: Ventura County turnout tops 70 percent in November
+[330-gemini-3] UNVERIFIED (e 0.00, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were responses to the COVID-19 pandemic.
+    - MORE: Ventura County turnout tops 70 percent in November election
+    - EARLIER: Ventura County turnout tops 70 percent in November
+    - The Ventura County registrar reports voter turnout at just under 36 percent.
+    - - These election results are from the Ventura County elections office.
+    - absentee or mail voting. Some jurisdictions will consolidate in-person voting locations and must
+[330-gemini-4] UNVERIFIED (e 0.00, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were responses to state legislation.
+    - MORE: Ventura County turnout tops 70 percent in November election
+    - absentee or mail voting. Some jurisdictions will consolidate in-person voting locations and must
+    - The Ventura County registrar reports voter turnout at just under 36 percent.
+    - EARLIER: Ventura County turnout tops 70 percent in November
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.
+[330-gemini-5] UNVERIFIED (e 0.00, c 0.01): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate health guidelines.
+    - absentee or mail voting. Some jurisdictions will consolidate in-person voting locations and must
+    - the mail and relaxing requirements for in-person voting locations. Which
+    - public health and safety guidelines for in-person voting locations.
+    - The order issued Wednesday allows those counties to provide a fraction of their normal in-person voting locations, focusing instead on larger facilities with voting devic
+    - MORE: Ventura County turnout tops 70 percent in November election
+[330-gemini-6] UNVERIFIED (e 0.00, c 0.00): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate poll worker shortages.
+    - absentee or mail voting. Some jurisdictions will consolidate in-person voting locations and must
+    - the mail and relaxing requirements for in-person voting locations. Which
+    - MORE: Ventura County turnout tops 70 percent in November election
+    - While voting locations and polling place design typically vary, some election officials are moving
+    - The Ventura County registrar reports voter turnout at just under 36 percent.
+[330-gemini-7] UNVERIFIED (e 0.00, c 0.85): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were implemented to accommodate state regulations.
+    - absentee or mail voting. Some jurisdictions will consolidate in-person voting locations and must
+    - MORE: Ventura County turnout tops 70 percent in November election
+    - the mail and relaxing requirements for in-person voting locations. Which
+    - The Ventura County registrar reports voter turnout at just under 36 percent.
+    - conducted using in-person voting at polling locations throughout the jurisdiction;
+[330-gemini-8] UNVERIFIED (e 0.00, c 0.07): Ventura County's polling-place consolidation and distribution of mail-in ballots to all registered voters were not intended to suppress or limit in-person voter turnout.
+    - The Ventura County registrar reports voter turnout at just under 36 percent.
+    - MORE: Ventura County turnout tops 70 percent in November election
+    - EARLIER: Ventura County turnout tops 70 percent in November
+    - inadequate selection of early voting locations that did not account for variations in voter turnout at
+    - If you live in CD-25 in Ventura County, you can vote by mail or at some, more limited than usual in-person voting locations.","claim verdict UNVERIFIED (e 0.00, c 0.41); strongest contradiction: To best allocate resources for voting locations, election officials should model the turnout by",,,
+463,openai/gpt-6.1-sol,similarity,"558 people were killed by the police in 2018, while 201 people died in police custody",SUPPORTED,REFUTED,"South Africa’s Independent Police Investigative Directorate recorded 436 deaths resulting from police action and 201 deaths in police custody in 2017/18. In 2018/19, the figures were 393 and 214, respectively. The claim pairs the 2017/18 custody figure with an incorrect figure for deaths resulting from police action.",bm25 verifier,"Has the police violence increased in south Africa? Yes as per the numbers shown, police violence has increased in South Africa.
+How many people were killed by South African police in 2018? 558
+How many people were killed in custody by South African police in 2018? 201","[463-gpt-1] UNVERIFIED (e 0.01, c 0.23): South Africa’s Independent Police Investigative Directorate recorded 436 deaths resulting from police action in 2017/18.
+    - died as a result of police action was 1548 while 626 people died in police custody.18
+    - of police action or in police custody in South Africa. The number of people who
+    - maintained the numbers from the prior two years: in 2016, 242 of 963 people killed by police
+    - During that time, at least 1730 people were killed by the police;Footnote 55 we remove from this dataset deaths that were caused by vehicle collisions, leaving a total of
+    - Last year police shot and killed 998 people, 11 more than the 987 they fatally shot in 2017. In 2016, police killed 963 people, and 995 in 2015.
+[463-gpt-2] UNVERIFIED (e 0.00, c 0.07): South Africa’s Independent Police Investigative Directorate recorded 201 deaths in police custody in 2017/18.
+    - of police action or in police custody in South Africa. The number of people who
+    - Data on risks facing people in police custody in South Africa
+    - died as a result of police action was 1548 while 626 people died in police custody.18
+    - More than 460 people have died in encounters with police in Canada since 2000
+    - proportion of deaths in custody may be the frequency with which British police arrest people for
+[463-gpt-3] UNVERIFIED (e 0.01, c 0.73): South Africa’s Independent Police Investigative Directorate recorded 393 deaths resulting from police action in 2018/19.
+    - of police action or in police custody in South Africa. The number of people who
+    - maintained the numbers from the prior two years: in 2016, 242 of 963 people killed by police
+    - died as a result of police action was 1548 while 626 people died in police custody.18
+    - the Daily Nation reported that police killed at least 101 people in Nairobi and
+    - - In 2018, police shot and killed 1,166 people throughout the country.
+[463-gpt-4] UNVERIFIED (e 0.00, c 0.09): South Africa’s Independent Police Investigative Directorate recorded 214 deaths in police custody in 2018/19.
+    - of police action or in police custody in South Africa. The number of people who
+    - died as a result of police action was 1548 while 626 people died in police custody.18
+    - Data on risks facing people in police custody in South Africa
+    - The original article stated 11 and 6 respectively. Additionally, it has been amended to show 164 people died in police custody.
+    - proportion of deaths in custody may be the frequency with which British police arrest people for","claim verdict UNVERIFIED (e 0.02, c 0.95); strongest contradiction: Last year police shot and killed 998 people, 11 more than the 987 they fatally shot in 2017. In 2016, police killed 963 people, and 995 in 2015.",,,
+13,google/gemini-3.8-flash,verifier,Wearing face masks will stop the spread of covid 19,SUPPORTED,REFUTED,"Public health agencies and scientific studies establish that wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2. However, masks do not completely prevent or stop the spread of COVID-19 on their own, and health authorities emphasize that they must be combined with other protective measures such as physical distancing and ventilation.",none,"Does a face mask prevent the spread of Covid 19? Cloth face coverings, even homemade masks made of the correct material, are effective in reducing the spread of COVID-19 - for the wearer and those around them - according to a new study from Oxford’s Leverhulme Centre for Demographic Science.","[13-gemini-1] SUPPORTED (e 0.99, c 0.00): Wearing face masks reduces the transmission of respiratory droplets carrying SARS-CoV-2.
+    - Wearing a well-fitted mask or respirator helps to protect you and those around you by preventing the spread of COVID-19.
+    - Research broadly suggests that face masks won't necessarily stop you from catching the virus, but it will lessen the chances of you passing it on if you are an asymptomat
+    - - Kenyon, C. Widespread use of face masks in public may slow the spread of SARS CoV-2: an ecological study.
+    - The consensus in the medical community is that face masks may help prevent the spread of SARS-CoV-2.
+    - How do face masks protect against the spread of COVID‑19?
+[13-gemini-2] SUPPORTED (e 1.00, c 0.00): Face masks do not completely prevent the spread of COVID-19 on their own.
+    - Research broadly suggests that face masks won't necessarily stop you from catching the virus, but it will lessen the chances of you passing it on if you are an asymptomat
+    - Can face masks help slow the spread of the COVID-19 pandemic? Why should you wear a face mask? Do you need to wear a face mask even if you’re practicing social distancing
+    - can contribute to the spread of COVID-19, face masks and other
+    - It is possible, therefore, that widespread use of face masks by the public might help slow the spread of the virus.
+    - June 12: German study suggests making face masks compulsory could slow the spread of Covid-19 by as much as 40 per cent.
+[13-gemini-3] SUPPORTED (e 0.99, c 0.00): Face masks must be combined with other protective measures such as physical distancing.
+    - Yes, face masks combined with other preventive measures, such as frequent hand-washing and social distancing, help slow the spread of the disease.
+    - Can face masks help slow the spread of the COVID-19 pandemic? Why should you wear a face mask? Do you need to wear a face mask even if you’re practicing social distancing
+    - How do face masks protect against the spread of COVID‑19?
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - Can face masks help prevent the spread of coronavirus disease 2019 (COVID-19)?
+[13-gemini-4] UNVERIFIED (e 0.01, c 0.00): Face masks must be combined with other protective measures such as ventilation.
+    - When COVID-19 first started to spread, public health officials said that face masks would not help prevent the spread of the virus.
+    - How do face masks protect against the spread of COVID‑19?
+    - Can face masks help prevent the spread of coronavirus disease 2019 (COVID-19)?
+    - that wearing face masks alone was not protective (19), although this evidence has
+    - But between face masks for healthcare workers and face masks for the rest of us, what do we really know about these different types of face masks?","claim verdict REFUTED (e 0.63, c 1.00); strongest contradiction: can contribute to the spread of COVID-19, face masks and other",,,
+99,google/gemini-3.8-flash,verifier,New Zealand's Abortion Legislation Act (2020) does not make it a legal requirement that babies born alive after an abortion are given medical support.,REFUTED,SUPPORTED,"New Zealand's Abortion Legislation Act 2020 does not include a specific provision requiring medical support for infants born alive following an abortion procedure. An amendment proposed during the legislative process to mandate medical care in such circumstances was voted down by Parliament. While general legal and professional duties under other legislation (such as the Crimes Act 1961) apply to any person born alive, the Abortion Legislation Act itself does not contain this requirement.",bm25,"Are babies born alive after an abortion in NZ entitled to  medical support? Yes. Once alive and living outside the mother's womb, the neonate is a legal person and has the same rights as any other person, and there is a requirement to provide health care in the same way as for any other neonate.
+Does NZ  Abortion Legislation Act (2020) makes it a legal requirement that babies born alive after an abortion are given medical support ? False , as per the New Zealand's Abortion Legislation Act (2020),  proposed amendment was voted down by 80 to 37 votes, so will not be part of the Bill.  If it was passed, then The amendment would have required that if a baby was born alive following a failed abortion, a qualified health practitioner or any other health practitioner present at the time the child is born, would have a duty to provide the child with appropriate medical care and treatment.","[99-gemini-1] SUPPORTED (e 0.98, c 0.14): New Zealand's Abortion Legislation Act 2020 does not include a specific provision requiring medical support for infants born alive following an abortion procedure.
+    - Additionally, there is now no requirement doctors must be involved with an abortion ‘procedure’ and MPs – including Prime Minister Jacinda Ardern – voted against an amend
+    - Even more horrific still, New Zealand’s new law includes no requirement that babies born alive after botched abortions be given medical support.
+    - That's a purpose that is under the New Zealand Public Health and Disability Act 2000 in relation to the specific provision of healthcare services, which the Abortion Legi
+    - a woman to receive an abortion in New Zealand. When there are no offences in the Crimes Act
+    - - No legal requirement that babies born alive are given medical support.
+[99-gemini-2] UNVERIFIED (e 0.07, c 0.21): An amendment to mandate medical care for infants born alive following an abortion procedure was proposed during the legislative process for New Zealand's Abortion Legislation Act 2020.
+    - The federal Born-Alive Abortion Survivors Protection Act would augment current law to require that proper medical care be given to an infant born alive following an abort
+    - * In a shocking display of human rights abuse in New Zealand, an amendment to the Abortion Legislation Bill which required the care of a child born after an attempted abo
+    - That's a purpose that is under the New Zealand Public Health and Disability Act 2000 in relation to the specific provision of healthcare services, which the Abortion Legi
+    - In New Zealand, the provision of legal abortion is determined by the Contraception, Sterilisation and Abortion Act of 1977, and is overseen by the Abortion Supervisory Co
+    - Additionally, there is now no requirement doctors must be involved with an abortion ‘procedure’ and MPs – including Prime Minister Jacinda Ardern – voted against an amend
+[99-gemini-3] UNVERIFIED (e 0.01, c 0.87): Parliament voted down the amendment to New Zealand's Abortion Legislation Act 2020 that would mandate medical care for infants born alive following an abortion procedure.
+    - New Zealand abortion law was liberalised on March 18, 2020. Abortion is legal up to birth with the only requirement being that after 20 weeks the “health practitioner rea
+    - That's a purpose that is under the New Zealand Public Health and Disability Act 2000 in relation to the specific provision of healthcare services, which the Abortion Legi
+    - - ""Abortion Legislation Bill"". New Zealand Legislation. Parliamentary Counsel Office. Retrieved 8 August 2019.
+    - New Zealand MPs have introduced the most extreme abortion law in the world after the Abortion Legislation Bill passed its third reading in Parliament.
+    - - ^ ""Abortion Legislation Bill — In Committee"". New Zealand Parliament. 10 March 2020. Retrieved 11 March 2020.
+[99-gemini-4] UNVERIFIED (e 0.03, c 0.67): General legal duties under other New Zealand legislation (such as the Crimes Act 1961) apply to any person born alive.
+    - Abortion was governed under New Zealand’s Crimes Act 1961, and women seeking an abortion were considered to be committing a crime.
+    - In New Zealand, in Aotearoa New Zealand, it is legal to have an abortion through the current system. In the current system in New Zealand, performing an unlawful abortion
+    - Background: Abortion is a common procedure in New Zealand (NZ). Currently, it is only legal when two certifying consultants agree that the person seeking an abortion meet
+    - a woman to receive an abortion in New Zealand. When there are no offences in the Crimes Act
+    - 56 “A brief history of abortion laws in New Zealand” (21 November 2014) Abortion Services in New Zealand <
+[99-gemini-5] UNVERIFIED (e 0.02, c 0.67): General professional duties under other New Zealand legislation (such as the Crimes Act 1961) apply to any person born alive.
+    - Background: Abortion is a common procedure in New Zealand (NZ). Currently, it is only legal when two certifying consultants agree that the person seeking an abortion meet
+    - Abortion was governed under New Zealand’s Crimes Act 1961, and women seeking an abortion were considered to be committing a crime.
+    - In New Zealand, in Aotearoa New Zealand, it is legal to have an abortion through the current system. In the current system in New Zealand, performing an unlawful abortion
+    - 56 “A brief history of abortion laws in New Zealand” (21 November 2014) Abortion Services in New Zealand <
+    - a woman to receive an abortion in New Zealand. When there are no offences in the Crimes Act","claim verdict SUPPORTED (e 0.96, c 0.05); strongest contradiction: No. Under the Contraception, Sterilisation and Abortion Act 1977, it is a crime for a woman to receive an unlawful [i] abortion in New Zealand (for example, a ‘",,,
+254,google/gemini-3.8-flash,verifier,Olive Garden prohibits its employees from wearing face masks depicting the American flag.,REFUTED,SUPPORTED,"Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear plain, solid-colored face masks without logos, symbols, or designs. Under this policy, face masks featuring graphics or patterns, including the American flag, were not permitted.",gold,"Is there any evidence that Olive Garden has banned employees from wearing masks with the American Flag? No. There are no credible reports anyway about Olive Garden banning its employees from wearing masks depicting the American flag.
+What Olive Garden said about this? In response to a question about the claim on the chain’s official Facebook page, Olive Garden also said that claim is “not true.”","[254-gemini-1] UNVERIFIED (e 0.00, c 0.43): Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear plain face masks.
+    - Olive Garden employees who have had to cut somebody off from unlimited breadsticks and salad, what happened?
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Which restaurants require diners to wear face masks?
+    - It's a good week for Olive Garden servers who hate ties and like to wear black. After more than 97 percent of employees complained about their uniforms, Bloomberg Busines
+[254-gemini-2] UNVERIFIED (e 0.00, c 0.09): Olive Garden's corporate dress code policy during the COVID-19 pandemic required employees to wear solid-colored face masks.
+    - Olive Garden employees who have had to cut somebody off from unlimited breadsticks and salad, what happened?
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Which restaurants require diners to wear face masks?
+    - It's a good week for Olive Garden servers who hate ties and like to wear black. After more than 97 percent of employees complained about their uniforms, Bloomberg Busines
+[254-gemini-3] UNVERIFIED (e 0.01, c 0.62): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with logos.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Additionally, she supplied masks for her local Olive Garden, two nursing homes, a church, and a factory.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+[254-gemini-4] UNVERIFIED (e 0.00, c 0.66): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with symbols.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Additionally, she supplied masks for her local Olive Garden, two nursing homes, a church, and a factory.
+[254-gemini-5] UNVERIFIED (e 0.00, c 0.63): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks with designs.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Additionally, she supplied masks for her local Olive Garden, two nursing homes, a church, and a factory.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+[254-gemini-6] UNVERIFIED (e 0.01, c 0.43): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring graphics.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Which restaurants require diners to wear face masks?
+[254-gemini-7] UNVERIFIED (e 0.01, c 0.57): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring patterns.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Team members undergo daily temperature checks and are required to wear face masks. Customers are also encouraged to wear face masks whenever away from their assigned tabl
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Additionally, she supplied masks for her local Olive Garden, two nursing homes, a church, and a factory.
+[254-gemini-8] UNVERIFIED (e 0.01, c 0.91): Olive Garden's corporate dress code policy during the COVID-19 pandemic prohibited employees from wearing face masks featuring the American flag.
+    - • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.
+    - New safety measures at its locations include requiring employees to wear masks and deep cleaning the restaurants daily.
+    - Starbucks has become the latest chain to announce that it will require its customers to wear face masks, from July 15.
+    - Which restaurants require diners to wear face masks?
+    - Additionally, she supplied masks for her local Olive Garden, two nursing homes, a church, and a factory.","claim verdict UNVERIFIED (e 0.01, c 0.35); strongest contradiction: • Kroger Corporate says employees can not wear flag masks but they can wear BLM masks, which have been debunked by the media and are reportedly false.",,,
