@@ -8,7 +8,7 @@ load_dotenv()
 KEY = os.environ["OPENROUTER_API_KEY"]
 URL = "https://openrouter.ai/api/v1/chat/completions"
 DECOMPOSER = "openai/gpt-6.1-sol"
-PROMPT_VERSION = "d2"
+PROMPT_VERSION = "d3"
 TYPES = {"fact", "meta", "hedge"}
 
 SYSTEM_PROMPT = (
@@ -20,9 +20,10 @@ SYSTEM_PROMPT = (
     "Every date must include its year when the explanation or the claim makes the year clear. "
     "3. Do not add, remove, correct or judge information. Keep every number, date, name and quantity exactly as written. "
     'If the explanation attributes a fact to a source ("reports said X", "officials indicated X"), write X itself as the statement. '
-    "4. Tag each statement: fact = a checkable claim about the world; meta = about the claim, the verdict, the "
-    "reasoning or its sources, or citing fact-checkers or debunking; hedge = vague, speculative, an opinion or a "
-    "generalisation that cannot be checked. "
+    "4. Tag each statement: fact = a checkable claim about the world, including claims that something did not "
+    'happen or was not reported, confirmed or recorded (for example "no official statement confirms X"); '
+    "meta = about the claim itself, the verdict, the explanation or its sources, or citing fact-checkers or debunking; "
+    "hedge = vague, speculative, an opinion or a generalisation that cannot be checked. "
     "5. Keep the original order."
 )
 USER_TEMPLATE = (
