@@ -1,4 +1,5 @@
-# step8_flag.py: label statements, flag LLM outputs, choose the threshold on tune
+# step8_flag.py: label statements, flag LLM outputs, choose the threshold on tune,
+# and score outputs for threshold-free evaluation (AUROC, average precision)
 #   python step8_flag.py --split tune   -> grid of thresholds, saves the best to threshold.json
 #   python step8_flag.py --split eval   -> uses threshold.json, writes flags_<condition>_eval.csv
 import argparse, csv, json, os
@@ -15,6 +16,21 @@ def label(e, c, t):
     if e >= t:
         return "supported"
     return "unverified"
+
+
+def refute_score(v):
+    """Score at which a statement becomes 'refuted': refuted at t exactly when this is >= t."""
+    return (
+        v["max_contradiction"] if v["max_contradiction"] > v["max_entailment"] else 0.0
+    )
+
+
+def mismatch_score(v, llm_label):
+    """Score at which the claim verdict contradicts the LLM label: mismatch at t exactly when >= t."""
+    e, c = v["max_entailment"], v["max_contradiction"]
+    if llm_label == "SUPPORTED":
+        return c if c > e else 0.0  # claim refuted
+    return e if e >= c else 0.0  # claim supported
 
 
 def short(model):
@@ -54,25 +70,27 @@ def load_verdicts(cond, split):
 
 
 def flag_outputs(outs, verd, t):
-    per_output = defaultdict(list)  # (claim_id, short model) -> [(sid, label)]
+    per_output = defaultdict(list)  # (claim_id, short model) -> [(sid, verdict)]
     for item_id, v in verd.items():
         if item_id.startswith("claim:"):
             continue
         cid, sh, _ = item_id.rsplit("-", 2)  # "36-gemini-2" -> "36", "gemini", "2"
-        per_output[(int(cid), sh)].append(
-            (item_id, label(v["max_entailment"], v["max_contradiction"], t))
-        )
+        per_output[(int(cid), sh)].append((item_id, v))
 
     rows = []
     for o in outs:
         st = per_output.get((o["claim_id"], o["short"]), [])
-        refuted = [sid for sid, lab in st if lab == "refuted"]
+        labs = [
+            (sid, label(v["max_entailment"], v["max_contradiction"], t))
+            for sid, v in st
+        ]
+        refuted = [sid for sid, lab in labs if lab == "refuted"]
         cv = verd[f"claim:{o['claim_id']}"]
-        claim_label = label(cv["max_entailment"], cv["max_contradiction"], t)
         claim_verdict = {"supported": "SUPPORTED", "refuted": "REFUTED"}.get(
-            claim_label, ""
+            label(cv["max_entailment"], cv["max_contradiction"], t), ""
         )
         claim_mismatch = claim_verdict != "" and claim_verdict != o["llm_label"]
+        stmt_score = max((refute_score(v) for _, v in st), default=0.0)
         rows.append(
             {
                 **{
@@ -80,13 +98,14 @@ def flag_outputs(outs, verd, t):
                     for k in ("claim_id", "model", "llm_label", "gold_label", "wrong")
                 },
                 "n_fact": len(st),
-                "n_supported": sum(lab == "supported" for _, lab in st),
+                "n_supported": sum(lab == "supported" for _, lab in labs),
                 "n_refuted": len(refuted),
-                "n_unverified": sum(lab == "unverified" for _, lab in st),
+                "n_unverified": sum(lab == "unverified" for _, lab in labs),
                 "claim_verdict": claim_verdict or "unverified",
                 "flag_statement": bool(refuted),
                 "flag_claim": claim_mismatch,
                 "flagged": bool(refuted) or claim_mismatch,
+                "score": round(max(stmt_score, mismatch_score(cv, o["llm_label"])), 4),
                 "refuted_sids": " ".join(refuted),
             }
         )
@@ -112,6 +131,35 @@ def metrics(rows):
     }
 
 
+def auroc(rows):
+    """Probability that a random wrong output scores higher than a random right one (ties count half)."""
+    pos = [r["score"] for r in rows if r["wrong"]]
+    neg = [r["score"] for r in rows if not r["wrong"]]
+    if not pos or not neg:
+        return float("nan")
+    wins = sum((p > n) + 0.5 * (p == n) for p in pos for n in neg)
+    return wins / (len(pos) * len(neg))
+
+
+def average_precision(rows):
+    """Area under the precision-recall curve, ranking outputs by score (highest first)."""
+    ranked = sorted(rows, key=lambda r: -r["score"])
+    n_pos = sum(r["wrong"] for r in rows)
+    hits, ap = 0, 0.0
+    for i, r in enumerate(ranked, start=1):
+        if r["wrong"]:
+            hits += 1
+            ap += hits / i
+    return ap / n_pos if n_pos else float("nan")
+
+
+def breakdown(rows):
+    s = sum(r["flag_statement"] and not r["flag_claim"] for r in rows)
+    c = sum(r["flag_claim"] and not r["flag_statement"] for r in rows)
+    b = sum(r["flag_claim"] and r["flag_statement"] for r in rows)
+    return f"flag reasons: statement only {s}, claim only {c}, both {b}"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--split", choices=["eval", "tune"], required=True)
@@ -119,7 +167,10 @@ def main():
 
     outs = load_outputs(args.split)
     verdicts = {c: load_verdicts(c, args.split) for c in CONDITIONS}
-    print(f'{args.split}: {len(outs)} outputs, {sum(o["wrong"] for o in outs)} wrong')
+    n_wrong = sum(o["wrong"] for o in outs)
+    print(
+        f"{args.split}: {len(outs)} outputs, {n_wrong} wrong (chance AP = {n_wrong / len(outs):.3f})"
+    )
 
     if args.split == "tune":
         best = None
@@ -141,6 +192,7 @@ def main():
                 "threshold": best[0],
                 "chosen_on": "tune",
                 "mean_f1_tune": round(best[1], 4),
+                "tune_wrong_outputs": n_wrong,
                 "grid": GRID,
             },
             open("threshold.json", "w"),
@@ -149,6 +201,11 @@ def main():
         print(
             f"chosen threshold: {best[0]} (mean F1 on tune {best[1]:.3f}), saved to threshold.json"
         )
+        for c in CONDITIONS:
+            rows = flag_outputs(outs, verdicts[c], best[0])
+            print(
+                f"{c:>10}: AUROC {auroc(rows):.3f}  AP {average_precision(rows):.3f}  | {breakdown(rows)}"
+            )
         return
 
     if not os.path.exists("threshold.json"):
@@ -167,9 +224,17 @@ def main():
             w.writerows(rows)
         m = metrics(rows)
         print(
-            f"{c:>10}: P {m['precision']:.3f}  R {m['recall']:.3f}  F1 {m['f1']:.3f}  "
+            f"\n{c:>10}: AUROC {auroc(rows):.3f}  AP {average_precision(rows):.3f}  |  at t={t}: "
+            f"P {m['precision']:.3f}  R {m['recall']:.3f}  F1 {m['f1']:.3f}  "
             f"flagged {m['flagged']}/{m['n']}  (tp {m['tp']}, fp {m['fp']}, fn {m['fn']})"
         )
+        print(f"            {breakdown(rows)}")
+        for model in sorted({r["model"] for r in rows}):
+            mm = metrics([r for r in rows if r["model"] == model])
+            print(
+                f"            {model:28} flagged {mm['flagged']:>3}/{mm['n']}  "
+                f"P {mm['precision']:.2f}  R {mm['recall']:.2f}  (wrong {mm['tp'] + mm['fn']})"
+            )
 
 
 if __name__ == "__main__":

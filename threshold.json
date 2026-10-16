@@ -2,6 +2,7 @@
  "threshold": 0.95,
  "chosen_on": "tune",
  "mean_f1_tune": 0.1348,
+ "tune_wrong_outputs": 3,
  "grid": [
   0.5,
   0.6,
