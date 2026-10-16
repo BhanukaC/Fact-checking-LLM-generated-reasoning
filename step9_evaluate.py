@@ -14,6 +14,10 @@ PAIRS = [
     ("gold", "verifier"),
 ]
 DOUBTFUL = {99, 113, 196, 258, 330}  # gold-label check, rule fixed on 15 Oct
+FIELDS = (
+    "score",
+    "stmt_score",
+)  # full output score, and statements only (no claim check)
 B, SEED = 2000, 2026
 
 
@@ -53,20 +57,23 @@ def ci(xs):
 
 
 def bootstrap(data, conds):
-    """Resample claims (all three outputs of a claim together), the same resamples for every condition."""
+    """Resample claims (all three outputs of a claim together); the same resamples for every
+    condition and every score field, so paired differences are valid."""
     claims = sorted({r["claim_id"] for r in data[conds[0]]})
     by_claim = {
         cond: {c: [r for r in data[cond] if r["claim_id"] == c] for c in claims}
         for cond in conds
     }
     rng = random.Random(SEED)
-    out = {cond: {"auroc": [], "ap": []} for cond in conds}
+    out = {f: {cond: {"auroc": [], "ap": []} for cond in conds} for f in FIELDS}
     for _ in range(B):
         pick = [rng.choice(claims) for _ in claims]
         for cond in conds:
-            rows = scored([r for c in pick for r in by_claim[cond][c]], "score")
-            out[cond]["auroc"].append(auroc(rows))
-            out[cond]["ap"].append(average_precision(rows))
+            rows = [r for c in pick for r in by_claim[cond][c]]
+            for f in FIELDS:
+                s = scored(rows, f)
+                out[f][cond]["auroc"].append(auroc(s))
+                out[f][cond]["ap"].append(average_precision(s))
     return out
 
 
@@ -79,6 +86,14 @@ def mcnemar(a, b):
     n, k = n01 + n10, min(n01, n10)
     p = min(1.0, 2 * sum(math.comb(n, i) for i in range(k + 1)) / 2**n) if n else 1.0
     return n01, n10, p
+
+
+def paired(boot_f, data, field, a_, b_, metric):
+    fn = auroc if metric == "auroc" else average_precision
+    d = [x - y for x, y in zip(boot_f[a_][metric], boot_f[b_][metric])]
+    point = fn(scored(data[a_], field)) - fn(scored(data[b_], field))
+    lo, hi = ci(d)
+    return point, lo, hi
 
 
 def main():
@@ -100,7 +115,7 @@ def main():
     for c in conds:
         rows = data[c]
         a, ap = auroc(scored(rows, "score")), average_precision(scored(rows, "score"))
-        (al, ah), (pl, ph) = ci(boot[c]["auroc"]), ci(boot[c]["ap"])
+        (al, ah), (pl, ph) = ci(boot["score"][c]["auroc"]), ci(boot["score"][c]["ap"])
         p, r, f1, fl = prf(rows)
         print(
             f"  {c:>10}: AUROC {a:.3f} [{al:.3f}, {ah:.3f}]  AP {ap:.3f} [{pl:.3f}, {ph:.3f}]  "
@@ -108,29 +123,30 @@ def main():
         )
 
     print(
-        "\n2. Where the signal comes from: AUROC of statement scores only vs claim check only"
+        "\n2. Where the signal comes from: statements only (95% CI) vs claim check only"
     )
     for c in conds:
+        lo, hi = ci(boot["stmt_score"][c]["auroc"])
         print(
-            f"  {c:>10}: statements {auroc(scored(data[c], 'stmt_score')):.3f}   "
+            f"  {c:>10}: statements {auroc(scored(data[c], 'stmt_score')):.3f} [{lo:.3f}, {hi:.3f}]   "
             f"claim check {auroc(scored(data[c], 'claim_score')):.3f}"
         )
-
-    print("\n3. Paired differences (first minus second), 95% bootstrap CI")
+    print("  Paired differences, statements only (first minus second):")
     for a_, b_ in PAIRS:
         if a_ in conds and b_ in conds:
-            da = [x - y for x, y in zip(boot[a_]["auroc"], boot[b_]["auroc"])]
-            dp = [x - y for x, y in zip(boot[a_]["ap"], boot[b_]["ap"])]
-            point_a = auroc(scored(data[a_], "score")) - auroc(
-                scored(data[b_], "score")
+            point, lo, hi = paired(
+                boot["stmt_score"], data, "stmt_score", a_, b_, "auroc"
             )
-            point_p = average_precision(scored(data[a_], "score")) - average_precision(
-                scored(data[b_], "score")
-            )
-            (l1, h1), (l2, h2) = ci(da), ci(dp)
+            print(f"  {a_:>10} - {b_:<10}: dAUROC {point:+.3f} [{lo:+.3f}, {hi:+.3f}]")
+
+    print("\n3. Paired differences, full score (first minus second), 95% bootstrap CI")
+    for a_, b_ in PAIRS:
+        if a_ in conds and b_ in conds:
+            pa, la, ha = paired(boot["score"], data, "score", a_, b_, "auroc")
+            pp, lp, hp = paired(boot["score"], data, "score", a_, b_, "ap")
             print(
-                f"  {a_:>10} - {b_:<10}: dAUROC {point_a:+.3f} [{l1:+.3f}, {h1:+.3f}]  "
-                f"dAP {point_p:+.3f} [{l2:+.3f}, {h2:+.3f}]"
+                f"  {a_:>10} - {b_:<10}: dAUROC {pa:+.3f} [{la:+.3f}, {ha:+.3f}]  "
+                f"dAP {pp:+.3f} [{lp:+.3f}, {hp:+.3f}]"
             )
 
     print(
@@ -148,6 +164,7 @@ def main():
         print(
             f"  {c:>10}: {len(rows)} outputs, {sum(x['wrong'] for x in rows)} wrong | "
             f"AUROC {auroc(scored(rows, 'score')):.3f}  AP {average_precision(scored(rows, 'score')):.3f} | "
+            f"statements only {auroc(scored(rows, 'stmt_score')):.3f} | "
             f"P {p:.3f} R {r:.3f} F1 {f1:.3f} flagged {fl}"
         )
 
