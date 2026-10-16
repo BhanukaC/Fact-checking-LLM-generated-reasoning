@@ -1,11 +1,12 @@
 # step8_flag.py: label statements, flag LLM outputs, choose the threshold on tune,
 # and score outputs for threshold-free evaluation (AUROC, average precision)
-#   python step8_flag.py --split tune   -> grid of thresholds, saves the best to threshold.json
+#   python step8_flag.py --split tune   -> grid of thresholds, saves the best to threshold.json (run once)
 #   python step8_flag.py --split eval   -> uses threshold.json, writes flags_<condition>_eval.csv
 import argparse, csv, json, os
 from collections import defaultdict
 
-CONDITIONS = ["gold", "bm25", "similarity"]
+CONDITIONS = ["gold", "bm25", "similarity"]  # the threshold was chosen on these three
+EXTRA = ["verifier"]  # added in Step 6b; uses the same fixed threshold
 GRID = [0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99]
 
 
@@ -91,6 +92,7 @@ def flag_outputs(outs, verd, t):
         )
         claim_mismatch = claim_verdict != "" and claim_verdict != o["llm_label"]
         stmt_score = max((refute_score(v) for _, v in st), default=0.0)
+        claim_score = mismatch_score(cv, o["llm_label"])
         rows.append(
             {
                 **{
@@ -105,7 +107,9 @@ def flag_outputs(outs, verd, t):
                 "flag_statement": bool(refuted),
                 "flag_claim": claim_mismatch,
                 "flagged": bool(refuted) or claim_mismatch,
-                "score": round(max(stmt_score, mismatch_score(cv, o["llm_label"])), 4),
+                "score": round(max(stmt_score, claim_score), 4),
+                "stmt_score": round(stmt_score, 4),
+                "claim_score": round(claim_score, 4),
                 "refuted_sids": " ".join(refuted),
             }
         )
@@ -166,13 +170,22 @@ def main():
     args = ap.parse_args()
 
     outs = load_outputs(args.split)
-    verdicts = {c: load_verdicts(c, args.split) for c in CONDITIONS}
+    conds = [
+        c
+        for c in CONDITIONS + EXTRA
+        if os.path.exists(f"verdicts_{c}_{args.split}.jsonl")
+    ]
+    verdicts = {c: load_verdicts(c, args.split) for c in conds}
     n_wrong = sum(o["wrong"] for o in outs)
     print(
         f"{args.split}: {len(outs)} outputs, {n_wrong} wrong (chance AP = {n_wrong / len(outs):.3f})"
     )
 
     if args.split == "tune":
+        if os.path.exists("threshold.json"):
+            raise SystemExit(
+                "threshold.json exists: the threshold is fixed. Delete it only to re-tune on purpose."
+            )
         best = None
         print(
             f"{'t':>5} | " + " | ".join(f"{c:^24}" for c in CONDITIONS) + " | mean F1"
@@ -214,7 +227,7 @@ def main():
         )
     t = json.load(open("threshold.json"))["threshold"]
     print(f"threshold {t} (from threshold.json, chosen on tune)")
-    for c in CONDITIONS:
+    for c in conds:
         rows = flag_outputs(outs, verdicts[c], t)
         with open(
             f"flags_{c}_{args.split}.csv", "w", newline="", encoding="utf-8"

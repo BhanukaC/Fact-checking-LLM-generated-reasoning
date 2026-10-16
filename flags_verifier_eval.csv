@@ -1,0 +1,301 @@
+claim_id,model,llm_label,gold_label,wrong,n_fact,n_supported,n_refuted,n_unverified,claim_verdict,flag_statement,flag_claim,flagged,score,stmt_score,claim_score,refuted_sids
+13,google/gemini-3.8-flash,REFUTED,SUPPORTED,True,4,3,0,1,REFUTED,False,False,False,0.0,0.0,0.0,
+16,google/gemini-3.8-flash,REFUTED,REFUTED,False,12,0,4,8,REFUTED,True,False,True,0.9856,0.9856,0.0,16-gemini-6 16-gemini-10 16-gemini-11 16-gemini-12
+17,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,0,3,REFUTED,False,False,False,0.8994,0.8994,0.0,
+22,google/gemini-3.8-flash,REFUTED,REFUTED,False,6,0,4,2,REFUTED,True,False,True,0.9978,0.9978,0.0,22-gemini-2 22-gemini-3 22-gemini-4 22-gemini-6
+29,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,2,1,REFUTED,True,False,True,0.9945,0.9945,0.0,29-gemini-2 29-gemini-4
+31,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,1,1,0,0,REFUTED,False,True,True,0.9984,0.0,0.9984,
+34,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,13,0,8,5,REFUTED,True,True,True,0.9986,0.9986,0.9842,34-gemini-1 34-gemini-2 34-gemini-3 34-gemini-4 34-gemini-5 34-gemini-6 34-gemini-7 34-gemini-11
+40,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,1,2,0,REFUTED,True,False,True,0.9903,0.9903,0.0,40-gemini-1 40-gemini-2
+41,google/gemini-3.8-flash,REFUTED,REFUTED,False,4,0,2,2,unverified,True,False,True,0.9945,0.9945,0.0,41-gemini-2 41-gemini-3
+42,google/gemini-3.8-flash,REFUTED,SUPPORTED,True,4,0,4,0,REFUTED,True,False,True,0.9902,0.9902,0.0,42-gemini-1 42-gemini-2 42-gemini-3 42-gemini-4
+46,google/gemini-3.8-flash,REFUTED,REFUTED,False,4,1,0,3,REFUTED,False,False,False,0.5295,0.5295,0.0,
+56,google/gemini-3.8-flash,REFUTED,REFUTED,False,2,0,0,2,unverified,False,False,False,0.928,0.928,0.0,
+90,google/gemini-3.8-flash,REFUTED,REFUTED,False,2,0,2,0,REFUTED,True,False,True,0.9987,0.9987,0.0,90-gemini-1 90-gemini-2
+91,google/gemini-3.8-flash,REFUTED,REFUTED,False,2,0,2,0,REFUTED,True,False,True,0.9996,0.9996,0.0,91-gemini-6 91-gemini-7
+92,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,6,3,1,2,SUPPORTED,True,False,True,0.9815,0.9815,0.0,92-gemini-2
+93,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,3,0,0,SUPPORTED,False,False,False,0.0,0.0,0.0,
+99,google/gemini-3.8-flash,SUPPORTED,REFUTED,True,5,1,0,4,SUPPORTED,False,False,False,0.8658,0.8658,0.0,
+102,google/gemini-3.8-flash,REFUTED,REFUTED,False,8,0,4,4,REFUTED,True,False,True,0.9903,0.9903,0.0,102-gemini-1 102-gemini-2 102-gemini-3 102-gemini-6
+103,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,8,1,3,4,REFUTED,True,True,True,0.999,0.999,0.9954,103-gemini-3 103-gemini-4 103-gemini-5
+104,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,0,1,2,unverified,True,False,True,0.9867,0.9867,0.8959,104-gemini-1
+106,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,1,1,1,REFUTED,True,False,True,0.9986,0.9986,0.0,106-gemini-2
+107,google/gemini-3.8-flash,REFUTED,REFUTED,False,2,0,0,2,unverified,False,False,False,0.0113,0.0113,0.0,
+109,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,3,0,SUPPORTED,True,True,True,0.9998,0.9998,0.997,109-gemini-2 109-gemini-3 109-gemini-4
+110,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,6,0,2,4,REFUTED,True,True,True,0.9981,0.9802,0.9981,110-gemini-3 110-gemini-5
+113,google/gemini-3.8-flash,REFUTED,SUPPORTED,True,2,0,2,0,unverified,True,False,True,0.9986,0.9986,0.0,113-gemini-1 113-gemini-2
+123,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,1,0,1,0,unverified,True,False,True,0.9813,0.9813,0.8197,123-gemini-1
+125,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,2,1,1,0,SUPPORTED,True,False,True,0.9867,0.9867,0.0,125-gemini-1
+140,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,6,6,0,0,SUPPORTED,False,False,False,0.0,0.0,0.0,
+147,google/gemini-3.8-flash,REFUTED,SUPPORTED,True,2,0,2,0,SUPPORTED,True,True,True,0.9994,0.9974,0.9994,147-gemini-1 147-gemini-3
+152,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,2,2,0,0,REFUTED,False,True,True,0.9977,0.0,0.9977,
+157,google/gemini-3.8-flash,REFUTED,REFUTED,False,5,0,4,1,REFUTED,True,False,True,0.9992,0.9992,0.0,157-gemini-1 157-gemini-2 157-gemini-4 157-gemini-5
+159,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,0,3,unverified,False,False,False,0.9082,0.9082,0.0,
+169,google/gemini-3.8-flash,REFUTED,REFUTED,False,7,0,4,3,REFUTED,True,False,True,0.9971,0.9971,0.0,169-gemini-1 169-gemini-2 169-gemini-4 169-gemini-8
+175,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,6,0,3,3,REFUTED,True,True,True,0.9997,0.9983,0.9997,175-gemini-4 175-gemini-5 175-gemini-6
+181,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,4,2,1,1,SUPPORTED,True,False,True,0.9987,0.9987,0.0,181-gemini-2
+196,google/gemini-3.8-flash,SUPPORTED,REFUTED,True,6,2,1,3,REFUTED,True,True,True,0.9982,0.9583,0.9982,196-gemini-8
+199,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,9,2,4,3,SUPPORTED,True,False,True,0.9972,0.9972,0.0,199-gemini-3 199-gemini-4 199-gemini-8 199-gemini-9
+203,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,0,1,2,unverified,True,False,True,0.9991,0.9991,0.0283,203-gemini-1
+215,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,1,0,0,1,SUPPORTED,False,False,False,0.9399,0.9399,0.0,
+216,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,1,0,1,0,REFUTED,True,True,True,0.9989,0.9818,0.9989,216-gemini-1
+218,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,1,0,0,1,unverified,False,False,False,0.9408,0.9408,0.0,
+222,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,2,1,0,1,REFUTED,False,True,True,0.9935,0.0,0.9935,
+224,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,2,1,1,0,REFUTED,True,True,True,0.9975,0.996,0.9975,224-gemini-2
+230,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,3,0,REFUTED,True,False,True,0.995,0.995,0.0,230-gemini-1 230-gemini-2 230-gemini-3
+231,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,0,1,2,unverified,True,False,True,0.9991,0.9991,0.0024,231-gemini-1
+254,google/gemini-3.8-flash,SUPPORTED,REFUTED,True,8,0,0,8,unverified,False,False,False,0.9134,0.9134,0.3458,
+256,google/gemini-3.8-flash,REFUTED,REFUTED,False,5,0,5,0,REFUTED,True,False,True,0.999,0.999,0.0,256-gemini-1 256-gemini-2 256-gemini-3 256-gemini-4 256-gemini-5
+258,google/gemini-3.8-flash,SUPPORTED,REFUTED,True,2,0,1,1,unverified,True,False,True,0.9976,0.9976,0.0,258-gemini-1
+264,google/gemini-3.8-flash,REFUTED,REFUTED,False,4,0,1,3,REFUTED,True,False,True,0.9975,0.9975,0.0,264-gemini-1
+267,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,7,3,0,4,SUPPORTED,False,False,False,0.8534,0.8534,0.0,
+272,google/gemini-3.8-flash,REFUTED,REFUTED,False,8,1,1,6,REFUTED,True,False,True,0.9699,0.9699,0.0,272-gemini-6
+274,google/gemini-3.8-flash,REFUTED,REFUTED,False,5,0,1,4,unverified,True,False,True,0.9578,0.9578,0.0,274-gemini-3
+285,google/gemini-3.8-flash,REFUTED,REFUTED,False,6,0,3,3,REFUTED,True,False,True,0.9981,0.9981,0.0,285-gemini-1 285-gemini-4 285-gemini-6
+287,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,0,3,REFUTED,False,False,False,0.8994,0.8994,0.0,
+289,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,8,1,2,5,REFUTED,True,True,True,0.9994,0.9939,0.9994,289-gemini-7 289-gemini-8
+296,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,3,0,0,REFUTED,False,False,False,0.0,0.0,0.0,
+299,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,5,3,0,2,unverified,False,False,False,0.6545,0.0,0.6545,
+301,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,2,1,0,1,SUPPORTED,False,False,False,0.7699,0.7699,0.0,
+308,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,5,4,0,1,unverified,False,False,False,0.0,0.0,0.0,
+309,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,4,3,0,1,unverified,False,False,False,0.3941,0.3941,0.0,
+310,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,0,2,1,REFUTED,True,True,True,0.9996,0.9989,0.9996,310-gemini-2 310-gemini-3
+311,google/gemini-3.8-flash,REFUTED,REFUTED,False,2,0,0,2,REFUTED,False,False,False,0.6178,0.6178,0.0,
+320,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,6,3,1,2,SUPPORTED,True,False,True,0.9891,0.9891,0.0,320-gemini-4
+323,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,4,1,0,3,unverified,False,False,False,0.9364,0.928,0.9364,
+325,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,1,2,REFUTED,True,False,True,0.9988,0.9988,0.0,325-gemini-3
+330,google/gemini-3.8-flash,REFUTED,SUPPORTED,True,8,0,1,7,REFUTED,True,False,True,0.985,0.985,0.0,330-gemini-3
+331,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,3,0,unverified,True,False,True,0.9944,0.9944,0.0,331-gemini-1 331-gemini-2 331-gemini-3
+335,google/gemini-3.8-flash,REFUTED,REFUTED,False,6,0,0,6,REFUTED,False,False,False,0.7216,0.7216,0.0,
+343,google/gemini-3.8-flash,REFUTED,REFUTED,False,10,0,4,6,unverified,True,False,True,0.987,0.987,0.0,343-gemini-7 343-gemini-8 343-gemini-9 343-gemini-10
+346,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,7,0,2,5,REFUTED,True,True,True,0.9851,0.9821,0.9851,346-gemini-4 346-gemini-6
+347,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,4,0,2,2,REFUTED,True,True,True,0.9986,0.971,0.9986,347-gemini-2 347-gemini-4
+356,google/gemini-3.8-flash,REFUTED,REFUTED,False,6,0,3,3,REFUTED,True,False,True,0.9947,0.9947,0.0,356-gemini-1 356-gemini-3 356-gemini-5
+357,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,1,1,0,0,SUPPORTED,False,False,False,0.0,0.0,0.0,
+358,google/gemini-3.8-flash,REFUTED,REFUTED,False,4,0,0,4,unverified,False,False,False,0.86,0.86,0.0,
+365,google/gemini-3.8-flash,REFUTED,REFUTED,False,21,1,1,19,unverified,True,False,True,0.9663,0.9663,0.0,365-gemini-5
+376,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,1,1,1,REFUTED,True,True,True,0.9993,0.9909,0.9993,376-gemini-1
+392,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,7,0,7,0,REFUTED,True,True,True,0.9991,0.9991,0.9976,392-gemini-1 392-gemini-2 392-gemini-3 392-gemini-4 392-gemini-5 392-gemini-6 392-gemini-7
+398,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,4,1,0,3,REFUTED,False,True,True,0.989,0.6928,0.989,
+402,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,4,0,0,4,SUPPORTED,False,False,False,0.684,0.684,0.0,
+406,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,1,2,0,SUPPORTED,True,False,True,0.9866,0.9866,0.0,406-gemini-2 406-gemini-3
+409,google/gemini-3.8-flash,REFUTED,REFUTED,False,1,0,1,0,SUPPORTED,True,True,True,0.9993,0.9993,0.9981,409-gemini-2
+417,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,1,0,2,REFUTED,False,False,False,0.0,0.0,0.0,
+419,google/gemini-3.8-flash,REFUTED,REFUTED,False,11,1,1,9,REFUTED,True,False,True,0.9695,0.9695,0.0,419-gemini-1
+425,google/gemini-3.8-flash,REFUTED,REFUTED,False,5,0,3,2,REFUTED,True,False,True,0.9995,0.9995,0.0,425-gemini-1 425-gemini-2 425-gemini-3
+429,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,3,0,3,0,REFUTED,True,True,True,0.9995,0.9992,0.9995,429-gemini-1 429-gemini-2 429-gemini-3
+430,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,10,1,4,5,REFUTED,True,True,True,0.9992,0.9861,0.9992,430-gemini-1 430-gemini-3 430-gemini-4 430-gemini-6
+437,google/gemini-3.8-flash,REFUTED,REFUTED,False,6,0,1,5,REFUTED,True,False,True,0.9931,0.9931,0.0,437-gemini-4
+438,google/gemini-3.8-flash,REFUTED,REFUTED,False,11,0,6,5,REFUTED,True,False,True,0.9911,0.9911,0.0,438-gemini-2 438-gemini-3 438-gemini-4 438-gemini-6 438-gemini-8 438-gemini-9
+440,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,1,2,unverified,True,False,True,0.9711,0.9711,0.0,440-gemini-2
+443,google/gemini-3.8-flash,REFUTED,REFUTED,False,8,0,2,6,REFUTED,True,False,True,0.9983,0.9983,0.0,443-gemini-4 443-gemini-5
+445,google/gemini-3.8-flash,REFUTED,REFUTED,False,6,0,1,5,REFUTED,True,False,True,0.9982,0.9982,0.0,445-gemini-2
+452,google/gemini-3.8-flash,REFUTED,REFUTED,False,3,0,3,0,unverified,True,False,True,0.9906,0.9906,0.0,452-gemini-1 452-gemini-2 452-gemini-3
+453,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,1,1,0,0,SUPPORTED,False,False,False,0.0,0.0,0.0,
+461,google/gemini-3.8-flash,REFUTED,SUPPORTED,True,3,0,3,0,REFUTED,True,False,True,0.9992,0.9992,0.0,461-gemini-2 461-gemini-4 461-gemini-5
+463,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,2,0,1,1,REFUTED,True,True,True,0.9942,0.9942,0.9884,463-gemini-1
+478,google/gemini-3.8-flash,REFUTED,REFUTED,False,4,0,3,1,REFUTED,True,False,True,0.9995,0.9995,0.0,478-gemini-1 478-gemini-3 478-gemini-4
+489,google/gemini-3.8-flash,SUPPORTED,SUPPORTED,False,13,0,9,4,REFUTED,True,True,True,0.9998,0.9998,0.9997,489-gemini-3 489-gemini-4 489-gemini-7 489-gemini-8 489-gemini-9 489-gemini-10 489-gemini-11 489-gemini-12 489-gemini-13
+491,google/gemini-3.8-flash,REFUTED,REFUTED,False,7,1,4,2,REFUTED,True,False,True,0.9985,0.9985,0.0,491-gemini-1 491-gemini-2 491-gemini-3 491-gemini-4
+497,google/gemini-3.8-flash,REFUTED,SUPPORTED,True,5,1,3,1,REFUTED,True,False,True,0.9979,0.9979,0.0,497-gemini-1 497-gemini-2 497-gemini-3
+499,google/gemini-3.8-flash,REFUTED,REFUTED,False,2,1,1,0,REFUTED,True,False,True,0.9941,0.9941,0.0,499-gemini-1
+13,anthropic/claude-sonnet-5,REFUTED,SUPPORTED,True,12,4,1,7,REFUTED,True,False,True,0.9898,0.9898,0.0,13-claude-1
+16,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,10,0,0,10,REFUTED,False,False,False,0.681,0.681,0.0,
+17,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,0,0,5,REFUTED,False,False,False,0.1655,0.1655,0.0,
+22,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,7,0,3,4,REFUTED,True,False,True,0.9969,0.9969,0.0,22-claude-1 22-claude-5 22-claude-9
+29,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,4,0,2,2,REFUTED,True,False,True,0.9958,0.9958,0.0,29-claude-2 29-claude-5
+31,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,5,4,1,0,REFUTED,True,True,True,0.9984,0.9618,0.9984,31-claude-5
+34,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,13,5,0,8,REFUTED,False,True,True,0.9842,0.9412,0.9842,
+40,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,9,3,4,2,REFUTED,True,False,True,0.9986,0.9986,0.0,40-claude-2 40-claude-5 40-claude-6 40-claude-10
+41,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,4,0,2,2,unverified,True,False,True,0.9835,0.9835,0.0,41-claude-3 41-claude-4
+42,anthropic/claude-sonnet-5,REFUTED,SUPPORTED,True,2,0,2,0,REFUTED,True,False,True,0.9945,0.9945,0.0,42-claude-6 42-claude-7
+46,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,6,1,0,5,REFUTED,False,False,False,0.6522,0.6522,0.0,
+56,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,14,1,2,11,unverified,True,False,True,0.9638,0.9638,0.0,56-claude-3 56-claude-9
+90,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,0,0,5,REFUTED,False,False,False,0.9351,0.9351,0.0,
+91,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,4,1,1,2,REFUTED,True,False,True,0.9894,0.9894,0.0,91-claude-7
+92,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,6,5,1,0,SUPPORTED,True,False,True,0.9736,0.9736,0.0,92-claude-2
+93,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,7,6,0,1,SUPPORTED,False,False,False,0.0,0.0,0.0,
+99,anthropic/claude-sonnet-5,SUPPORTED,REFUTED,True,11,4,3,4,SUPPORTED,True,False,True,0.9968,0.9968,0.0,99-claude-4 99-claude-5 99-claude-9
+102,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,7,0,3,4,REFUTED,True,False,True,0.9899,0.9899,0.0,102-claude-1 102-claude-5 102-claude-6
+103,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,8,4,1,3,REFUTED,True,True,True,0.9954,0.9735,0.9954,103-claude-1
+104,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,6,1,1,4,unverified,True,False,True,0.9975,0.9975,0.8959,104-claude-3
+106,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,4,0,2,2,REFUTED,True,False,True,0.999,0.999,0.0,106-claude-1 106-claude-2
+107,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,16,3,2,11,unverified,True,False,True,0.9858,0.9858,0.0,107-claude-9 107-claude-13
+109,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,2,0,3,SUPPORTED,False,True,True,0.997,0.0,0.997,
+110,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,9,1,1,7,REFUTED,True,True,True,0.9981,0.9922,0.9981,110-claude-1
+113,anthropic/claude-sonnet-5,REFUTED,SUPPORTED,True,4,0,4,0,unverified,True,False,True,0.9983,0.9983,0.0,113-claude-1 113-claude-2 113-claude-3 113-claude-7
+123,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,3,0,2,1,unverified,True,False,True,0.9996,0.9996,0.8197,123-claude-2 123-claude-3
+125,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,7,1,3,3,SUPPORTED,True,False,True,0.9974,0.9974,0.0,125-claude-1 125-claude-3 125-claude-6
+140,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,2,2,0,0,SUPPORTED,False,False,False,0.0,0.0,0.0,
+147,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,5,0,2,3,SUPPORTED,True,False,True,0.998,0.998,0.0,147-claude-3 147-claude-6
+152,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,3,1,1,1,REFUTED,True,True,True,0.9977,0.9785,0.9977,152-claude-3
+157,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,8,0,6,2,REFUTED,True,False,True,0.9995,0.9995,0.0,157-claude-1 157-claude-2 157-claude-3 157-claude-4 157-claude-5 157-claude-10
+159,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,0,2,3,unverified,True,False,True,0.9851,0.9851,0.0,159-claude-3 159-claude-4
+169,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,6,0,1,5,REFUTED,True,False,True,0.992,0.992,0.0,169-claude-7
+175,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,6,0,1,5,REFUTED,True,True,True,0.9997,0.98,0.9997,175-claude-6
+181,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,5,2,1,2,SUPPORTED,True,False,True,0.9984,0.9984,0.0,181-claude-6
+196,anthropic/claude-sonnet-5,SUPPORTED,REFUTED,True,7,1,6,0,REFUTED,True,True,True,0.9994,0.9994,0.9982,196-claude-1 196-claude-2 196-claude-3 196-claude-4 196-claude-5 196-claude-6
+199,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,7,4,3,0,SUPPORTED,True,False,True,0.9979,0.9979,0.0,199-claude-2 199-claude-3 199-claude-5
+203,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,4,1,1,2,unverified,True,False,True,0.9984,0.9984,0.0283,203-claude-2
+215,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,2,0,0,2,SUPPORTED,False,False,False,0.1616,0.1616,0.0,
+216,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,2,0,1,1,REFUTED,True,True,True,0.9989,0.9896,0.9989,216-claude-2
+218,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,3,1,0,2,unverified,False,False,False,0.1477,0.1477,0.0,
+222,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,6,1,1,4,REFUTED,True,True,True,0.9935,0.9908,0.9935,222-claude-4
+224,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,6,1,4,1,REFUTED,True,True,True,0.9984,0.9984,0.9975,224-claude-2 224-claude-4 224-claude-5 224-claude-6
+230,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,0,0,0,0,REFUTED,False,False,False,0.0,0.0,0.0,
+231,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,3,0,1,2,unverified,True,False,True,0.9979,0.9979,0.0024,231-claude-1
+254,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,1,0,4,unverified,False,False,False,0.9214,0.9214,0.0,
+256,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,4,0,0,4,REFUTED,False,False,False,0.9272,0.9272,0.0,
+258,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,6,0,3,3,unverified,True,False,True,0.9946,0.9946,0.1919,258-claude-1 258-claude-2 258-claude-5
+264,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,3,0,1,2,REFUTED,True,False,True,0.9967,0.9967,0.0,264-claude-1
+267,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,5,1,1,3,SUPPORTED,True,False,True,0.9503,0.9503,0.0,267-claude-4
+272,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,10,0,3,7,REFUTED,True,False,True,0.9982,0.9982,0.0,272-claude-5 272-claude-13 272-claude-15
+274,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,6,0,2,4,unverified,True,False,True,0.9688,0.9688,0.0,274-claude-1 274-claude-5
+285,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,8,0,1,7,REFUTED,True,False,True,0.9984,0.9984,0.0,285-claude-2
+287,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,3,0,0,3,REFUTED,False,False,False,0.921,0.921,0.0,
+289,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,10,3,2,5,REFUTED,True,True,True,0.9996,0.9996,0.9994,289-claude-8 289-claude-10
+296,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,5,0,0,REFUTED,False,False,False,0.0,0.0,0.0,
+299,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,5,4,1,0,unverified,True,False,True,0.9884,0.9884,0.6545,299-claude-5
+301,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,4,1,3,0,SUPPORTED,True,False,True,0.9989,0.9989,0.0,301-claude-1 301-claude-2 301-claude-3
+308,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,6,4,1,1,unverified,True,False,True,0.9947,0.9947,0.0,308-claude-4
+309,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,6,3,0,3,unverified,False,False,False,0.3941,0.3941,0.0,
+310,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,2,1,1,0,REFUTED,True,True,True,0.9996,0.9996,0.9996,310-claude-1
+311,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,8,0,1,7,REFUTED,True,False,True,0.9858,0.9858,0.0,311-claude-12
+320,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,7,0,2,5,SUPPORTED,True,False,True,0.9656,0.9656,0.0,320-claude-3 320-claude-7
+323,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,8,2,1,5,unverified,True,False,True,0.9901,0.9901,0.9364,323-claude-2
+325,anthropic/claude-sonnet-5,SUPPORTED,REFUTED,True,5,0,3,2,REFUTED,True,True,True,0.9994,0.9994,0.9994,325-claude-1 325-claude-2 325-claude-5
+330,anthropic/claude-sonnet-5,REFUTED,SUPPORTED,True,15,0,3,12,REFUTED,True,False,True,0.9905,0.9905,0.0,330-claude-6 330-claude-10 330-claude-15
+331,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,6,0,2,4,unverified,True,False,True,0.9883,0.9883,0.0,331-claude-5 331-claude-8
+335,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,9,2,2,5,REFUTED,True,False,True,0.9927,0.9927,0.0,335-claude-2 335-claude-3
+343,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,7,0,0,7,unverified,False,False,False,0.8758,0.8758,0.0,
+346,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,9,0,0,9,REFUTED,False,True,True,0.9851,0.8911,0.9851,
+347,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,7,1,5,1,REFUTED,True,True,True,0.9986,0.9949,0.9986,347-claude-1 347-claude-3 347-claude-4 347-claude-5 347-claude-7
+356,anthropic/claude-sonnet-5,SUPPORTED,REFUTED,True,7,0,2,5,REFUTED,True,True,True,0.9988,0.9988,0.9978,356-claude-1 356-claude-5
+357,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,4,1,1,2,SUPPORTED,True,False,True,0.9967,0.9967,0.0,357-claude-1
+358,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,1,1,3,unverified,True,False,True,0.9745,0.9745,0.0,358-claude-7
+365,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,11,1,1,9,unverified,True,False,True,0.9941,0.9941,0.0,365-claude-7
+376,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,4,1,1,2,REFUTED,True,True,True,0.9993,0.9906,0.9993,376-claude-1
+392,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,15,2,8,5,REFUTED,True,True,True,0.9976,0.9957,0.9976,392-claude-1 392-claude-2 392-claude-3 392-claude-4 392-claude-5 392-claude-7 392-claude-9 392-claude-10
+398,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,9,0,1,8,REFUTED,True,True,True,0.9951,0.9951,0.989,398-claude-1
+402,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,17,2,4,11,SUPPORTED,True,False,True,0.9989,0.9989,0.0,402-claude-5 402-claude-6 402-claude-13 402-claude-14
+406,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,3,1,1,1,SUPPORTED,True,False,True,0.998,0.998,0.0,406-claude-3
+409,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,7,1,4,2,SUPPORTED,True,True,True,0.9987,0.9987,0.9981,409-claude-1 409-claude-2 409-claude-8 409-claude-12
+417,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,3,3,0,0,REFUTED,False,False,False,0.0,0.0,0.0,
+419,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,13,0,2,11,REFUTED,True,False,True,0.9806,0.9806,0.0,419-claude-15 419-claude-16
+425,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,10,0,4,6,REFUTED,True,False,True,0.9978,0.9978,0.0,425-claude-2 425-claude-8 425-claude-9 425-claude-10
+429,anthropic/claude-sonnet-5,REFUTED,SUPPORTED,True,5,0,3,2,REFUTED,True,False,True,0.9985,0.9985,0.0,429-claude-1 429-claude-5 429-claude-8
+430,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,9,1,2,6,REFUTED,True,True,True,0.9992,0.9917,0.9992,430-claude-1 430-claude-9
+437,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,7,1,1,5,REFUTED,True,False,True,0.9806,0.9806,0.0,437-claude-1
+438,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,12,0,4,8,REFUTED,True,False,True,0.992,0.992,0.0,438-claude-1 438-claude-2 438-claude-7 438-claude-12
+440,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,5,0,1,4,unverified,True,False,True,0.988,0.988,0.0,440-claude-9
+443,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,18,1,3,14,REFUTED,True,False,True,0.9823,0.9823,0.0,443-claude-18 443-claude-20 443-claude-21
+445,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,7,1,2,4,REFUTED,True,False,True,0.9924,0.9924,0.0,445-claude-3 445-claude-7
+452,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,6,1,1,4,unverified,True,False,True,0.9775,0.9775,0.0,452-claude-6
+453,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,2,2,0,0,SUPPORTED,False,False,False,0.0,0.0,0.0,
+461,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,5,0,1,4,REFUTED,True,True,True,0.9994,0.9994,0.9974,461-claude-3
+463,anthropic/claude-sonnet-5,REFUTED,SUPPORTED,True,3,0,3,0,REFUTED,True,False,True,0.9995,0.9995,0.0,463-claude-3 463-claude-4 463-claude-5
+478,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,11,0,5,6,REFUTED,True,False,True,0.9994,0.9994,0.0,478-claude-1 478-claude-5 478-claude-6 478-claude-7 478-claude-8
+489,anthropic/claude-sonnet-5,SUPPORTED,SUPPORTED,False,10,1,6,3,REFUTED,True,True,True,0.9997,0.9997,0.9997,489-claude-2 489-claude-3 489-claude-6 489-claude-7 489-claude-9 489-claude-11
+491,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,6,1,5,0,REFUTED,True,False,True,0.9978,0.9978,0.0,491-claude-1 491-claude-2 491-claude-3 491-claude-5 491-claude-6
+497,anthropic/claude-sonnet-5,REFUTED,SUPPORTED,True,5,2,3,0,REFUTED,True,False,True,0.9987,0.9987,0.0,497-claude-4 497-claude-5 497-claude-6
+499,anthropic/claude-sonnet-5,REFUTED,REFUTED,False,3,2,1,0,REFUTED,True,False,True,0.9965,0.9965,0.0,499-claude-1
+13,openai/gpt-6.1-sol,REFUTED,SUPPORTED,True,6,3,1,2,REFUTED,True,False,True,0.9794,0.9794,0.0,13-gpt-1
+16,openai/gpt-6.1-sol,REFUTED,REFUTED,False,11,1,7,3,REFUTED,True,False,True,0.9949,0.9949,0.0,16-gpt-2 16-gpt-3 16-gpt-6 16-gpt-7 16-gpt-8 16-gpt-9 16-gpt-10
+17,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,0,4,REFUTED,False,False,False,0.8876,0.8876,0.0,
+22,openai/gpt-6.1-sol,REFUTED,REFUTED,False,6,0,2,4,REFUTED,True,False,True,0.9985,0.9985,0.0,22-gpt-2 22-gpt-4
+29,openai/gpt-6.1-sol,SUPPORTED,REFUTED,True,3,1,1,1,REFUTED,True,True,True,0.9829,0.9648,0.9829,29-gpt-1
+31,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,2,2,0,0,REFUTED,False,True,True,0.9984,0.0,0.9984,
+34,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,12,0,5,7,REFUTED,True,True,True,0.9842,0.9804,0.9842,34-gpt-1 34-gpt-5 34-gpt-10 34-gpt-11 34-gpt-12
+40,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,2,1,2,REFUTED,True,False,True,0.9974,0.9974,0.0,40-gpt-1
+41,openai/gpt-6.1-sol,REFUTED,REFUTED,False,6,1,0,5,unverified,False,False,False,0.9023,0.9023,0.0,
+42,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,0,1,3,REFUTED,True,True,True,0.9985,0.9514,0.9985,42-gpt-3
+46,openai/gpt-6.1-sol,REFUTED,REFUTED,False,7,3,1,3,REFUTED,True,False,True,0.9907,0.9907,0.0,46-gpt-1
+56,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,1,1,3,unverified,True,False,True,0.986,0.986,0.0,56-gpt-5
+90,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,0,4,REFUTED,False,False,False,0.8755,0.8755,0.0,
+91,openai/gpt-6.1-sol,REFUTED,REFUTED,False,2,1,1,0,REFUTED,True,False,True,0.9886,0.9886,0.0,91-gpt-1
+92,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,3,0,1,SUPPORTED,False,False,False,0.0,0.0,0.0,
+93,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,4,0,1,SUPPORTED,False,False,False,0.0,0.0,0.0,
+99,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,0,4,1,SUPPORTED,True,True,True,0.9992,0.9992,0.9637,99-gpt-2 99-gpt-3 99-gpt-4 99-gpt-5
+102,openai/gpt-6.1-sol,REFUTED,REFUTED,False,6,0,3,3,REFUTED,True,False,True,0.9957,0.9957,0.0,102-gpt-1 102-gpt-3 102-gpt-5
+103,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,8,2,3,3,REFUTED,True,True,True,0.9995,0.9995,0.9954,103-gpt-2 103-gpt-3 103-gpt-6
+104,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,1,1,2,unverified,True,False,True,0.9609,0.9609,0.8959,104-gpt-4
+106,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,2,2,REFUTED,True,False,True,0.9991,0.9991,0.0,106-gpt-1 106-gpt-2
+107,openai/gpt-6.1-sol,REFUTED,REFUTED,False,3,0,0,3,unverified,False,False,False,0.392,0.392,0.0,
+109,openai/gpt-6.1-sol,REFUTED,REFUTED,False,3,0,3,0,SUPPORTED,True,True,True,0.9976,0.9976,0.997,109-gpt-1 109-gpt-2 109-gpt-3
+110,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,8,0,2,6,REFUTED,True,True,True,0.9986,0.9986,0.9981,110-gpt-3 110-gpt-5
+113,openai/gpt-6.1-sol,REFUTED,SUPPORTED,True,2,0,1,1,unverified,True,False,True,0.9935,0.9935,0.0,113-gpt-1
+123,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,3,0,3,0,unverified,True,False,True,0.9992,0.9992,0.8197,123-gpt-1 123-gpt-2 123-gpt-3
+125,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,0,1,3,SUPPORTED,True,False,True,0.9507,0.9507,0.0,125-gpt-2
+140,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,3,3,0,0,SUPPORTED,False,False,False,0.0,0.0,0.0,
+147,openai/gpt-6.1-sol,REFUTED,SUPPORTED,True,5,4,0,1,SUPPORTED,False,True,True,0.9994,0.4345,0.9994,
+152,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,3,2,0,1,REFUTED,False,True,True,0.9977,0.0,0.9977,
+157,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,0,5,0,REFUTED,True,False,True,0.9995,0.9995,0.0,157-gpt-1 157-gpt-2 157-gpt-3 157-gpt-4 157-gpt-5
+159,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,1,3,unverified,True,False,True,0.9755,0.9755,0.0,159-gpt-1
+169,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,2,2,REFUTED,True,False,True,0.999,0.999,0.0,169-gpt-1 169-gpt-2
+175,openai/gpt-6.1-sol,REFUTED,SUPPORTED,True,5,0,2,3,REFUTED,True,False,True,0.992,0.992,0.0,175-gpt-4 175-gpt-5
+181,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,2,0,3,SUPPORTED,False,False,False,0.4027,0.4027,0.0,
+196,openai/gpt-6.1-sol,SUPPORTED,REFUTED,True,5,0,4,1,REFUTED,True,True,True,0.9988,0.9988,0.9982,196-gpt-2 196-gpt-3 196-gpt-4 196-gpt-5
+199,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,6,2,3,1,SUPPORTED,True,False,True,0.9942,0.9942,0.0,199-gpt-2 199-gpt-3 199-gpt-6
+203,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,0,1,3,unverified,True,False,True,0.997,0.997,0.0283,203-gpt-2
+215,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,1,0,0,1,SUPPORTED,False,False,False,0.9266,0.9266,0.0,
+216,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,1,0,1,0,REFUTED,True,True,True,0.9989,0.9841,0.9989,216-gpt-1
+218,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,1,0,0,1,unverified,False,False,False,0.9266,0.9266,0.0,
+222,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,0,1,4,REFUTED,True,True,True,0.9977,0.9977,0.9935,222-gpt-5
+224,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,2,1,1,0,REFUTED,True,True,True,0.9975,0.9966,0.9975,224-gpt-2
+230,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,4,0,REFUTED,True,False,True,0.9964,0.9964,0.0,230-gpt-1 230-gpt-2 230-gpt-3 230-gpt-4
+231,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,0,1,3,unverified,True,False,True,0.9833,0.9833,0.0024,231-gpt-2
+254,openai/gpt-6.1-sol,SUPPORTED,REFUTED,True,6,0,4,2,unverified,True,False,True,0.9979,0.9979,0.3458,254-gpt-1 254-gpt-2 254-gpt-3 254-gpt-4
+256,openai/gpt-6.1-sol,REFUTED,REFUTED,False,3,1,1,1,REFUTED,True,False,True,0.9834,0.9834,0.0,256-gpt-3
+258,openai/gpt-6.1-sol,REFUTED,REFUTED,False,6,0,1,5,unverified,True,False,True,0.9938,0.9938,0.1919,258-gpt-1
+264,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,3,1,REFUTED,True,False,True,0.9985,0.9985,0.0,264-gpt-1 264-gpt-3 264-gpt-4
+267,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,2,0,3,SUPPORTED,False,False,False,0.887,0.887,0.0,
+272,openai/gpt-6.1-sol,REFUTED,REFUTED,False,6,2,3,1,REFUTED,True,False,True,0.9938,0.9938,0.0,272-gpt-5 272-gpt-7 272-gpt-8
+274,openai/gpt-6.1-sol,REFUTED,REFUTED,False,6,1,0,5,unverified,False,False,False,0.7885,0.7885,0.0,
+285,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,0,3,2,REFUTED,True,False,True,0.9987,0.9987,0.0,285-gpt-1 285-gpt-4 285-gpt-5
+287,openai/gpt-6.1-sol,REFUTED,REFUTED,False,2,0,0,2,REFUTED,False,False,False,0.7171,0.7171,0.0,
+289,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,0,2,2,REFUTED,True,True,True,0.9994,0.9644,0.9994,289-gpt-1 289-gpt-2
+296,openai/gpt-6.1-sol,REFUTED,REFUTED,False,3,2,1,0,REFUTED,True,False,True,0.9963,0.9963,0.0,296-gpt-3
+299,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,2,1,1,unverified,True,False,True,0.9988,0.9988,0.6545,299-gpt-4
+301,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,3,1,0,2,SUPPORTED,False,False,False,0.7825,0.7825,0.0,
+308,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,0,2,2,unverified,True,False,True,0.9926,0.9926,0.0,308-gpt-1 308-gpt-2
+309,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,9,3,2,4,unverified,True,False,True,0.9977,0.9977,0.0,309-gpt-6 309-gpt-9
+310,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,3,0,3,0,REFUTED,True,True,True,0.9996,0.9979,0.9996,310-gpt-1 310-gpt-2 310-gpt-3
+311,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,0,4,REFUTED,False,False,False,0.245,0.245,0.0,
+320,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,1,1,3,SUPPORTED,True,False,True,0.9971,0.9971,0.0,320-gpt-5
+323,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,7,1,4,2,unverified,True,False,True,0.9984,0.9984,0.9364,323-gpt-2 323-gpt-3 323-gpt-4 323-gpt-6
+325,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,1,1,2,REFUTED,True,False,True,0.9881,0.9881,0.0,325-gpt-1
+330,openai/gpt-6.1-sol,REFUTED,SUPPORTED,True,5,0,3,2,REFUTED,True,False,True,0.9964,0.9964,0.0,330-gpt-2 330-gpt-4 330-gpt-5
+331,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,0,1,4,unverified,True,False,True,0.9652,0.9652,0.0,331-gpt-4
+335,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,0,1,4,REFUTED,True,False,True,0.9527,0.9527,0.0,335-gpt-4
+343,openai/gpt-6.1-sol,REFUTED,REFUTED,False,3,0,1,2,unverified,True,False,True,0.9761,0.9761,0.0,343-gpt-2
+346,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,6,0,3,3,REFUTED,True,True,True,0.9935,0.9935,0.9851,346-gpt-1 346-gpt-4 346-gpt-5
+347,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,9,1,2,6,REFUTED,True,True,True,0.9993,0.9993,0.9986,347-gpt-3 347-gpt-8
+356,openai/gpt-6.1-sol,REFUTED,REFUTED,False,12,2,2,8,REFUTED,True,False,True,0.9867,0.9867,0.0,356-gpt-1 356-gpt-10
+357,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,2,1,0,1,SUPPORTED,False,False,False,0.9494,0.9494,0.0,
+358,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,2,0,3,unverified,False,False,False,0.6802,0.6802,0.0,
+365,openai/gpt-6.1-sol,REFUTED,REFUTED,False,13,1,0,12,unverified,False,False,False,0.8266,0.8266,0.0,
+376,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,2,1,1,REFUTED,True,True,True,0.9993,0.9941,0.9993,376-gpt-1
+392,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,0,5,0,REFUTED,True,True,True,0.9992,0.9992,0.9976,392-gpt-1 392-gpt-2 392-gpt-3 392-gpt-4 392-gpt-5
+398,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,1,1,3,REFUTED,True,True,True,0.989,0.9804,0.989,398-gpt-3
+402,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,5,0,0,5,SUPPORTED,False,False,False,0.798,0.798,0.0,
+406,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,3,0,1,SUPPORTED,False,False,False,0.0,0.0,0.0,
+409,openai/gpt-6.1-sol,REFUTED,REFUTED,False,1,0,1,0,SUPPORTED,True,True,True,0.9982,0.9982,0.9981,409-gpt-2
+417,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,2,1,1,REFUTED,True,False,True,0.9984,0.9984,0.0,417-gpt-1
+419,openai/gpt-6.1-sol,REFUTED,REFUTED,False,8,0,1,7,REFUTED,True,False,True,0.977,0.977,0.0,419-gpt-4
+425,openai/gpt-6.1-sol,REFUTED,REFUTED,False,7,3,4,0,REFUTED,True,False,True,0.9992,0.9992,0.0,425-gpt-1 425-gpt-2 425-gpt-3 425-gpt-7
+429,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,4,0,4,0,REFUTED,True,True,True,0.9996,0.9996,0.9995,429-gpt-1 429-gpt-2 429-gpt-3 429-gpt-4
+430,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,6,3,2,1,REFUTED,True,True,True,0.9992,0.9953,0.9992,430-gpt-1 430-gpt-3
+437,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,0,1,3,REFUTED,True,False,True,0.9965,0.9965,0.0,437-gpt-3
+438,openai/gpt-6.1-sol,REFUTED,REFUTED,False,9,0,4,5,REFUTED,True,False,True,0.9926,0.9926,0.0,438-gpt-1 438-gpt-2 438-gpt-4 438-gpt-7
+440,openai/gpt-6.1-sol,REFUTED,REFUTED,False,2,0,1,1,unverified,True,False,True,0.9517,0.9517,0.0,440-gpt-1
+443,openai/gpt-6.1-sol,REFUTED,REFUTED,False,7,1,0,6,REFUTED,False,False,False,0.3182,0.3182,0.0,
+445,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,1,0,4,REFUTED,False,False,False,0.9166,0.9166,0.0,
+452,openai/gpt-6.1-sol,REFUTED,REFUTED,False,2,1,0,1,unverified,False,False,False,0.413,0.413,0.0,
+453,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,3,2,1,0,SUPPORTED,True,False,True,0.9962,0.9962,0.0,453-gpt-3
+461,openai/gpt-6.1-sol,REFUTED,SUPPORTED,True,3,0,3,0,REFUTED,True,False,True,0.9964,0.9964,0.0,461-gpt-1 461-gpt-2 461-gpt-3
+463,openai/gpt-6.1-sol,REFUTED,SUPPORTED,True,4,0,2,2,REFUTED,True,False,True,0.9926,0.9926,0.0,463-gpt-1 463-gpt-3
+478,openai/gpt-6.1-sol,REFUTED,REFUTED,False,5,0,1,4,REFUTED,True,False,True,0.9989,0.9989,0.0,478-gpt-1
+489,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,9,0,5,4,REFUTED,True,True,True,0.9997,0.9997,0.9997,489-gpt-4 489-gpt-5 489-gpt-6 489-gpt-7 489-gpt-9
+491,openai/gpt-6.1-sol,REFUTED,REFUTED,False,4,2,2,0,REFUTED,True,False,True,0.9985,0.9985,0.0,491-gpt-1 491-gpt-2
+497,openai/gpt-6.1-sol,SUPPORTED,SUPPORTED,False,2,0,2,0,REFUTED,True,True,True,0.9983,0.9964,0.9983,497-gpt-1 497-gpt-2
+499,openai/gpt-6.1-sol,REFUTED,REFUTED,False,3,1,2,0,REFUTED,True,False,True,0.9996,0.9996,0.0,499-gpt-1 499-gpt-2
