@@ -8,17 +8,21 @@ load_dotenv()
 KEY = os.environ["OPENROUTER_API_KEY"]
 URL = "https://openrouter.ai/api/v1/chat/completions"
 DECOMPOSER = "openai/gpt-6.1-sol"
-PROMPT_VERSION = "d1"
+PROMPT_VERSION = "d2"
 TYPES = {"fact", "meta", "hedge"}
 
 SYSTEM_PROMPT = (
     "You split a fact-checking explanation into atomic statements. Rules: "
-    "1. Each statement contains exactly one checkable fact. "
+    '1. Each statement contains exactly one checkable fact. Split lists and "and" into separate statements, '
+    "but never write the same fact twice in different words. "
     "2. Each statement must be understandable on its own: replace pronouns and vague references "
     "(he, the seat, this law) with what they refer to, using the claim for context. "
+    "Every date must include its year when the explanation or the claim makes the year clear. "
     "3. Do not add, remove, correct or judge information. Keep every number, date, name and quantity exactly as written. "
-    "4. Tag each statement: fact = a checkable claim about the world; meta = about the claim, the verdict or the "
-    "reasoning itself, or citing fact-checkers or debunking; hedge = vague, opinion or not checkable. "
+    'If the explanation attributes a fact to a source ("reports said X", "officials indicated X"), write X itself as the statement. '
+    "4. Tag each statement: fact = a checkable claim about the world; meta = about the claim, the verdict, the "
+    "reasoning or its sources, or citing fact-checkers or debunking; hedge = vague, speculative, an opinion or a "
+    "generalisation that cannot be checked. "
     "5. Keep the original order."
 )
 USER_TEMPLATE = (
