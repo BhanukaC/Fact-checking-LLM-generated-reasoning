@@ -142,17 +142,15 @@ for c in CONDITIONS:
             }
         )
 
-for path, rows in (
-    ("sq3_missed_errors.csv", missed),
-    ("sq3_false_flags.csv", false_flags),
-):
-    with open(path, "w", newline="", encoding="utf-8-sig") as fh:
-        w = csv.DictWriter(fh, fieldnames=list(rows[0]))
-        w.writeheader()
-        w.writerows(rows)
-    print(f"{path}: {len(rows)} rows")
-for c in CONDITIONS:
-    print(
-        f"  {c:>10}: missed {sum(r['condition'] == c for r in missed)}, "
-        f"false flags sampled {sum(r['condition'] == c for r in false_flags)}"
-    )
+# Four files: gold rows (Yoke) and retrieval rows (Bhanuka), so both can work independently
+OWNERS = {"gold": ["gold"], "retrieval": ["bm25", "similarity", "verifier"]}
+
+for sheet, rows in (("missed_errors", missed), ("false_flags", false_flags)):
+    for owner, conds in OWNERS.items():
+        part = [r for r in rows if r["condition"] in conds]
+        path = f"sq3_{sheet}_{owner}.csv"
+        with open(path, "w", newline="", encoding="utf-8-sig") as fh:
+            w = csv.DictWriter(fh, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(part)
+        print(f"{path}: {len(part)} rows")
