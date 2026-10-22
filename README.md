@@ -73,6 +73,7 @@ In short: with gold evidence the verifier separates wrong from right outputs abo
 | `step10_sq3_sheets.py` | reading sheets for the failure analysis: missed errors and false flags, separately for gold and for the retrieval conditions | `sq3_missed_errors_gold.csv`, `sq3_false_flags_gold.csv`, `sq3_missed_errors_retrieval.csv`, `sq3_false_flags_retrieval.csv` |
 | `step11_annotation_sheet.py`, `step11b_compare_annotation.py` | manual statement annotation and comparison with the verifier | `statement_annotation.csv` |
 | `check_top_contradictions.py` | lists the 12 strongest contradictions on the tuning split for a manual check of whether the contradicted statement is really false (11 were not, 1 is contested) | `top_contradictions_tune.csv` |
+| `check_factcheck_leak.py` | finds sentences from fact-check sections of general news sites that passed the cleaning (9 sentences, claims 29, 91, 109, 426) and recomputes AUROC without the affected eval claims | console |
 | `walkthrough.py` | follows one output through the whole pipeline, e.g. `python walkthrough.py 36 claude` | console |
 | `check_numbers.py` | recomputes the reported numbers from the files and prints OK or DIFF | console |
 
@@ -129,7 +130,7 @@ python step9_evaluate.py
 - Small sample: 100 claims and 32 wrong outputs give wide confidence intervals.
 - Only Supported and Refuted claims are used, so results are not comparable with published AVeriTeC scores.
 - The gold evidence was written to justify the gold verdict, so the gold condition is an upper bound and may partly reflect the label.
-- A few fact-check sentences from general news sites (9 sentences, 4 claims) passed the cleaning; excluding the affected claims changes AUROC by at most 0.013.
+- A few fact-check sentences from general news sites (9 sentences, 4 claims) passed the cleaning; excluding the affected claims changes AUROC by at most 0.013 (`check_factcheck_leak.py`).
 - API models can change behind the same name, so regenerating step 2 may give different outputs.
 
 ## Data and licence
