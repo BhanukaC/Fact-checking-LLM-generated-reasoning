@@ -1,42 +1,47 @@
-eval: 300 outputs, 32 wrong, chance AP 0.107, threshold 0.95, bootstrap 2000 (seed 2026)
+eval: 300 outputs, 32 wrong, chance AP 0.107, threshold 0.95 (chosen on tune, 3 wrong of 60), bootstrap 2000 over claims (seed 2026)
 
-1. Main results (95% bootstrap CI over claims)
-        gold: AUROC 0.715 [0.589, 0.827]  AP 0.235 [0.104, 0.429]  | t=0.95: P 0.198 R 0.500 F1 0.283 flagged 81
-        bm25: AUROC 0.594 [0.456, 0.730]  AP 0.136 [0.070, 0.238]  | t=0.95: P 0.135 R 0.719 F1 0.227 flagged 171
-  similarity: AUROC 0.587 [0.473, 0.699]  AP 0.127 [0.070, 0.214]  | t=0.95: P 0.133 R 0.750 F1 0.225 flagged 181
-    verifier: AUROC 0.599 [0.483, 0.719]  AP 0.133 [0.075, 0.215]  | t=0.95: P 0.124 R 0.906 F1 0.219 flagged 233
+1. Main results (threshold-free; 95% CI)
+        gold: AUROC 0.715 [0.589, 0.827]  AP 0.230 [0.107, 0.435]
+        bm25: AUROC 0.594 [0.456, 0.730]  AP 0.136 [0.072, 0.255]
+  similarity: AUROC 0.587 [0.473, 0.699]  AP 0.128 [0.072, 0.235]
+    verifier: AUROC 0.599 [0.483, 0.719]  AP 0.137 [0.077, 0.235]
 
-2. Where the signal comes from: statements only (95% CI) vs claim check only
+2. Statements only (95% CI) vs claim check only
         gold: statements 0.679 [0.562, 0.795]   claim check 0.775
         bm25: statements 0.595 [0.471, 0.718]   claim check 0.449
   similarity: statements 0.565 [0.475, 0.652]   claim check 0.520
     verifier: statements 0.609 [0.511, 0.711]   claim check 0.501
-  Paired differences, statements only (first minus second):
-        gold - bm25      : dAUROC +0.083 [-0.068, +0.246]
-        gold - similarity: dAUROC +0.114 [-0.003, +0.247]
-  similarity - bm25      : dAUROC -0.030 [-0.150, +0.083]
-    verifier - similarity: dAUROC +0.044 [-0.029, +0.137]
-    verifier - bm25      : dAUROC +0.014 [-0.076, +0.122]
-        gold - verifier  : dAUROC +0.069 [-0.024, +0.163]
 
-3. Paired differences, full score (first minus second), 95% bootstrap CI
-        gold - bm25      : dAUROC +0.122 [-0.040, +0.282]  dAP +0.099 [-0.030, +0.280]
-        gold - similarity: dAUROC +0.128 [-0.015, +0.273]  dAP +0.108 [-0.011, +0.287]
-  similarity - bm25      : dAUROC -0.006 [-0.117, +0.099]  dAP -0.009 [-0.057, +0.026]
-    verifier - similarity: dAUROC +0.012 [-0.064, +0.105]  dAP +0.006 [-0.024, +0.041]
-    verifier - bm25      : dAUROC +0.005 [-0.078, +0.108]  dAP -0.003 [-0.040, +0.028]
-        gold - verifier  : dAUROC +0.116 [-0.004, +0.236]  dAP +0.102 [-0.012, +0.273]
+3. Paired differences, first minus second (95% CI)
+        gold - bm25      : dAUROC +0.122 [-0.040, +0.282]  dAP +0.094 [-0.040, +0.281]  dAUROC stmt +0.083 [-0.068, +0.246]
+        gold - similarity: dAUROC +0.128 [-0.015, +0.273]  dAP +0.102 [-0.022, +0.283]  dAUROC stmt +0.114 [-0.003, +0.247]
+  similarity - bm25      : dAUROC -0.006 [-0.117, +0.099]  dAP -0.008 [-0.066, +0.031]  dAUROC stmt -0.030 [-0.150, +0.083]
+    verifier - similarity: dAUROC +0.012 [-0.064, +0.105]  dAP +0.009 [-0.027, +0.050]  dAUROC stmt +0.044 [-0.029, +0.137]
+    verifier - bm25      : dAUROC +0.005 [-0.078, +0.108]  dAP +0.001 [-0.040, +0.031]  dAUROC stmt +0.014 [-0.076, +0.122]
+        gold - verifier  : dAUROC +0.116 [-0.004, +0.236]  dAP +0.093 [-0.026, +0.271]  dAUROC stmt +0.069 [-0.024, +0.163]
 
-4. McNemar tests at t=0.95 (per-output correctness; n01 = first right and second wrong)
-        gold vs bm25      : n01 103  n10  27  p = 0.0000
-        gold vs similarity: n01 111  n10  27  p = 0.0000
-  similarity vs bm25      : n01  31  n10  39  p = 0.4030
-    verifier vs similarity: n01   8  n10  50  p = 0.0000
-    verifier vs bm25      : n01  15  n10  65  p = 0.0000
-        gold vs verifier  : n01 150  n10  24  p = 0.0000
+4. At the fixed threshold t=0.95: claim-clustered CIs (main) and McNemar (exploratory, assumes independent outputs)
+        gold: P 0.198 R 0.500 F1 0.283 accuracy 0.730 flagged 81
+        bm25: P 0.135 R 0.719 F1 0.227 accuracy 0.477 flagged 171
+  similarity: P 0.133 R 0.750 F1 0.225 accuracy 0.450 flagged 181
+    verifier: P 0.124 R 0.906 F1 0.219 accuracy 0.310 flagged 233
+        gold - bm25      : dAccuracy +0.253 [+0.157, +0.347]  dF1 +0.057 [-0.067, +0.183]  | McNemar n01 103 n10 27 p 0.0000
+        gold - similarity: dAccuracy +0.280 [+0.180, +0.373]  dF1 +0.058 [-0.058, +0.177]  | McNemar n01 111 n10 27 p 0.0000
+  similarity - bm25      : dAccuracy -0.027 [-0.097, +0.037]  dF1 -0.001 [-0.047, +0.043]  | McNemar n01 31 n10 39 p 0.4030
+    verifier - similarity: dAccuracy -0.140 [-0.197, -0.083]  dF1 -0.006 [-0.039, +0.029]  | McNemar n01 8 n10 50 p 0.0000
+    verifier - bm25      : dAccuracy -0.167 [-0.237, -0.097]  dF1 -0.008 [-0.055, +0.043]  | McNemar n01 15 n10 65 p 0.0000
+        gold - verifier  : dAccuracy +0.420 [+0.320, +0.517]  dF1 +0.064 [-0.049, +0.181]  | McNemar n01 150 n10 24 p 0.0000
 
 5. Robustness: without the doubtful-label claims [99, 113, 196, 258, 330]
-        gold: 285 outputs, 20 wrong | AUROC 0.731  AP 0.137 | statements only 0.697 | P 0.135 R 0.500 F1 0.213 flagged 74
-        bm25: 285 outputs, 20 wrong | AUROC 0.584  AP 0.096 | statements only 0.565 | P 0.087 R 0.700 F1 0.156 flagged 160
-  similarity: 285 outputs, 20 wrong | AUROC 0.577  AP 0.090 | statements only 0.548 | P 0.088 R 0.750 F1 0.157 flagged 171
-    verifier: 285 outputs, 20 wrong | AUROC 0.603  AP 0.097 | statements only 0.602 | P 0.082 R 0.900 F1 0.151 flagged 219
+        gold: 285 outputs, 20 wrong | AUROC 0.731  AP 0.139  statements only 0.697 | P 0.135 R 0.500 F1 0.213 flagged 74
+        bm25: 285 outputs, 20 wrong | AUROC 0.584  AP 0.099  statements only 0.565 | P 0.087 R 0.700 F1 0.156 flagged 160
+  similarity: 285 outputs, 20 wrong | AUROC 0.577  AP 0.092  statements only 0.548 | P 0.088 R 0.750 F1 0.157 flagged 171
+    verifier: 285 outputs, 20 wrong | AUROC 0.603  AP 0.100  statements only 0.602 | P 0.082 R 0.900 F1 0.151 flagged 219
+
+6. Threshold sensitivity on eval (descriptive only; t was fixed on tune)
+     t |            gold            |            bm25            |         similarity         |          verifier         
+   0.5 | P 0.17 R 0.66 F1 0.28 fl 120 | P 0.12 R 0.88 F1 0.22 fl 227 | P 0.13 R 0.94 F1 0.23 fl 231 | P 0.11 R 0.97 F1 0.20 fl 271
+   0.7 | P 0.17 R 0.59 F1 0.27 fl 110 | P 0.13 R 0.84 F1 0.22 fl 215 | P 0.14 R 0.94 F1 0.24 fl 218 | P 0.12 R 0.97 F1 0.21 fl 264
+   0.9 | P 0.18 R 0.50 F1 0.27 fl  88 | P 0.14 R 0.81 F1 0.23 fl 191 | P 0.13 R 0.78 F1 0.22 fl 198 | P 0.12 R 0.94 F1 0.21 fl 248
+  0.95 | P 0.20 R 0.50 F1 0.28 fl  81 | P 0.13 R 0.72 F1 0.23 fl 171 | P 0.13 R 0.75 F1 0.23 fl 181 | P 0.12 R 0.91 F1 0.22 fl 233
+  0.99 | P 0.26 R 0.44 F1 0.33 fl  54 | P 0.14 R 0.50 F1 0.22 fl 112 | P 0.12 R 0.47 F1 0.20 fl 121 | P 0.14 R 0.78 F1 0.24 fl 177

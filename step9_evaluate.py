@@ -1,5 +1,6 @@
-# step9_evaluate.py: confidence intervals, paired comparisons, McNemar tests,
-# robustness set and the statement/claim split. Reads flags_<condition>_eval.csv.
+# step9_evaluate.py: AUROC/AP with claim-clustered bootstrap CIs, statement/claim split,
+# paired differences, threshold metrics with clustered CIs (McNemar kept as exploratory),
+# robustness set, and a descriptive threshold-sensitivity table.
 #   python step9_evaluate.py | tee results_eval.txt
 import csv, json, math, os, random
 from step8_flag import auroc, average_precision
@@ -14,10 +15,13 @@ PAIRS = [
     ("gold", "verifier"),
 ]
 DOUBTFUL = {99, 113, 196, 258, 330}  # gold-label check, rule fixed on 15 Oct
-FIELDS = (
-    "score",
-    "stmt_score",
-)  # full output score, and statements only (no claim check)
+SENSITIVITY = [
+    0.5,
+    0.7,
+    0.9,
+    0.95,
+    0.99,
+]  # shown on eval for description only, never used to choose
 B, SEED = 2000, 2026
 
 
@@ -29,7 +33,6 @@ def load(cond):
                 "claim_id": int(r["claim_id"]),
                 "model": r["model"],
                 "wrong": r["wrong"] == "True",
-                "flagged": r["flagged"] == "True",
                 "score": float(r["score"]),
                 "stmt_score": float(r["stmt_score"]),
                 "claim_score": float(r["claim_score"]),
@@ -42,13 +45,16 @@ def scored(rows, field):
     return [{"wrong": r["wrong"], "score": r[field]} for r in rows]
 
 
-def prf(rows):
-    tp = sum(r["flagged"] and r["wrong"] for r in rows)
-    fp = sum(r["flagged"] and not r["wrong"] for r in rows)
-    fn = sum(not r["flagged"] and r["wrong"] for r in rows)
+def at_threshold(rows, t):
+    """Flagged at t exactly when score >= t (same rule as step 8). Returns P, R, F1, accuracy, flagged."""
+    tp = sum(r["score"] >= t and r["wrong"] for r in rows)
+    fp = sum(r["score"] >= t and not r["wrong"] for r in rows)
+    fn = sum(r["score"] < t and r["wrong"] for r in rows)
     p = tp / (tp + fp) if tp + fp else 0.0
     rc = tp / (tp + fn) if tp + fn else 0.0
-    return p, rc, (2 * p * rc / (p + rc) if p + rc else 0.0), tp + fp
+    f1 = 2 * p * rc / (p + rc) if p + rc else 0.0
+    acc = sum((r["score"] >= t) == r["wrong"] for r in rows) / len(rows)
+    return p, rc, f1, acc, tp + fp
 
 
 def ci(xs):
@@ -56,44 +62,48 @@ def ci(xs):
     return xs[int(0.025 * len(xs))], xs[int(0.975 * len(xs)) - 1]
 
 
-def bootstrap(data, conds):
-    """Resample claims (all three outputs of a claim together); the same resamples for every
-    condition and every score field, so paired differences are valid."""
+METRICS = {
+    "auroc": lambda rs, t: auroc(scored(rs, "score")),
+    "ap": lambda rs, t: average_precision(scored(rs, "score")),
+    "auroc_stmt": lambda rs, t: auroc(scored(rs, "stmt_score")),
+    "f1": lambda rs, t: at_threshold(rs, t)[2],
+    "acc": lambda rs, t: at_threshold(rs, t)[3],
+}
+
+
+def bootstrap(data, conds, t):
+    """Resample claims (a claim's three outputs stay together); the same resamples for every
+    condition and metric, so paired differences are valid."""
     claims = sorted({r["claim_id"] for r in data[conds[0]]})
     by_claim = {
-        cond: {c: [r for r in data[cond] if r["claim_id"] == c] for c in claims}
-        for cond in conds
+        c: {k: [r for r in data[c] if r["claim_id"] == k] for k in claims}
+        for c in conds
     }
     rng = random.Random(SEED)
-    out = {f: {cond: {"auroc": [], "ap": []} for cond in conds} for f in FIELDS}
+    out = {c: {m: [] for m in METRICS} for c in conds}
     for _ in range(B):
         pick = [rng.choice(claims) for _ in claims]
-        for cond in conds:
-            rows = [r for c in pick for r in by_claim[cond][c]]
-            for f in FIELDS:
-                s = scored(rows, f)
-                out[f][cond]["auroc"].append(auroc(s))
-                out[f][cond]["ap"].append(average_precision(s))
+        for c in conds:
+            rows = [r for k in pick for r in by_claim[c][k]]
+            for m, fn in METRICS.items():
+                out[c][m].append(fn(rows, t))
     return out
 
 
-def mcnemar(a, b):
-    """Exact McNemar test on per-output correctness (flag decision == wrong) at the fixed threshold."""
-    ca = [r["flagged"] == r["wrong"] for r in a]
-    cb = [r["flagged"] == r["wrong"] for r in b]
-    n01 = sum(x and not y for x, y in zip(ca, cb))  # a right, b wrong
+def paired(boot, data, a, b, m, t):
+    point = METRICS[m](data[a], t) - METRICS[m](data[b], t)
+    lo, hi = ci([x - y for x, y in zip(boot[a][m], boot[b][m])])
+    return point, lo, hi
+
+
+def mcnemar(a, b, t):
+    ca = [(r["score"] >= t) == r["wrong"] for r in a]
+    cb = [(r["score"] >= t) == r["wrong"] for r in b]
+    n01 = sum(x and not y for x, y in zip(ca, cb))
     n10 = sum(y and not x for x, y in zip(ca, cb))
     n, k = n01 + n10, min(n01, n10)
     p = min(1.0, 2 * sum(math.comb(n, i) for i in range(k + 1)) / 2**n) if n else 1.0
     return n01, n10, p
-
-
-def paired(boot_f, data, field, a_, b_, metric):
-    fn = auroc if metric == "auroc" else average_precision
-    d = [x - y for x, y in zip(boot_f[a_][metric], boot_f[b_][metric])]
-    point = fn(scored(data[a_], field)) - fn(scored(data[b_], field))
-    lo, hi = ci(d)
-    return point, lo, hi
 
 
 def main():
@@ -107,66 +117,74 @@ def main():
     n_wrong = sum(r["wrong"] for r in data[conds[0]])
     print(
         f"eval: {len(keys)} outputs, {n_wrong} wrong, chance AP {n_wrong / len(keys):.3f}, "
-        f"threshold {t}, bootstrap {B} (seed {SEED})"
+        f"threshold {t} (chosen on tune, 3 wrong of 60), bootstrap {B} over claims (seed {SEED})"
     )
+    boot = bootstrap(data, conds, t)
 
-    boot = bootstrap(data, conds)
-    print("\n1. Main results (95% bootstrap CI over claims)")
+    print("\n1. Main results (threshold-free; 95% CI)")
     for c in conds:
-        rows = data[c]
-        a, ap = auroc(scored(rows, "score")), average_precision(scored(rows, "score"))
-        (al, ah), (pl, ph) = ci(boot["score"][c]["auroc"]), ci(boot["score"][c]["ap"])
-        p, r, f1, fl = prf(rows)
+        a, ap = METRICS["auroc"](data[c], t), METRICS["ap"](data[c], t)
+        (al, ah), (pl, ph) = ci(boot[c]["auroc"]), ci(boot[c]["ap"])
         print(
-            f"  {c:>10}: AUROC {a:.3f} [{al:.3f}, {ah:.3f}]  AP {ap:.3f} [{pl:.3f}, {ph:.3f}]  "
-            f"| t={t}: P {p:.3f} R {r:.3f} F1 {f1:.3f} flagged {fl}"
+            f"  {c:>10}: AUROC {a:.3f} [{al:.3f}, {ah:.3f}]  AP {ap:.3f} [{pl:.3f}, {ph:.3f}]"
         )
 
-    print(
-        "\n2. Where the signal comes from: statements only (95% CI) vs claim check only"
-    )
+    print("\n2. Statements only (95% CI) vs claim check only")
     for c in conds:
-        lo, hi = ci(boot["stmt_score"][c]["auroc"])
+        lo, hi = ci(boot[c]["auroc_stmt"])
         print(
-            f"  {c:>10}: statements {auroc(scored(data[c], 'stmt_score')):.3f} [{lo:.3f}, {hi:.3f}]   "
+            f"  {c:>10}: statements {METRICS['auroc_stmt'](data[c], t):.3f} [{lo:.3f}, {hi:.3f}]   "
             f"claim check {auroc(scored(data[c], 'claim_score')):.3f}"
         )
-    print("  Paired differences, statements only (first minus second):")
-    for a_, b_ in PAIRS:
-        if a_ in conds and b_ in conds:
-            point, lo, hi = paired(
-                boot["stmt_score"], data, "stmt_score", a_, b_, "auroc"
-            )
-            print(f"  {a_:>10} - {b_:<10}: dAUROC {point:+.3f} [{lo:+.3f}, {hi:+.3f}]")
 
-    print("\n3. Paired differences, full score (first minus second), 95% bootstrap CI")
-    for a_, b_ in PAIRS:
-        if a_ in conds and b_ in conds:
-            pa, la, ha = paired(boot["score"], data, "score", a_, b_, "auroc")
-            pp, lp, hp = paired(boot["score"], data, "score", a_, b_, "ap")
+    print("\n3. Paired differences, first minus second (95% CI)")
+    for a, b in PAIRS:
+        if a in conds and b in conds:
+            r1, r2, r3 = (
+                paired(boot, data, a, b, m, t) for m in ("auroc", "ap", "auroc_stmt")
+            )
             print(
-                f"  {a_:>10} - {b_:<10}: dAUROC {pa:+.3f} [{la:+.3f}, {ha:+.3f}]  "
-                f"dAP {pp:+.3f} [{lp:+.3f}, {hp:+.3f}]"
+                f"  {a:>10} - {b:<10}: dAUROC {r1[0]:+.3f} [{r1[1]:+.3f}, {r1[2]:+.3f}]  "
+                f"dAP {r2[0]:+.3f} [{r2[1]:+.3f}, {r2[2]:+.3f}]  dAUROC stmt {r3[0]:+.3f} [{r3[1]:+.3f}, {r3[2]:+.3f}]"
             )
 
     print(
-        f"\n4. McNemar tests at t={t} (per-output correctness; n01 = first right and second wrong)"
+        f"\n4. At the fixed threshold t={t}: claim-clustered CIs (main) and McNemar (exploratory, assumes independent outputs)"
     )
-    for a_, b_ in PAIRS:
-        if a_ in conds and b_ in conds:
-            n01, n10, p = mcnemar(data[a_], data[b_])
-            print(f"  {a_:>10} vs {b_:<10}: n01 {n01:>3}  n10 {n10:>3}  p = {p:.4f}")
+    for c in conds:
+        p, r, f1, acc, fl = at_threshold(data[c], t)
+        print(
+            f"  {c:>10}: P {p:.3f} R {r:.3f} F1 {f1:.3f} accuracy {acc:.3f} flagged {fl}"
+        )
+    for a, b in PAIRS:
+        if a in conds and b in conds:
+            da, df = paired(boot, data, a, b, "acc", t), paired(
+                boot, data, a, b, "f1", t
+            )
+            n01, n10, p = mcnemar(data[a], data[b], t)
+            print(
+                f"  {a:>10} - {b:<10}: dAccuracy {da[0]:+.3f} [{da[1]:+.3f}, {da[2]:+.3f}]  "
+                f"dF1 {df[0]:+.3f} [{df[1]:+.3f}, {df[2]:+.3f}]  | McNemar n01 {n01} n10 {n10} p {p:.4f}"
+            )
 
     print(f"\n5. Robustness: without the doubtful-label claims {sorted(DOUBTFUL)}")
     for c in conds:
         rows = [r for r in data[c] if r["claim_id"] not in DOUBTFUL]
-        p, r, f1, fl = prf(rows)
+        p, r, f1, acc, fl = at_threshold(rows, t)
         print(
             f"  {c:>10}: {len(rows)} outputs, {sum(x['wrong'] for x in rows)} wrong | "
-            f"AUROC {auroc(scored(rows, 'score')):.3f}  AP {average_precision(scored(rows, 'score')):.3f} | "
-            f"statements only {auroc(scored(rows, 'stmt_score')):.3f} | "
-            f"P {p:.3f} R {r:.3f} F1 {f1:.3f} flagged {fl}"
+            f"AUROC {METRICS['auroc'](rows, t):.3f}  AP {METRICS['ap'](rows, t):.3f}  "
+            f"statements only {METRICS['auroc_stmt'](rows, t):.3f} | P {p:.3f} R {r:.3f} F1 {f1:.3f} flagged {fl}"
         )
+
+    print("\n6. Threshold sensitivity on eval (descriptive only; t was fixed on tune)")
+    print("     t | " + " | ".join(f"{c:^26}" for c in conds))
+    for tt in SENSITIVITY:
+        cells = []
+        for c in conds:
+            p, r, f1, acc, fl = at_threshold(data[c], tt)
+            cells.append(f"P {p:.2f} R {r:.2f} F1 {f1:.2f} fl {fl:>3}")
+        print(f"  {tt:>4} | " + " | ".join(cells))
 
 
 if __name__ == "__main__":

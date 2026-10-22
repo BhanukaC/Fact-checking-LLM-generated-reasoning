@@ -107,9 +107,9 @@ def flag_outputs(outs, verd, t):
                 "flag_statement": bool(refuted),
                 "flag_claim": claim_mismatch,
                 "flagged": bool(refuted) or claim_mismatch,
-                "score": round(max(stmt_score, claim_score), 4),
-                "stmt_score": round(stmt_score, 4),
-                "claim_score": round(claim_score, 4),
+                "score": max(stmt_score, claim_score),
+                "stmt_score": stmt_score,
+                "claim_score": claim_score,
                 "refuted_sids": " ".join(refuted),
             }
         )
@@ -146,15 +146,23 @@ def auroc(rows):
 
 
 def average_precision(rows):
-    """Area under the precision-recall curve, ranking outputs by score (highest first)."""
-    ranked = sorted(rows, key=lambda r: -r["score"])
+    """AP as defined in sklearn: at each distinct score (highest first), precision so far times the
+    share of positives gained at that score. Tied outputs form one step, so their order cannot matter.
+    """
     n_pos = sum(r["wrong"] for r in rows)
-    hits, ap = 0, 0.0
-    for i, r in enumerate(ranked, start=1):
-        if r["wrong"]:
-            hits += 1
-            ap += hits / i
-    return ap / n_pos if n_pos else float("nan")
+    if not n_pos:
+        return float("nan")
+    groups = defaultdict(lambda: [0, 0])  # score -> [wrong outputs, all outputs]
+    for r in rows:
+        groups[r["score"]][0] += r["wrong"]
+        groups[r["score"]][1] += 1
+    tp = seen = 0
+    ap = 0.0
+    for s in sorted(groups, reverse=True):
+        pos, tot = groups[s]
+        tp, seen = tp + pos, seen + tot
+        ap += (pos / n_pos) * (tp / seen)
+    return ap
 
 
 def breakdown(rows):

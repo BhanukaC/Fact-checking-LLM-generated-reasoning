@@ -171,13 +171,13 @@ for c, con, ent in (
 # Stages 7-8: flags and results
 section("Stages 7-8: flags and results")
 check("threshold", 0.95, json.load(open("threshold.json"))["threshold"], tol=0)
-expected = {  # flagged, AUROC, AP, P, R, statements-only, claim-only, robust AUROC
-    "gold": (81, 0.715, 0.235, 0.198, 0.500, 0.679, 0.775, 0.731),
-    "bm25": (171, 0.594, 0.136, 0.135, 0.719, 0.595, 0.449, 0.584),
-    "similarity": (181, 0.587, 0.127, 0.133, 0.750, 0.565, 0.520, 0.577),
-    "verifier": (233, 0.599, 0.133, 0.124, 0.906, 0.609, 0.501, 0.603),
+expected = {  # flagged, AUROC, AP, P, R, accuracy, statements-only, claim-only, robust AUROC, robust AP
+    "gold": (81, 0.715, 0.230, 0.198, 0.500, 0.730, 0.679, 0.775, 0.731, 0.139),
+    "bm25": (171, 0.594, 0.136, 0.135, 0.719, 0.477, 0.595, 0.449, 0.584, 0.099),
+    "similarity": (181, 0.587, 0.128, 0.133, 0.750, 0.450, 0.565, 0.520, 0.577, 0.092),
+    "verifier": (233, 0.599, 0.137, 0.124, 0.906, 0.310, 0.609, 0.501, 0.603, 0.100),
 }
-for c, (fl, au, ap, p, r, st, cl, rb) in expected.items():
+for c, (fl, au, ap, p, r, acc, st, cl, rb, rap) in expected.items():
     rows = []
     for x in csv.DictReader(open(f"flags_{c}_eval.csv", encoding="utf-8")):
         rows.append(
@@ -197,13 +197,20 @@ for c, (fl, au, ap, p, r, st, cl, rb) in expected.items():
     s = lambda f, rs=rows: [{"wrong": z["wrong"], "score": z[f]} for z in rs]
     check(f"{c}: flagged", fl, nfl)
     check(f"{c}: AUROC", au, auroc(s("score")), tol=0.0015)
-    check(f"{c}: AP", ap, average_precision(s("score")), tol=0.002)
+    check(f"{c}: AP", ap, average_precision(s("score")), tol=0.0015)
     check(f"{c}: precision at 0.95", p, tp / nfl, tol=0.0015)
     check(f"{c}: recall at 0.95", r, tp / nw, tol=0.0015)
+    check(
+        f"{c}: accuracy at 0.95",
+        acc,
+        sum(z["flagged"] == z["wrong"] for z in rows) / len(rows),
+        tol=0.0015,
+    )
     check(f"{c}: AUROC statements only", st, auroc(s("stmt")), tol=0.0015)
     check(f"{c}: AUROC claim check only", cl, auroc(s("claim")), tol=0.0015)
     rr = [z for z in rows if z["claim_id"] not in DOUBTFUL]
     check(f"{c}: robustness AUROC", rb, auroc(s("score", rr)), tol=0.0015)
+    check(f"{c}: robustness AP", rap, average_precision(s("score", rr)), tol=0.0015)
     check(
         f"{c}: missed errors (SQ3 sheet rows)",
         {"gold": 16, "bm25": 9, "similarity": 8, "verifier": 3}[c],
