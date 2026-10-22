@@ -36,7 +36,7 @@ Research questions:
 - Statement extraction: GPT-6.1 splits each reasoning into fact, meta and hedge statements; only fact statements are verified (1,612 on eval). The claim itself is also verified once per condition.
 - Verifier: `MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli`, passage as premise, statement as hypothesis.
 - Retrieval models: `rank-bm25` (BM25Okapi) and `sentence-transformers/all-MiniLM-L6-v2`.
-- Manual checks: the gold-label check found 5 claims with doubtful gold labels (99, 113, 196, 258, 330). They hold 12 of the 32 wrong outputs, so every result is also reported without them (285 outputs, 20 wrong).
+- Manual checks: the gold-label check found 5 claims with doubtful gold labels (99, 113, 196, 258, 330). Their 15 outputs (3 models each) include 12 of the 32 "wrong" outputs, and where the gold label is doubtful the LLM may in fact be right. Every result is therefore also reported without these claims (300 − 15 = 285 outputs, 32 − 12 = 20 wrong); the conclusions do not change.
 - Threshold: 0.95, chosen on the tuning split. Because the tuning split has only 3 wrong outputs, the main results are threshold-free (AUROC and average precision).
 
 ## Results
