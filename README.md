@@ -74,6 +74,7 @@ In short: with gold evidence the verifier separates wrong from right outputs abo
 | `step11_annotation_sheet.py`, `step11b_compare_annotation.py` | manual statement annotation and comparison with the verifier | `statement_annotation.csv` |
 | `check_top_contradictions.py` | lists the 12 strongest contradictions on the tuning split for a manual check of whether the contradicted statement is really false (11 were not, 1 is contested) | `top_contradictions_tune.csv` |
 | `check_factcheck_leak.py` | finds sentences from fact-check sections of general news sites that passed the cleaning (9 sentences, claims 29, 91, 109, 426) and recomputes AUROC without the affected eval claims | console |
+| `make_auroc_chart.py` | draws the poster figure: AUROC with 95% bootstrap CIs per condition, for the full score and for statements only (values from `results_eval.txt`) | `auroc_chart.png`, `auroc_chart.svg`, `auroc_chart.pdf` |
 | `walkthrough.py` | follows one output through the whole pipeline, e.g. `python walkthrough.py 36 claude` | console |
 | `check_numbers.py` | recomputes the reported numbers from the files and prints OK or DIFF | console |
 
@@ -84,7 +85,7 @@ Requires Python 3.10 or newer.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install requests python-dotenv rank-bm25 sentence-transformers transformers torch sentencepiece protobuf
+pip install requests python-dotenv rank-bm25 sentence-transformers transformers torch sentencepiece protobuf matplotlib
 ```
 
 `dev.json` (the AVeriTeC dev split) is included; `python step1_sample.py` downloads it again from Hugging Face and recreates `sampled_claims.json` with the same seed. The evidence pool is not, because of its size: `python step4_inspect_evidence.py` downloads [`dev_top_k_sentences.json`](https://huggingface.co/chenxwh/AVeriTeC/blob/main/data_store/dev_top_k_sentences.json) (the AVeriTeC baseline's precomputed BM25 sentences) into `data/`, which is ignored by git. You only need it to redo step 4: the cleaned pool `evidence_clean.json` is included.
