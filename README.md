@@ -2,7 +2,7 @@
 
 How much does evidence retrieval limit an automated verifier that checks the factual claims in an LLM's fact-checking reasoning?
 
-Bhanuka Uyanage and Yoke Cheng Lee
+Bhanuka Chandiru Uyanage and Yoke Cheng Lee
 Department of Computer and Systems Sciences (DSV), Stockholm University
 Course project, RTDS, autumn 2026
 
