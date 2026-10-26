@@ -1,6 +1,6 @@
 # Fact-checking LLM-generated reasoning
 
-How much does evidence retrieval limit an automated verifier that checks the factual claims in an LLM's fact-checking reasoning?
+How much does evidence retrieval limit an NLI verifier that checks LLM fact-checking reasoning?
 
 Bhanuka Chandiru Uyanage and Yoke Cheng Lee
 Department of Computer and Systems Sciences (DSV), Stockholm University
@@ -52,6 +52,16 @@ Evaluation set: 300 outputs, 32 wrong (chance AP 0.107). 95% confidence interval
 
 In short: with gold evidence the verifier separates wrong from right outputs above chance. With retrieved evidence its ranking cannot be shown to beat chance, whichever selection method is used, and the three methods do not differ from each other. The gap to gold (+0.07 to +0.13 AUROC) is consistent but not significant with 32 errors. At the threshold, retrieved evidence produces two to three times more flags, mostly false, because many retrieved passages contradict a true statement (the passage repeats the misinformation, describes a different event, or is opinion or a sentence fragment). The full output is in `results_eval.txt`.
 
+Failure analysis (SQ3), from the four hand-checked reading sheets (`sq3_counts.py`):
+
+| | Gold evidence | Retrieved evidence |
+|---|---|---|
+| False flags | on-topic evidence, but the question restates the false claim or NLI misreads it (7 of 10) | passage on a different event, place or time (14 of 30), or a sentence fragment (7) |
+| Real missed errors | verifier: evidence too indirect or NLI misread (4 of 16) | retrieval: correcting evidence not in the pool (7 of 20) |
+| "Missed errors" with no false fact | 12 of 16 | 13 of 20 |
+
+Statement level (`step11b_compare_annotation.py`, 75 hand-labelled facts): gold evidence caught 9 of 19 false facts, BM25 3, similarity 2; verifier-guided caught 9 but wrongly refuted 14 of 56 true facts.
+
 ## Repository layout
 
 | Script | What it does | Main output |
@@ -70,11 +80,14 @@ In short: with gold evidence the verifier separates wrong from right outputs abo
 | `step7_verify.py` | runs the NLI verifier | `verdicts_<condition>_<split>.jsonl` |
 | `step8_flag.py` | labels statements, flags outputs, chooses the threshold on tune | `threshold.json`, `flags_<condition>_eval.csv` |
 | `step9_evaluate.py` | AUROC, AP, confidence intervals, paired differences, robustness and threshold sensitivity | `results_eval.txt` |
-| `step10_sq3_sheets.py` | reading sheets for the failure analysis: missed errors and false flags, separately for gold and for the retrieval conditions | `sq3_missed_errors_gold.csv`, `sq3_false_flags_gold.csv`, `sq3_missed_errors_retrieval.csv`, `sq3_false_flags_retrieval.csv` |
+| `step10_sq3_sheets.py` | reading sheets for the failure analysis: missed errors and false flags, separately for gold and for the retrieval conditions; the type and category columns were filled in by hand | `sq3_missed_errors_gold.csv`, `sq3_false_flags_gold.csv`, `sq3_missed_errors_retrieval.csv`, `sq3_false_flags_retrieval.csv` |
 | `step11_annotation_sheet.py`, `step11b_compare_annotation.py` | manual statement annotation and comparison with the verifier | `statement_annotation.csv` |
 | `check_top_contradictions.py` | lists the 12 strongest contradictions on the tuning split for a manual check of whether the contradicted statement is really false (11 were not, 1 is contested) | `top_contradictions_tune.csv` |
 | `check_factcheck_leak.py` | finds sentences from fact-check sections of general news sites that passed the cleaning (9 sentences, claims 29, 91, 109, 426) and recomputes AUROC without the affected eval claims | console |
 | `make_auroc_chart.py` | draws the poster figure: AUROC with 95% bootstrap CIs per condition, for the full score and for statements only (values from `results_eval.txt`) | `auroc_chart.png`, `auroc_chart.svg`, `auroc_chart.pdf` |
+| `sq3_counts.py` | counts the labels in the four SQ3 reading sheets | console |
+| `make_auroc_chart_column.py` | one-column version of the AUROC figure (panels stacked), used on the poster | `auroc_chart_column.png`, `.svg`, `.pdf` |
+| `make_pipeline_svg.py`, `make_pipeline_column_svg.py` | draw the pipeline diagram (wide and one-column versions; the column version is on the poster) | `pipeline.svg`, `pipeline_column.svg` |
 | `walkthrough.py` | follows one output through the whole pipeline, e.g. `python walkthrough.py 36 claude` | console |
 | `check_numbers.py` | recomputes the reported numbers from the files and prints OK or DIFF | console |
 
