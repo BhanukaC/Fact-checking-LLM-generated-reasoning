@@ -1,4 +1,6 @@
 # make_pipeline_column_svg.py: top-to-bottom pipeline diagram for a one-column poster layout
+# Writes pipeline_column.svg and pipeline_column.pdf (vector, for LaTeX).
+#   pip install cairosvg   (on macOS also: brew install cairo)
 INK, MUTED, LINE, GOLD, GOLDBG, GREY, GREYBG = (
     "#0b0b0b",
     "#52514e",
@@ -158,5 +160,17 @@ text(
     -90,
 )
 a("</svg>")
-open("pipeline_column.svg", "w").write("\n".join(out))
+svg = "\n".join(out)
+open("pipeline_column.svg", "w").write(svg)
 print(W, H)
+
+# PDF version for the report (vector, stays sharp at any size)
+try:
+    import cairosvg
+
+    cairosvg.svg2pdf(bytestring=svg.encode("utf-8"), write_to="pipeline_column.pdf")
+    print("wrote pipeline_column.pdf")
+except (ImportError, OSError) as e:
+    print(
+        f"PDF skipped ({e}). Install with: pip install cairosvg (macOS: brew install cairo)"
+    )
